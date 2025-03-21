@@ -10,16 +10,15 @@ ______________________________________________________________________
 
 ## 💡 Introduction
 
-[**Open3DVQA: A Benchmark for Comprehensive Spatial Reasoning with Multimodal Large Language Model in Open Space**](<>)
+[**Open3DVQA: A Benchmark for Comprehensive Spatial Reasoning with Multimodal Large Language Model in Open Space**](<https://www.arxiv.org/abs/2503.11094>)
 
 Open3DVQA is a benchamrk to comprehensively evaluate the spatial reasoning capacities of current SOTA foundation models in open 3D space. It consists of 9k VOA samples, collected using aneffcient semi-automated tool in a high-fdelity urban simulator. 
 
 ______________________________________________________________________
 
 ## 📢 News
-
-- **Feb-27-25**- Open3DVQA code/dataset released! 🔥
-
+- **Mar-15-2025**- Open3DVQA preprint released at [Arxiv](https://www.arxiv.org/abs/2503.11094)
+- **Feb-27-2025**- Open3DVQA code/dataset released! 🔥
 ______________________________________________________________________
 
 ## Open3DVQA Dataset
