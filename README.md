@@ -17,7 +17,7 @@ Open3DVQA is a benchamrk to comprehensively evaluate the spatial reasoning capac
 ______________________________________________________________________
 
 ## 📢 News
-- **Mar-15-2025**- Open3DVQA preprint released at [Arxiv](https://www.arxiv.org/abs/2503.11094)
+- **Mar-15-2025**- Open3DVQA preprint released at [Arxiv](https://www.arxiv.org/abs/2503.11094)!
 - **Feb-27-2025**- Open3DVQA code/dataset released! 🔥
 ______________________________________________________________________
 
