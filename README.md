@@ -71,3 +71,5 @@ ______________________________________________________________________
 ## 🙏 Acknowledgement
 
 We have used code snippets from different repositories, especially from: LLaVA, Qwen2-VL and VQASynth. We would like to acknowledge and thank the authors of these repositories for their excellent work.
+
+- Other instresting project: [CityNavAgent: Aerial Vision-and-Language Navigation with Hierarchical Semantic Planning and Global Memory](https://github.com/WeichenZh/CityNavAgent)
