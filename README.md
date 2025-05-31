@@ -1,8 +1,8 @@
 # Open3DVQA: A Benchmark for Comprehensive Spatial Reasoning with Multimodal Large Language Model in Open Space
 
 
-[![Code License](https://img.shields.io/badge/Code%20License-apache-green.svg)](CODE_LICENSE)
-[![Data License](https://img.shields.io/badge/Data%20License-apache-green.svg)](DATA_LICENSE)
+[![Code License](https://img.shields.io/badge/Code%20License-apache 2.0-green.svg)](CODE_LICENSE)
+[![Data License](https://img.shields.io/badge/Data%20License-apache 2.0-green.svg)](DATA_LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/release/python-3100/)
 
 
