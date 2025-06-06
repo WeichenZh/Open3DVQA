@@ -91,13 +91,11 @@ def main(image_dir, output_dir):
                     conversations = []
                     first_prompt = True
                     if len(row['prompts']) != len(row['qa_information']):
-                        raise ValueError("列表的长度不相同！")
-                    # 假设 row['prompts'] 和 row['qa_information'] 的长度相同
+                        raise ValueError("Length of prompts and qa_information must match.")
                     for prompt, question_name in zip(row['prompts'], row['qa_information']):
                         print(row['qa_information'])
                         conversation = []
                         qa_information = {}
-                        # 处理 prompts
                         if 'Answer: ' in prompt:
                             question, answer = prompt.split('Answer: ', 1)
                             # human_value = f"<image>\n{question}" if first_prompt else question
@@ -112,7 +110,7 @@ def main(image_dir, output_dir):
                             })
                             first_prompt = False
 
-                        # 处理 qa_information
+                        # process qa_information
                         if 'choice' in question_name or 'predicate' in question_name or 'relationship' in question_name:
                             qa_information={
                                 "type": 'qualitative',

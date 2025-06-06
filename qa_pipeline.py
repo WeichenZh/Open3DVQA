@@ -2,7 +2,7 @@ import subprocess
 import os
 import time
 
-data_dir = r"f:\Documents\PythonScripts\dataset-build\dataset\embodied_tasks_zx\realworldUAV"
+data_dir = r"O3DVQA/EmbodiedCity/Wuhan"
 seqs = os.listdir(data_dir)
 
 for idx, seq in enumerate(seqs):
