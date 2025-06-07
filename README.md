@@ -345,32 +345,6 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
   </tr>
 </table>
 
-## Data Curation
-
-AirScape takes the current observations and motion intentions as input and outputs future embodied sequence observations (videos). 
-Below are examples of videos generated on the test set.
-
-### Simulator
-
-| Example |                                          Prediction                                           |                                                                                                                             Motion Intention                                                                                                                              |
-|:-------:|:---------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| **1** |         <img src="figure/generated_example/00819_urbanvideo_test.gif" width="100%"/>          |                                                      The drone moved forward with its camera pointed straight ahead, capturing a stationary view of high-rise buildings, a landscaped garden, and a pond.                                                       |
-| **2** |         <img src="figure/generated_example/00840_urbanvideo_test.gif" width="100%"/>          |                             The drone rotated counterclockwise inplace, with its camera gimbal angled downward, and concluded its flight above a courtyard featuring a circular fountain, swimming pools, and surrounding greenery.                             |
-| **3** |         <img src="figure/generated_example/00846_urbanvideo_test.gif" width="100%"/>          |                                                             The drone hovered in place while gradually rotating to the left, ended up facing a broader view of the buildings and the street below.                                                              |
-| **4** |         <img src="figure/generated_example/00930_urbanvideo_test.gif" width="100%"/>          |                                  The drone tilts up its camera, moves slightly forward while maintaining a steady view of a fountain plaza and surrounding area, then holds position for an overhead perspective of the scene.                                  |
-| **5** |      <img src="figure/generated_example/01035_NAT2021_test_N02029_4.gif" width="100%"/>       |                                          No obvious tracking of a target, the drone moving forward along a road while maintaining the gimbal angle, with its final position being farther down the illuminated street.                                          |
-| **6** |      <img src="figure/generated_example/01247_NAT2021_test_N04039_2.gif" width="100%"/>       |                    A group of pedestrians moving from left to right along a walkway, while the drone rotates rightward slowly and its camera gimbal adjusts slightly to follow their motion, keeping them centered and visible in the frame.                    |
-| **7** |      <img src="figure/generated_example/01374_NAT2021_test_N08024_3.gif" width="100%"/>       | The drone ascends while capturing a night-time view of a road with vehicles moving forward (away from the drone) and brightly lit buildings in the distance, without obvious tracking or significant camera gimbal movements. |
-| **8** |    <img src="figure/generated_example/11954_WebUAV3M_val_apartment_3_1.gif" width="100%"/>    |                                                                  The drone flies forward, keeping the skyline of the city centered in its field of view.                                                                   |
-| **9** | <img src="figure/generated_example/11992_WebUAV3M_val_container_ship_6_0.gif" width="100%"/>  |                                            The drone tracks a cargo ship moving forward along the river, while flying to the right and rotate to the left, maintaining the ship in the center of the field of view.                                             |
-| **10** |  <img src="figure/generated_example/11964_WebUAV3M_val_bulk_carrier_32_0.gif" width="100%"/>  |                                                                               The drone flies to the right, maintaining the current altitude and keeping the gimbal angle level.                                                                                |
-| **11** |    <img src="figure/generated_example/11977_WebUAV3M_val_climbing_2_2.gif" width="100%"/>     |                         The drone flies to the left while rotating to the right, rotating clockwise about 45 degrees around the pagoda in the field of view, while keeping the pagoda and surrounding structures centered in the frame.                         |
-| **12** | <img src="figure/generated_example/11980_WebUAV3M_val_climbing_stairs_5_1.gif" width="100%"/> |                                       The drone flies to the left while rotating to the right, rotating clockwise slowly around the pagoda in the field of view, while keeping the statue centered in its field of view.                                        |
-| **13** |   <img src="figure/generated_example/12026_WebUAV3M_val_harvester_23_1.gif" width="100%"/>    |                              The drone is moving forward, adjusting the pan tilt angle downwards to track the movement of two agricultural vehicles proceeding forward in tandem, maintaining them centered in its field of view.                               |
-| **14** |   <img src="figure/generated_example/12033_WebUAV3M_val_harvester_34_6.gif" width="100%"/>    |                                      The drone follows a combine harvester moving forward through a field, keeping the harvester in the center of its field of view while maintaining a steady altitude and camera angle.                                       |
-
-### Realworld
-
 ## QA Generation Pipeline
 
 We've also made the dataset synthesis pipeline available. You can find the code and instructions in the [processor](processor) folder.
