@@ -1,6 +1,6 @@
 # Open3DVQA: A Benchmark for Embodied Spatial Concept Reasoning with Multimodal Large Language Model in Open Space
 
-Open3DVQA is a benchamrk to comprehensively evaluate the spatial reasoning capacities of current SOTA foundation models in open 3D space. It consists of 89k VOA samples, collected using aneffcient semi-automated tool in a high-fdelity urban simulator.
+Open3DVQA is a benchamrk to comprehensively evaluate the spatial reasoning capacities of current SOTA foundation models in open 3D space. It consists of 89k VQA samples, collected using aneffcient semi-automated tool in a high-fdelity urban simulator.
 
 ## Open3DVQA Benchmark
 
