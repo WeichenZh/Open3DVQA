@@ -223,10 +223,10 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
     <td>
       <table>
         <tr>
-          <td style="text-align: center; vertical-align: middle;">
+          <td>
             Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?
           </td>
-          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_1.png" height="80px"/></td>
         </tr>
       </table>
     </td>
@@ -243,9 +243,9 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
       <table>
         <tr>
           <td>
-            Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?
+            Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?
           </td>
-          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_1.png" height="80px"/></td>
         </tr>
       </table>
     </td>
@@ -262,9 +262,9 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
       <table>
         <tr>
           <td>
-            Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?
+            Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?
           </td>
-          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_1.png" height="80px"/></td>
         </tr>
       </table>
     </td>
@@ -281,9 +281,9 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
       <table>
         <tr>
           <td>
-            Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?
+            Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?
           </td>
-          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_1.png" height="80px"/></td>
         </tr>
       </table>
     </td>
@@ -300,9 +300,9 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
       <table>
         <tr>
           <td>
-            Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?
+            Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?
           </td>
-          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_1.png" height="80px"/></td>
         </tr>
       </table>
     </td>
@@ -319,9 +319,9 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
       <table>
         <tr>
           <td>
-            Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?
+            Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?
           </td>
-          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_1.png" height="80px"/></td>
         </tr>
       </table>
     </td>
@@ -338,9 +338,9 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
       <table>
         <tr>
           <td>
-            Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?
+            Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?
           </td>
-          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_1.png" height="80px"/></td>
         </tr>
       </table>
     </td>
