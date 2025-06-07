@@ -20,10 +20,9 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
 | **1** | <img src="figure/rgb_1.png" height="65px"/>                | <img src="figure/depth_1.png" height="65px"/>              | <img src="figure/cap_1.png" height="65px"/>              | <img src="figure/mask_1.png" height="65px"/>              | <img src="figure/pcd_1.png" height="65px"/>                |
 | **2** | <img src="figure/rgb_2.png" height="65px"/>                | <img src="figure/depth_2.png" height="65px"/>              | <img src="figure/cap_2.png" height="65px"/>              | <img src="figure/mask_2.png" height="65px"/>              | <img src="figure/pcd_2.png" height="65px"/>                |
 | **3** | <img src="figure/rgb_3.png" height="65px"/>                | <img src="figure/depth_3.png" height="65px"/>              | <img src="figure/cap_3.png" height="65px"/>              | <img src="figure/mask_3.png" height="65px"/>              | <img src="figure/pcd_3.png" height="65px"/>                |
-| **4** | <img src="figure/rgb_4.png" height="65px"/>                | <img src="figure/cap_4.png" height="65px"/>              | <img src="figure/depth_4.png" height="65px"/>              | <img src="figure/mask_4.png" height="65px"/>              | <img src="figure/pcd_4.png" height="65px"/>                |
-| **5** | <img src="figure/rgb_5.png" height="65px"/>                | <img src="figure/cap_5.png" height="65px"/>              | <img src="figure/depth_5.png" height="65px"/>              | <img src="figure/mask_5.png" height="65px"/>              | <img src="figure/pcd_5.png" height="65px"/>                |
-| **6** | <img src="figure/rgb_6.png" height="65px"/>                | <img src="figure/cap_6.png" height="65px"/>              | <img src="figure/depth_6.png" height="65px"/>              | <img src="figure/mask_6.png" height="65px"/>              | <img src="figure/pcd_6.png" height="65px"/>                |
-| **7** | <img src="figure/rgb_7.png" height="65px"/>                | <img src="figure/cap_7.png" height="65px"/>              | <img src="figure/depth_7.png" height="65px"/>              | <img src="figure/mask_7.png" height="65px"/>              | <img src="figure/pcd_7.png" height="65px"/>                |
+| **4** | <img src="figure/rgb_4.png" height="65px"/>                | <img src="figure/depth_4.png" height="65px"/>              | <img src="figure/cap_4.png" height="65px"/>              | <img src="figure/mask_4.png" height="65px"/>              | <img src="figure/pcd_4.png" height="65px"/>                |
+| **5** | <img src="figure/rgb_5.png" height="65px"/>                | <img src="figure/depth_5.png" height="65px"/>              | <img src="figure/cap_5.png" height="65px"/>              | <img src="figure/mask_5.png" height="65px"/>              | <img src="figure/pcd_5.png" height="65px"/>                |
+| **6** | <img src="figure/rgb_6.png" height="65px"/>                | <img src="figure/depth_6.png" height="65px"/>              | <img src="figure/cap_6.png" height="65px"/>              | <img src="figure/mask_6.png" height="65px"/>              | <img src="figure/pcd_6.png" height="65px"/>                |
 
 
 
@@ -42,14 +41,6 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
 |  **Night**   |  <img src="figure/dataset_example/scene/01909_NAT2021_train_0138tricycle1_3_0.gif" width="100%"/>   | The drone flies forward while maintaining its focus on the bridge and the cars below, keeping the camera gimbal stable and centered on the scene. |
 | **Daytime**  | <img src="figure/dataset_example/scene/04170_WebUAV3M_train_container_ship_11_5.gif" width="100%"/> | The drone flies forward while keeping both the Maersk container ship and the tugboat in its field of view, with the camera gimbal slightly adjusting to track them continuously. |
 | **Snowy** |   <img src="figure/dataset_example/scene/09048_WebUAV3M_train_snowmobile_29_1.gif" width="100%"/>   | The drone flies upwards and slightly backward while rotating left, keeping a snowmobile in its field of view as it moves around the edge of a forested area on a snow-covered landscape. |
-
-### Task
-
-|                |                                                      Video                                                      |                                                                                                                               Motion Intention                                                                                                                                |
-|:--------------:|:---------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| **Navigation** |                 <img src="figure/dataset_example/task/00925_urbanvideo_test.gif" width="100%"/>                 | The drone moved forward steadily and turned right slightly, maintaining its altitude, with the camera gimbal slightly tilted downward, capturing a street view with parked cars, trees, buildings, and pedestrians, before coming to a stop over a commercial area. |
-|  **Tracking**  | <img src="figure/dataset_example/task/04689_WebUAV3M_train_gaily-painted_pleasure-boat_10_2.gif" width="100%"/> |                          The drone follows a boat moving forward along the river, maintaining a steady distance while adjusting its position slightly to the left and aligning the camera to keep the boat centered in the field of view.                           |
-| **Detection**  |            <img src="figure/dataset_example/task/08079_WebUAV3M_train_sedan_67_1.gif" width="100%"/>            |     The drone flies forward while detecting traffic flow on the road.                                                                                                  |
 
 
 ## Data Curation
@@ -154,6 +145,6 @@ Run id_processor.py to get ids of interested objects. After that, run caption_pr
 
 Feel free to report any issues or unexpected results you encounter.
 
-## 🙏 Acknowledgement
+## Acknowledgement
 
 We have used code snippets from different repositories, especially from: LLaVA, Qwen2-VL and VQASynth. We would like to acknowledge and thank the authors of these repositories for their excellent work.
