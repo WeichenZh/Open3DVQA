@@ -222,12 +222,18 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
     <td style="text-align: center; vertical-align: middle;"><strong>Allocentric Size Reasoning</strong></td>
     <td>
       <table>
-        <tr>
-          <td>
-            Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?
-          </td>
-          <td style="width: 90px;"><img src="figure/rgb_1.png" height="80px"/></td>
-        </tr>
+         <tr>
+            <td style="text-align: center;">
+               <img src="figure/rgb_1.png" height="80px"/>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               Does the red storefront with Chinese<br>
+               text have a lesser height compared<br>
+               to the white building with blue stripes?
+            </td>
+         </tr>
       </table>
     </td>
     <td>
@@ -240,12 +246,18 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
     <td style="text-align: center; vertical-align: middle;"><strong>Allocentric Distance Reasoning</strong></td>
     <td>
       <table>
-        <tr>
-          <td>
-            Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?
-          </td>
-          <td style="width: 90px;"><img src="figure/rgb_1.png" height="80px"/></td>
-        </tr>
+         <tr>
+            <td style="text-align: center;">
+               <img src="figure/rgb_1.png" height="80px"/>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               Does the red storefront with Chinese<br>
+               text have a lesser height compared<br>
+               to the white building with blue stripes?
+            </td>
+         </tr>
       </table>
     </td>
     <td>
@@ -258,12 +270,18 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
     <td style="text-align: center; vertical-align: middle;"><strong>Egocentric Direction Reasoning</strong></td>
     <td>
       <table>
-        <tr>
-          <td>
-            Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?
-          </td>
-          <td style="width: 90px;"><img src="figure/rgb_1.png" height="80px"/></td>
-        </tr>
+         <tr>
+            <td style="text-align: center;">
+               <img src="figure/rgb_1.png" height="80px"/>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               Does the red storefront with Chinese<br>
+               text have a lesser height compared<br>
+               to the white building with blue stripes?
+            </td>
+         </tr>
       </table>
     </td>
     <td>
@@ -276,12 +294,18 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
     <td style="text-align: center; vertical-align: middle;"><strong>Egocentric Distance Reasoning</strong></td>
     <td>
       <table>
-        <tr>
-          <td>
-            Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?
-          </td>
-          <td style="width: 90px;"><img src="figure/rgb_1.png" height="80px"/></td>
-        </tr>
+         <tr>
+            <td style="text-align: center;">
+               <img src="figure/rgb_1.png" height="80px"/>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               Does the red storefront with Chinese<br>
+               text have a lesser height compared<br>
+               to the white building with blue stripes?
+            </td>
+         </tr>
       </table>
     </td>
     <td>
@@ -294,12 +318,18 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
     <td style="text-align: center; vertical-align: middle;"><strong>Allocentric-Egocentric Transformation Direction Reasoning</strong></td>
     <td>
       <table>
-        <tr>
-          <td>
-            Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?
-          </td>
-          <td style="width: 90px;"><img src="figure/rgb_1.png" height="80px"/></td>
-        </tr>
+         <tr>
+            <td style="text-align: center;">
+               <img src="figure/rgb_1.png" height="80px"/>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               Does the red storefront with Chinese<br>
+               text have a lesser height compared<br>
+               to the white building with blue stripes?
+            </td>
+         </tr>
       </table>
     </td>
     <td>
@@ -312,12 +342,18 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
     <td style="text-align: center; vertical-align: middle;"><strong>Allocentric-Egocentric Transformation Distance Reasoning</strong></td>
     <td>
       <table>
-        <tr>
-          <td>
-            Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?
-          </td>
-          <td style="width: 90px;"><img src="figure/rgb_1.png" height="80px"/></td>
-        </tr>
+         <tr>
+            <td style="text-align: center;">
+               <img src="figure/rgb_1.png" height="80px"/>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               Does the red storefront with Chinese<br>
+               text have a lesser height compared<br>
+               to the white building with blue stripes?
+            </td>
+         </tr>
       </table>
     </td>
     <td>
@@ -330,12 +366,18 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
     <td style="text-align: center; vertical-align: middle;"><strong>Object-Centric Size Reasoning</strong></td>
     <td>
       <table>
-        <tr>
-          <td>
-            Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?
-          </td>
-          <td style="width: 90px;"><img src="figure/rgb_1.png" height="80px"/></td>
-        </tr>
+         <tr>
+            <td style="text-align: center;">
+               <img src="figure/rgb_1.png" height="80px"/>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               Does the red storefront with Chinese<br>
+               text have a lesser height compared<br>
+               to the white building with blue stripes?
+            </td>
+         </tr>
       </table>
     </td>
     <td>
