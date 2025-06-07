@@ -220,22 +220,13 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
   </tr>
   <tr>
     <td style="text-align: center; vertical-align: middle;"><strong>Allocentric Size Reasoning</strong></td>
-    <td>
-      <table>
-         <tr>
-            <td>
-               <img src="figure/rgb_1.png" height="80px" style="display: block; margin-left: auto; margin-right: auto;" />
-            </td>
-         </tr>
-         <tr>
-            <td>
-               Does the red storefront with Chinese<br>
-               text have a lesser height compared<br>
-               to the white building with blue stripes?
-            </td>
-         </tr>
-      </table>
-    </td>
+   <td align="center">
+   <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
+   <br />
+   Does the red storefront with Chinese<br>
+   text have a lesser height compared<br>
+   to the white building with blue stripes?
+   </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
       <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
@@ -244,22 +235,13 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
 
   <tr>
     <td style="text-align: center; vertical-align: middle;"><strong>Allocentric Distance Reasoning</strong></td>
-    <td>
-      <table>
-         <tr>
-            <td>
-               <img src="figure/rgb_1.png" height="80px" style="display: block; margin-left: auto; margin-right: auto;" />
-            </td>
-         </tr>
-         <tr>
-            <td>
-               Does the red storefront with Chinese<br>
-               text have a lesser height compared<br>
-               to the white building with blue stripes?
-            </td>
-         </tr>
-      </table>
-    </td>
+   <td align="center">
+   <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
+   <br />
+   Does the red storefront with Chinese<br>
+   text have a lesser height compared<br>
+   to the white building with blue stripes?
+   </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
       <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
@@ -268,22 +250,13 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
 
   <tr>
     <td style="text-align: center; vertical-align: middle;"><strong>Egocentric Direction Reasoning</strong></td>
-    <td>
-      <table>
-         <tr>
-            <td>
-               <img src="figure/rgb_1.png" height="80px" style="display: block; margin-left: auto; margin-right: auto;" />
-            </td>
-         </tr>
-         <tr>
-            <td>
-               Does the red storefront with Chinese<br>
-               text have a lesser height compared<br>
-               to the white building with blue stripes?
-            </td>
-         </tr>
-      </table>
-    </td>
+   <td align="center">
+   <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
+   <br />
+   Does the red storefront with Chinese<br>
+   text have a lesser height compared<br>
+   to the white building with blue stripes?
+   </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
       <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
@@ -292,22 +265,13 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
 
   <tr>
     <td style="text-align: center; vertical-align: middle;"><strong>Egocentric Distance Reasoning</strong></td>
-    <td>
-      <table>
-         <tr>
-            <td>
-               <img src="figure/rgb_1.png" height="80px" style="display: block; margin-left: auto; margin-right: auto;" />
-            </td>
-         </tr>
-         <tr>
-            <td>
-               Does the red storefront with Chinese<br>
-               text have a lesser height compared<br>
-               to the white building with blue stripes?
-            </td>
-         </tr>
-      </table>
-    </td>
+   <td align="center">
+   <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
+   <br />
+   Does the red storefront with Chinese<br>
+   text have a lesser height compared<br>
+   to the white building with blue stripes?
+   </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
       <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
@@ -316,22 +280,13 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
 
   <tr>
     <td style="text-align: center; vertical-align: middle;"><strong>Allocentric-Egocentric Transformation Direction Reasoning</strong></td>
-    <td>
-      <table>
-         <tr>
-            <td>
-               <img src="figure/rgb_1.png" height="80px" style="display: block; margin-left: auto; margin-right: auto;" />
-            </td>
-         </tr>
-         <tr>
-            <td>
-               Does the red storefront with Chinese<br>
-               text have a lesser height compared<br>
-               to the white building with blue stripes?
-            </td>
-         </tr>
-      </table>
-    </td>
+   <td align="center">
+   <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
+   <br />
+   Does the red storefront with Chinese<br>
+   text have a lesser height compared<br>
+   to the white building with blue stripes?
+   </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
       <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
@@ -340,22 +295,13 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
 
   <tr>
     <td style="text-align: center; vertical-align: middle;"><strong>Allocentric-Egocentric Transformation Distance Reasoning</strong></td>
-    <td>
-      <table>
-         <tr>
-            <td>
-               <img src="figure/rgb_1.png" height="80px" style="display: block; margin-left: auto; margin-right: auto;" />
-            </td>
-         </tr>
-         <tr>
-            <td>
-               Does the red storefront with Chinese<br>
-               text have a lesser height compared<br>
-               to the white building with blue stripes?
-            </td>
-         </tr>
-      </table>
-    </td>
+   <td align="center">
+   <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
+   <br />
+   Does the red storefront with Chinese<br>
+   text have a lesser height compared<br>
+   to the white building with blue stripes?
+   </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
       <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
@@ -364,22 +310,13 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
 
   <tr>
     <td style="text-align: center; vertical-align: middle;"><strong>Object-Centric Size Reasoning</strong></td>
-    <td>
-      <table>
-         <tr>
-            <td>
-               <img src="figure/rgb_1.png" height="80px" style="display: block; margin-left: auto; margin-right: auto;" />
-            </td>
-         </tr>
-         <tr>
-            <td>
-               Does the red storefront with Chinese<br>
-               text have a lesser height compared<br>
-               to the white building with blue stripes?
-            </td>
-         </tr>
-      </table>
-    </td>
+   <td align="center">
+   <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
+   <br />
+   Does the red storefront with Chinese<br>
+   text have a lesser height compared<br>
+   to the white building with blue stripes?
+   </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
       <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
