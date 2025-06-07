@@ -48,7 +48,6 @@ def pointcloud_image_data(row, output_dir):
     # construct canonicalized extrinsic matrix, rotate y, -pitch degrees
     r_tar = R.from_euler('y', -pitch, degrees=True).as_matrix()
     r_ori = r.as_matrix()
-    # r_diff = r_tar @ r_ori.T
     r_diff = r_tar
 
     point_clouds = []
