@@ -223,8 +223,8 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
     <td>
       <table>
          <tr>
-            <td style="text-align: center;">
-               <img src="figure/rgb_1.png" height="80px"/>
+            <td>
+               <img src="figure/rgb_1.png" height="80px" style="display: block; margin-left: auto; margin-right: auto;" />
             </td>
          </tr>
          <tr>
@@ -247,8 +247,8 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
     <td>
       <table>
          <tr>
-            <td style="text-align: center;">
-               <img src="figure/rgb_1.png" height="80px"/>
+            <td>
+               <img src="figure/rgb_1.png" height="80px" style="display: block; margin-left: auto; margin-right: auto;" />
             </td>
          </tr>
          <tr>
@@ -271,8 +271,8 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
     <td>
       <table>
          <tr>
-            <td style="text-align: center;">
-               <img src="figure/rgb_1.png" height="80px"/>
+            <td>
+               <img src="figure/rgb_1.png" height="80px" style="display: block; margin-left: auto; margin-right: auto;" />
             </td>
          </tr>
          <tr>
@@ -295,8 +295,8 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
     <td>
       <table>
          <tr>
-            <td style="text-align: center;">
-               <img src="figure/rgb_1.png" height="80px"/>
+            <td>
+               <img src="figure/rgb_1.png" height="80px" style="display: block; margin-left: auto; margin-right: auto;" />
             </td>
          </tr>
          <tr>
@@ -319,8 +319,8 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
     <td>
       <table>
          <tr>
-            <td style="text-align: center;">
-               <img src="figure/rgb_1.png" height="80px"/>
+            <td>
+               <img src="figure/rgb_1.png" height="80px" style="display: block; margin-left: auto; margin-right: auto;" />
             </td>
          </tr>
          <tr>
@@ -343,8 +343,8 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
     <td>
       <table>
          <tr>
-            <td style="text-align: center;">
-               <img src="figure/rgb_1.png" height="80px"/>
+            <td>
+               <img src="figure/rgb_1.png" height="80px" style="display: block; margin-left: auto; margin-right: auto;" />
             </td>
          </tr>
          <tr>
@@ -367,8 +367,8 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
     <td>
       <table>
          <tr>
-            <td style="text-align: center;">
-               <img src="figure/rgb_1.png" height="80px"/>
+            <td>
+               <img src="figure/rgb_1.png" height="80px" style="display: block; margin-left: auto; margin-right: auto;" />
             </td>
          </tr>
          <tr>
