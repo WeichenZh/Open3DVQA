@@ -28,20 +28,329 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
 
 ### QA Templates
 
-|                        |                                                Video                                                | Motion Intention |
-|:----------------------:|:---------------------------------------------------------------------------------------------------:|:------:|
-|      **Roadside**      |          <img src="figure/dataset_example/area/00109_urbanvideo_train.gif" width="100%"/>           | The drone moved forward steadily while maintaining altitude. Meanwhile, the drone's gimbal has been adjusted downwards to a 45 degree oblique view, capturing a descending viewpoint of a busy urban road surrounded by buildings and vehicles, and ended its final position directly over the road. |
-| **Tourist Attraction** | <img src="figure/dataset_example/area/05442_WebUAV3M_train_hot-air_balloon_83_0.gif" width="100%"/> | The drone follows the red heart-shaped hot air balloon, gradually rotating leftward, maintaining focus on the balloon without camera gimbal adjustments. |
-|      **Seaside**       |      <img src="figure/dataset_example/area/05446_WebUAV3M_train_hotel_1_1.gif" width="100%"/>       | The drone flies forward while keeping the four buildings in the field of view, no significant altitude change and camera movements. |
+<table>
+  <tr>
+    <th style="text-align: center; vertical-align: middle;">QA Tasks</th>
+    <th style="text-align: center; vertical-align: middle;">Intention</th>
+    <th style="text-align: center; vertical-align: middle;">Examples</th>
+  </tr>
+  <tr>
+    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric Size Reasoning</strong></td>
+    <td style="text-align: center; vertical-align: middle;">
+      To infer relative size relationships <strong>between two objects in space</strong>, such as longer/shorter, wider/narrower, taller/shorter, larger/smaller.
+    </td>
+    <td>
+      <table>
+        <tr>
+          <td>
+            <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?<br>
+            <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+          </td>
+          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Question:</strong> Between the white building with blue stripes and the tall beige apartment building nearby, which one has more width?<br>
+            <strong>Answer:</strong> Appearing wider between the two is white building with blue stripes.<br>
+          </td>
+          <td style="width: 100px;"><img src="figure/rgb_2.png" height="80px"/></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <tr>
+    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric Distance Reasoning</strong></td>
+    <td style="text-align: center; vertical-align: middle;">
+      To infer straight-line, vertical or horizontal <strong>distances between objects</strong>.
+    </td>
+    <td>
+      <table>
+        <tr>
+          <td>
+            <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?<br>
+            <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+          </td>
+          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Question:</strong> Between the white building with blue stripes and the tall beige apartment building nearby, which one has more width?<br>
+            <strong>Answer:</strong> Appearing wider between the two is white building with blue stripes.<br>
+          </td>
+          <td style="width: 100px;"><img src="figure/rgb_2.png" height="80px"/></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <tr>
+    <td style="text-align: center; vertical-align: middle;"><strong>Egocentric Direction Reasoning</strong></td>
+    <td style="text-align: center; vertical-align: middle;">
+      To infer the direction of an object <strong>relative to the agent</strong>, such as left, right, up and down.
+    </td>
+    <td>
+      <table>
+        <tr>
+          <td>
+            <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?<br>
+            <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+          </td>
+          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Question:</strong> Between the white building with blue stripes and the tall beige apartment building nearby, which one has more width?<br>
+            <strong>Answer:</strong> Appearing wider between the two is white building with blue stripes.<br>
+          </td>
+          <td style="width: 100px;"><img src="figure/rgb_2.png" height="80px"/></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <tr>
+    <td style="text-align: center; vertical-align: middle;"><strong>Egocentric Distance Reasoning</strong></td>
+    <td style="text-align: center; vertical-align: middle;">
+      To infer the straight-line distance of an object <strong>from the agent</strong>.
+    </td>
+    <td>
+      <table>
+        <tr>
+          <td>
+            <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?<br>
+            <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+          </td>
+          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Question:</strong> Between the white building with blue stripes and the tall beige apartment building nearby, which one has more width?<br>
+            <strong>Answer:</strong> Appearing wider between the two is white building with blue stripes.<br>
+          </td>
+          <td style="width: 100px;"><img src="figure/rgb_2.png" height="80px"/></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <tr>
+    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric-Egocentric Transformation Direction Reasoning</strong></td>
+    <td style="text-align: center; vertical-align: middle;">
+      The agent <strong>infers the direction of objects</strong> relative to itself based on its movement.
+    </td>
+    <td>
+      <table>
+        <tr>
+          <td>
+            <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?<br>
+            <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+          </td>
+          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Question:</strong> Between the white building with blue stripes and the tall beige apartment building nearby, which one has more width?<br>
+            <strong>Answer:</strong> Appearing wider between the two is white building with blue stripes.<br>
+          </td>
+          <td style="width: 100px;"><img src="figure/rgb_2.png" height="80px"/></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <tr>
+    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric-Egocentric Transformation Distance Reasoning</strong></td>
+    <td style="text-align: center; vertical-align: middle;">
+      The agent <strong>infers object distance</strong> in the horizontal or vertical direction relative to itself.
+    </td>
+    <td>
+      <table>
+        <tr>
+          <td>
+            <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?<br>
+            <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+          </td>
+          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Question:</strong> Between the white building with blue stripes and the tall beige apartment building nearby, which one has more width?<br>
+            <strong>Answer:</strong> Appearing wider between the two is white building with blue stripes.<br>
+          </td>
+          <td style="width: 100px;"><img src="figure/rgb_2.png" height="80px"/></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <tr>
+    <td style="text-align: center; vertical-align: middle;"><strong>Object-Centric Size Reasoning</strong></td>
+    <td style="text-align: center; vertical-align: middle;">
+      To infer the <strong>absolute size</strong> of a single object, such as its length, width or height.
+    </td>
+    <td>
+      <table>
+        <tr>
+          <td>
+            <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?<br>
+            <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+          </td>
+          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Question:</strong> Between the white building with blue stripes and the tall beige apartment building nearby, which one has more width?<br>
+            <strong>Answer:</strong> Appearing wider between the two is white building with blue stripes.<br>
+          </td>
+          <td style="width: 100px;"><img src="figure/rgb_2.png" height="80px"/></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
 
 ### Response Examples
 
-|              |                                                Video                                                | Motion Intention |
-|:------------:|:---------------------------------------------------------------------------------------------------:|:------:|
-|  **Night**   |  <img src="figure/dataset_example/scene/01909_NAT2021_train_0138tricycle1_3_0.gif" width="100%"/>   | The drone flies forward while maintaining its focus on the bridge and the cars below, keeping the camera gimbal stable and centered on the scene. |
-| **Daytime**  | <img src="figure/dataset_example/scene/04170_WebUAV3M_train_container_ship_11_5.gif" width="100%"/> | The drone flies forward while keeping both the Maersk container ship and the tugboat in its field of view, with the camera gimbal slightly adjusting to track them continuously. |
-| **Snowy** |   <img src="figure/dataset_example/scene/09048_WebUAV3M_train_snowmobile_29_1.gif" width="100%"/>   | The drone flies upwards and slightly backward while rotating left, keeping a snowmobile in its field of view as it moves around the edge of a forested area on a snow-covered landscape. |
+<table>
+  <tr>
+    <th style="text-align: center; vertical-align: middle;">QA Tasks</th>
+    <th style="text-align: center; vertical-align: middle;">Questions</th>
+    <th style="text-align: center; vertical-align: middle;">Responses</th>
+  </tr>
+  <tr>
+    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric Size Reasoning</strong></td>
+    <td>
+      <table>
+        <tr>
+          <td style="text-align: center; vertical-align: middle;">
+            Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?
+          </td>
+          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
+        </tr>
+      </table>
+    </td>
+    <td>
+      <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
+      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
+      <strong>3D-LLM:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+    </td>
+  </tr>
 
+  <tr>
+    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric Distance Reasoning</strong></td>
+    <td>
+      <table>
+        <tr>
+          <td>
+            Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?
+          </td>
+          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
+        </tr>
+      </table>
+    </td>
+    <td>
+      <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
+      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
+      <strong>3D-LLM:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+    </td>
+  </tr>
+
+  <tr>
+    <td style="text-align: center; vertical-align: middle;"><strong>Egocentric Direction Reasoning</strong></td>
+    <td>
+      <table>
+        <tr>
+          <td>
+            Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?
+          </td>
+          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
+        </tr>
+      </table>
+    </td>
+    <td>
+      <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
+      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
+      <strong>3D-LLM:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+    </td>
+  </tr>
+
+  <tr>
+    <td style="text-align: center; vertical-align: middle;"><strong>Egocentric Distance Reasoning</strong></td>
+    <td>
+      <table>
+        <tr>
+          <td>
+            Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?
+          </td>
+          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
+        </tr>
+      </table>
+    </td>
+    <td>
+      <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
+      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
+      <strong>3D-LLM:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+    </td>
+  </tr>
+
+  <tr>
+    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric-Egocentric Transformation Direction Reasoning</strong></td>
+    <td>
+      <table>
+        <tr>
+          <td>
+            Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?
+          </td>
+          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
+        </tr>
+      </table>
+    </td>
+    <td>
+      <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
+      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
+      <strong>3D-LLM:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+    </td>
+  </tr>
+
+  <tr>
+    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric-Egocentric Transformation Distance Reasoning</strong></td>
+    <td>
+      <table>
+        <tr>
+          <td>
+            Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?
+          </td>
+          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
+        </tr>
+      </table>
+    </td>
+    <td>
+      <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
+      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
+      <strong>3D-LLM:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+    </td>
+  </tr>
+
+  <tr>
+    <td style="text-align: center; vertical-align: middle;"><strong>Object-Centric Size Reasoning</strong></td>
+    <td>
+      <table>
+        <tr>
+          <td>
+            Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?
+          </td>
+          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
+        </tr>
+      </table>
+    </td>
+    <td>
+      <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
+      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
+      <strong>3D-LLM:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+    </td>
+  </tr>
+</table>
 
 ## Data Curation
 

@@ -88,7 +88,7 @@ def process_images_in_chunks(image_dir, chunk_size=100):
         yield chunk
 
 
-def main(image_dir, output_dir):
+def main(image_dir, output_dir, use_gt=False):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
@@ -105,7 +105,10 @@ def main(image_dir, output_dir):
 
             try:
                 img = Image.open(image_path).convert('RGB')
-                caption = caption_image_data(image_path)  
+                if use_gt:
+                    caption = []
+                else:
+                    caption = caption_image_data(image_path)
                 desrpition = extract_descriptions_from_incomplete_json(caption)
                 print(desrpition)
                 records.append({
@@ -132,6 +135,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Process images and generate captions", add_help=True)
     parser.add_argument("--image_dir", type=str, required=True, help="path to directory containing image files")
     parser.add_argument("--output_dir", type=str, required=True, help="path to directory to save .pkl files")
+    parser.add_argument("--use_gt", type=bool, default=False, help="use the gt caption")
     args = parser.parse_args()
 
-    main(args.image_dir, args.output_dir)
+    main(args.image_dir, args.output_dir, args.use_gt)

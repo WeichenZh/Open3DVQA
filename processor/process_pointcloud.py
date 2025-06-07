@@ -3,8 +3,6 @@ import os
 import sys
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
-import cv2
-import pickle
 import open3d as o3d
 import argparse
 import numpy as np
@@ -16,29 +14,71 @@ from scipy.spatial.transform import Rotation as R
 from vqasynth.datasets.segment import apply_mask_to_image
 from vqasynth.datasets.pointcloud import create_point_cloud_from_rgbd, save_pointcloud, canonicalize_point_cloud
 
-def pointcloud_image_data(row, output_dir):
+def get_intrinsic(scene_name, width, height, fov):
+    if scene_name == "EmbodiedCity" or scene_name == "UrbanScene":
+        fov_x = np.radians(fov)
+        fov_y = 2 * np.arctan((height * 1.0 / width) * np.tan(fov_x / 2))
+
+        intrinsic_parameters = {
+            'width': width,
+            'height': height,
+            'fx': width / (2 * np.tan(fov_x / 2)),  # 1.5 * width,
+            'fy': height / (2 * np.tan(fov_y / 2)),  # 1.5 * width,
+            'cx': width / 2,
+            'cy': height / 2,
+        }
+
+    elif scene_name == "RealworldUAV":
+        intrinsic_parameters = {
+            'width': width,
+            'height': height,
+            'fx': 493.68,  # 1.5 * width,
+            'fy': 491.56,  # 1.5 * width,
+            'cx': 319.10,
+            'cy': 189.21,
+        }
+    elif scene_name == "WildUAV":
+        intrinsic_parameters = {
+            'width': width,
+            'height': height,
+            'fx': 4548.91 / 8,
+            'fy': 4548.91 / 8,
+            'cx': 2647.23 / 8,
+            'cy': 1964.00 / 8,
+        }
+    else:
+        raise ValueError(f"Unknown scene name: {scene_name}")
+
+    return intrinsic_parameters
+
+
+def pointcloud_image_data(row, output_dir, use_gt=False):
     print(row["image_path"])
-    camera_pose_file = row["image_path"].replace('rgb', 'state')[:-4]+'.json'
-    # original_image_cv = cv2.cvtColor(np.array(row["image"].convert('RGB')), cv2.COLOR_RGB2BGR)
     original_image_cv = np.array(row["image"].convert('RGB'))
     depth_image_cv = np.repeat(np.array(row["depth_map"])[:, :, np.newaxis], 3, axis=2)
 
-    width, height = row["image"].size
-    fov_x = np.radians(90)
-    fov_y = 2 * np.arctan((height*1.0 / width) * np.tan(fov_x / 2))
+    if use_gt:
+        width, height = row["image"].size
+        fov = 90
+        if "EmbodiedCity" in row['image_path']:
+            intrinsic_parameters = get_intrinsic("EmbodiedCity", width, height, fov)
+        elif "UrbanScene" in row['image_path']:
+            intrinsic_parameters = get_intrinsic("UrbanScene", width, height, fov)
+        elif "realworldUAV" in row['image_path']:
+            intrinsic_parameters = get_intrinsic("RealworldUAV", width, height, fov)
+        elif "WildUAV" in row['image_path']:
+            intrinsic_parameters = get_intrinsic("WildUAV", width, height, fov)
+        else:
+            raise ValueError(f"Unknown scene name: {row['image_path']}")
 
-    intrinsic_parameters = {
-        'width': width,
-        'height': height,
-        'fx': width / (2 * np.tan(fov_x / 2)), # 1.5 * width,
-        'fy': height / (2 * np.tan(fov_y / 2)), # 1.5 * width,
-        'cx': width / 2,
-        'cy': height / 2,
-    }
+        camera_pose_file = row["image_path"].replace('rgb', 'state')[:-4] + '.json'
+        # construct extrinsic matrix
+        with open(camera_pose_file, 'r') as f:
+            camera_pose = json.load(f)
 
-    # construct extrinsic matrix
-    with open(camera_pose_file, 'r') as f:
-        camera_pose = json.load(f)
+    else:
+        #  todo: load estimated camera intrinsic
+        pass
 
     # obtain roll, pitch, yaww
     qw, qx, qy, qz = camera_pose['rotation']
@@ -47,7 +87,6 @@ def pointcloud_image_data(row, output_dir):
 
     # construct canonicalized extrinsic matrix, rotate y, -pitch degrees
     r_tar = R.from_euler('y', -pitch, degrees=True).as_matrix()
-    r_ori = r.as_matrix()
     r_diff = r_tar
 
     point_clouds = []
@@ -64,7 +103,6 @@ def pointcloud_image_data(row, output_dir):
 
         # 2. canonicalize, remove pitch, roll
         # 2.1 convert to airsim ego coordinate system, because rotation matrix is originally designed for airsim coordinate systems
-        # Thus, first finish the coordinate transformation in airsim ego coordinate system, then project back to camera
         pcd_cam = np.array(pcd.points)
         pcd_ego = np.stack([pcd_cam[:, 2], -pcd_cam[:, 0], -pcd_cam[:, 1]], axis=-1)
 
@@ -77,19 +115,6 @@ def pointcloud_image_data(row, output_dir):
         print("after rotate:", np.array(pcd.points).mean(axis=0))
         o3d.visualization.draw_geometries([pcd])
 
-        # # 2.3 convert back to camera coordinate system
-        # pcd_ego = np.array(pcd.points)
-        # pcd_cam = np.stack([-pcd_ego[:, 1], -pcd_ego[:, 2], pcd_ego[:, 0]], axis=-1)
-        # pcd.points = o3d.utility.Vector3dVector(pcd_cam)
-
-        # print(np.array(pcd.points))
-
-        # 2.4 convert to camera view coordinate system, due to the historical reason, QA is based on the camera coordinate system
-        # todo: on processing: remove this projection process, QA generation is directly based on the airsim ego coordinate system
-        # pc = np.asarray(pcd.points)
-        # npc = np.hstack([pc[:, 0:1], pc[:, 1:2], pc[:, 2:3]])
-        # assert npc.shape == pc.shape
-        # pcd.points = o3d.utility.Vector3dVector(npc)
         point_clouds.append(pcd)
 
     # vis global point cloud
@@ -124,16 +149,13 @@ def pointcloud_image_data(row, output_dir):
     return point_cloud_data, None, valid_idx
 
 
-def main(output_dir):
+def main(output_dir, use_gt=False):
     point_cloud_dir = os.path.join(output_dir, "pointclouds")
     if not os.path.exists(point_cloud_dir):
         os.makedirs(point_cloud_dir)
 
     for filename in os.listdir(output_dir):
         if filename.endswith('.pkl'):
-            # if "down" not in filename:
-            #     continue
-
             pkl_path = os.path.join(output_dir, filename)
             df = pd.read_pickle(pkl_path)
 
@@ -144,7 +166,7 @@ def main(output_dir):
 
             # Update to process each row and append results to lists
             for index, row in df.iterrows():
-                pcd_data, canonicalized, valid_idx = pointcloud_image_data(row, output_dir)
+                pcd_data, canonicalized, valid_idx = pointcloud_image_data(row, output_dir, use_gt)
                 # print(len(pcd_data), valid_idx)
                 assert len(pcd_data) == len(valid_idx)
                 pointclouds.append(pcd_data)
@@ -160,8 +182,11 @@ def main(output_dir):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Process images from .pkl files", add_help=True)
-    parser.add_argument("--output_dir", type=str, required=True, help="path to directory containing .pkl files")
-    args = parser.parse_args()
+    # parser = argparse.ArgumentParser(description="Process images from .pkl files", add_help=True)
+    # parser.add_argument("--output_dir", type=str, required=True, help="path to directory containing .pkl files")
+    # args = parser.parse_args()
+    #
+    # main(args.output_dir)
 
-    main(args.output_dir)
+    output_dir = r"F:\Documents\PythonScripts\dataset-build\dataset\embodied_tasks_zx\realworldUAV\lab"
+    main(output_dir, use_gt=True)

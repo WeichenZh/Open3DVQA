@@ -10,7 +10,7 @@ import argparse
 import numpy as np
 import pandas as pd
 from vqasynth.datasets.pointcloud import restore_pointclouds
-from vqasynth.datasets.prompts_v2 import evaluate_predicates_on_pairs
+from vqasynth.datasets.prompts import evaluate_predicates_on_pairs
 
 
 def prompt_image_data(row):
