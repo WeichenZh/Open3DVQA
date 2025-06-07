@@ -10,7 +10,7 @@ import argparse
 import numpy as np
 import pandas as pd
 from vqasynth.datasets.pointcloud import restore_pointclouds
-from vqasynth.datasets.prompts import evaluate_predicates_on_pairs
+from vqasynth.datasets.prompts_v2 import evaluate_predicates_on_pairs
 
 
 def prompt_image_data(row):
@@ -28,12 +28,12 @@ def prompt_image_data(row):
 
     try:
         objects = list(zip(captions, pointclouds))
-        all_pairs = [(i, j) for i in range(len(objects)) for j in range(len(objects)) if i != j]
+        all_pairs = [(i, j) for i in range(len(objects)) for j in range(i+1, len(objects)) if i != j]
         random.shuffle(all_pairs)
         selected_pairs = all_pairs[:2]
         object_pairs = [(objects[i], objects[j]) for i,j in selected_pairs]
         prompts, qa_information = evaluate_predicates_on_pairs(object_pairs, is_canonicalized)
-        
+
     except Exception as e:
         print(e)
         prompts = []
@@ -58,44 +58,16 @@ def main(image_dir, output_dir):
             print(f"Processed and updated {filename}")
 
             for index, row in df.iterrows():
-                # Check if the image filename is valid
-                if row['prompts'] and any(row['prompts']):
-                    image_filename = row['image_filename']
-                    conversations = []
-                    first_prompt = True
-                    for prompt in row['prompts']:
-                        if 'Answer: ' in prompt:
-                            question, answer = prompt.split('Answer: ', 1)
-                            human_value = f"<image>\n{question}" if first_prompt else question
-                            conversations.append({
-                                "from": "human",
-                                "value": human_value
-                            })
-                            conversations.append({
-                                "from": "gpt",
-                                "value": answer
-                            })
-                            first_prompt = False
-
-                    if conversations:  # Ensure we have valid conversation data
-                        sample = {
-                            "id": image_filename,
-                            # Ensure the image path format fits your structure
-                            "image": os.path.join(image_dir, image_filename),
-                            "conversations": conversations
-                        }
-                        final_samples.append(sample)
-
                 if row['prompts'] and any(row['prompts']) and row['qa_information'] and any(row['qa_information']):
                     image_filename = row['image_filename']
-                    conversations = []
-                    first_prompt = True
                     if len(row['prompts']) != len(row['qa_information']):
-                        raise ValueError("Length of prompts and qa_information must match.")
+                        raise ValueError("列表的长度不相同！")
+                    # 假设 row['prompts'] 和 row['qa_information'] 的长度相同
                     for prompt, question_name in zip(row['prompts'], row['qa_information']):
                         print(row['qa_information'])
                         conversation = []
                         qa_information = {}
+                        # 处理 prompts
                         if 'Answer: ' in prompt:
                             question, answer = prompt.split('Answer: ', 1)
                             # human_value = f"<image>\n{question}" if first_prompt else question
@@ -108,9 +80,8 @@ def main(image_dir, output_dir):
                                 "from": "gpt",
                                 "value": answer
                             })
-                            first_prompt = False
 
-                        # process qa_information
+                        # 处理 qa_information
                         if 'choice' in question_name or 'predicate' in question_name or 'relationship' in question_name:
                             qa_information={
                                 "type": 'qualitative',
@@ -141,12 +112,6 @@ def main(image_dir, output_dir):
                             "query_question": question
                         }
                         images_samples.append(image_sample)
-
-
-    # Save the final samples to the output JSON file
-    output_json = os.path.join(output_dir, "processed_dataset.json")
-    with open(output_json, "w") as json_file:
-        json.dump(final_samples, json_file, indent=4)
 
     test_json = os.path.join(output_dir, "test_dataset.json")
     with open(test_json, "w") as json_file:

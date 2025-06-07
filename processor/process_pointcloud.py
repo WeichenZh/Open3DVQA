@@ -73,7 +73,7 @@ def pointcloud_image_data(row, output_dir):
         print("before rotate:", np.array(pcd.points).mean(axis=0))
         # o3d.visualization.draw_geometries([pcd])
 
-        # 2.2 rotate the point cloud
+        # 2.2 应用旋转矩阵到airsim ego点云
         pcd.rotate(r_diff, center=(0, 0, 0))
         print("after rotate:", np.array(pcd.points).mean(axis=0))
         o3d.visualization.draw_geometries([pcd])
@@ -107,7 +107,7 @@ def pointcloud_image_data(row, output_dir):
         pc_valid = True
         cl, ind = pcd.remove_statistical_outlier(nb_neighbors=20, std_ratio=2.0)
         inlier_cloud = pcd.select_by_index(ind)
-        if len(inlier_cloud.points) < 100:        
+        if len(inlier_cloud.points) < 100:          # 小于100个点 判定为无效点云
             pc_valid = False
 
         pointcloud_filepath = os.path.join(output_dir, "pointclouds", f"pointcloud_{Path(row['image_filename']).stem}_{idx}_v2.pcd")

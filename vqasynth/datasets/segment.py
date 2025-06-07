@@ -59,13 +59,13 @@ def sample_points_from_heatmap(heatmap, original_size, num_points=5, percentile=
     Sample points from the given heatmap, focusing on areas with higher values.
     """
     width, height = original_size
-    threshold = np.percentile(heatmap.numpy(), percentile) 
-    masked_heatmap = torch.where(heatmap > threshold, heatmap, torch.tensor(0.0)) 
-    probabilities = torch.softmax(masked_heatmap.flatten(), dim=0) 
+    threshold = np.percentile(heatmap.numpy(), percentile) #    计算heatmap的百分位数
+    masked_heatmap = torch.where(heatmap > threshold, heatmap, torch.tensor(0.0)) #  将heatmap中小于threshold的值设为0
+    probabilities = torch.softmax(masked_heatmap.flatten(), dim=0) #  将heatmap展平并进行softmax
 
-    attn = torch.sigmoid(heatmap) 
-    w = attn.shape[0] 
-
+    attn = torch.sigmoid(heatmap) #  对heatmap进行sigmoid,生成注意力图
+    w = attn.shape[0] #  获取heatmap的宽度
+    #   从概率分布中采样num_points个点
     sampled_indices = torch.multinomial(torch.tensor(probabilities.ravel()), num_points, replacement=True)
 
     sampled_coords = np.array(np.unravel_index(sampled_indices, attn.shape)).T

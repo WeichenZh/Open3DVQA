@@ -236,7 +236,7 @@ behind_false = [
     "No, it is in front of the [B].",
     "That is False.",
     "No, the [A] is closer to the viewer.",
-    "No, the [B] is in front of the [A].",
+    "No, the [A] is in front of the [B].",
 ]
 
 front_predicate_questions = [

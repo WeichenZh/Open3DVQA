@@ -20,7 +20,7 @@ def left_predicate(A, B):
     A_pos = A_cloud.get_center()
     B_pos = B_cloud.get_center()
 
-    is_left = A_pos[0] < B_pos[0]  # Compare X coordinates
+    is_left = A_pos[1] > B_pos[1]  # Compare Y coordinates
 
     question_template = random.choice(template_questions)
     response_template = random.choice(true_responses if is_left else false_responses)
@@ -43,7 +43,7 @@ def right_predicate(A, B):
     A_pos = A_cloud.get_center()
     B_pos = B_cloud.get_center()
 
-    is_right = A_pos[0] > B_pos[0]  # Compare X coordinates
+    is_right = A_pos[1] < B_pos[1]  # Compare y coordinates
 
     question_template = random.choice(template_questions)
     response_template = random.choice(true_responses if is_right else false_responses)
@@ -66,7 +66,7 @@ def above_predicate(A, B):
     A_pos = A_cloud.get_center()
     B_pos = B_cloud.get_center()
 
-    is_above = A_pos[1] > B_pos[1]  
+    is_above = A_pos[2] > B_pos[2]          # compare Z
 
     question_template = random.choice(template_questions)
     response_template = random.choice(true_responses if is_above else false_responses)
@@ -89,7 +89,7 @@ def below_predicate(A, B):
     A_pos = A_cloud.get_center()
     B_pos = B_cloud.get_center()
 
-    is_below = A_pos[1] < B_pos[1]  
+    is_below = A_pos[2] < B_pos[2]
 
     question_template = random.choice(template_questions)
     response_template = random.choice(true_responses if is_below else false_responses)
@@ -109,13 +109,36 @@ def wide_predicate(A, B):
     B_desc, B_cloud = B
     A_desc, B_desc = A_desc.lower(), B_desc.lower()
 
-    width_A = A_cloud.get_axis_aligned_bounding_box().get_extent()[0]
-    width_B = B_cloud.get_axis_aligned_bounding_box().get_extent()[0]
+    width_A = A_cloud.get_axis_aligned_bounding_box().get_extent()[1]       # Y coords
+    width_B = B_cloud.get_axis_aligned_bounding_box().get_extent()[1]
 
     is_wider = width_A > width_B
 
     question_template = random.choice(template_questions)
     response_template = random.choice(true_responses if is_wider else false_responses)
+
+    question = question_template.replace("[A]", A_desc).replace("[B]", B_desc)
+    answer = response_template.replace("[A]", A_desc).replace("[B]", B_desc)
+
+    return question + " Answer: " + answer
+
+
+def thin_predicate(A, B):
+    template_questions = thin_predicate_questions
+    true_responses = thin_true_responses
+    false_responses = thin_false_responses
+
+    A_desc, A_cloud = A
+    B_desc, B_cloud = B
+    A_desc, B_desc = A_desc.lower(), B_desc.lower()
+
+    width_A = A_cloud.get_axis_aligned_bounding_box().get_extent()[1]
+    width_B = B_cloud.get_axis_aligned_bounding_box().get_extent()[1]
+
+    is_thinner = width_A < width_B
+
+    question_template = random.choice(template_questions)
+    response_template = random.choice(true_responses if is_thinner else false_responses)
 
     question = question_template.replace("[A]", A_desc).replace("[B]", B_desc)
     answer = response_template.replace("[A]", A_desc).replace("[B]", B_desc)
@@ -142,74 +165,6 @@ def big_predicate(A, B):
 
     question_template = random.choice(template_questions)
     response_template = random.choice(true_responses if is_bigger else false_responses)
-
-    question = question_template.replace("[A]", A_desc).replace("[B]", B_desc)
-    answer = response_template.replace("[A]", A_desc).replace("[B]", B_desc)
-
-    return question + " Answer: " + answer
-
-def tall_predicate(A, B):
-    template_questions = tall_predicate_questions
-    true_responses = tall_true_responses
-    false_responses = tall_false_responses
-
-    A_desc, A_cloud = A
-    B_desc, B_cloud = B
-    A_desc, B_desc = A_desc.lower(), B_desc.lower()
-
-    height_A = A_cloud.get_axis_aligned_bounding_box().get_extent()[1]
-    height_B = B_cloud.get_axis_aligned_bounding_box().get_extent()[1]
-
-    is_taller = height_A > height_B
-
-    question_template = random.choice(template_questions)
-    response_template = random.choice(true_responses if is_taller else false_responses)
-
-    question = question_template.replace("[A]", A_desc).replace("[B]", B_desc)
-    answer = response_template.replace("[A]", A_desc).replace("[B]", B_desc)
-
-    return question + " Answer: " + answer
-
-
-def short_predicate(A, B):
-    template_questions = short_predicate_questions
-    true_responses = short_true_responses
-    false_responses = short_false_responses
-
-    A_desc, A_cloud = A
-    B_desc, B_cloud = B
-    A_desc, B_desc = A_desc.lower(), B_desc.lower()
-
-    height_A = A_cloud.get_axis_aligned_bounding_box().get_extent()[1]
-    height_B = B_cloud.get_axis_aligned_bounding_box().get_extent()[1]
-
-    is_shorter = height_A < height_B
-
-    question_template = random.choice(template_questions)
-    response_template = random.choice(true_responses if is_shorter else false_responses)
-
-    question = question_template.replace("[A]", A_desc).replace("[B]", B_desc)
-    answer = response_template.replace("[A]", A_desc).replace("[B]", B_desc)
-
-    return question + " Answer: " + answer
-
-
-def thin_predicate(A, B):
-    template_questions = thin_predicate_questions
-    true_responses = thin_true_responses
-    false_responses = thin_false_responses
-
-    A_desc, A_cloud = A
-    B_desc, B_cloud = B
-    A_desc, B_desc = A_desc.lower(), B_desc.lower()
-
-    width_A = A_cloud.get_axis_aligned_bounding_box().get_extent()[0]
-    width_B = B_cloud.get_axis_aligned_bounding_box().get_extent()[0]
-
-    is_thinner = width_A < width_B
-
-    question_template = random.choice(template_questions)
-    response_template = random.choice(true_responses if is_thinner else false_responses)
 
     question = question_template.replace("[A]", A_desc).replace("[B]", B_desc)
     answer = response_template.replace("[A]", A_desc).replace("[B]", B_desc)
@@ -243,6 +198,52 @@ def small_predicate(A, B):
     return question + " Answer: " + answer
 
 
+def tall_predicate(A, B):
+    template_questions = tall_predicate_questions
+    true_responses = tall_true_responses
+    false_responses = tall_false_responses
+
+    A_desc, A_cloud = A
+    B_desc, B_cloud = B
+    A_desc, B_desc = A_desc.lower(), B_desc.lower()
+
+    height_A = A_cloud.get_axis_aligned_bounding_box().get_extent()[2]      # Z coords
+    height_B = B_cloud.get_axis_aligned_bounding_box().get_extent()[2]
+
+    is_taller = height_A > height_B
+
+    question_template = random.choice(template_questions)
+    response_template = random.choice(true_responses if is_taller else false_responses)
+
+    question = question_template.replace("[A]", A_desc).replace("[B]", B_desc)
+    answer = response_template.replace("[A]", A_desc).replace("[B]", B_desc)
+
+    return question + " Answer: " + answer
+
+
+def short_predicate(A, B):
+    template_questions = short_predicate_questions
+    true_responses = short_true_responses
+    false_responses = short_false_responses
+
+    A_desc, A_cloud = A
+    B_desc, B_cloud = B
+    A_desc, B_desc = A_desc.lower(), B_desc.lower()
+
+    height_A = A_cloud.get_axis_aligned_bounding_box().get_extent()[2]
+    height_B = B_cloud.get_axis_aligned_bounding_box().get_extent()[2]
+
+    is_shorter = height_A < height_B
+
+    question_template = random.choice(template_questions)
+    response_template = random.choice(true_responses if is_shorter else false_responses)
+
+    question = question_template.replace("[A]", A_desc).replace("[B]", B_desc)
+    answer = response_template.replace("[A]", A_desc).replace("[B]", B_desc)
+
+    return question + " Answer: " + answer
+
+
 def behind_predicate(A, B):
     template_questions = behind_predicate_questions
     true_responses = behind_true
@@ -252,16 +253,9 @@ def behind_predicate(A, B):
     B_desc, B_cloud = B
     A_desc, B_desc = A_desc.lower(), B_desc.lower()
 
-    A_center = A_cloud.get_axis_aligned_bounding_box().get_center()
-    B_center = B_cloud.get_axis_aligned_bounding_box().get_center()
-    is_behind = A_center[2] > B_center[2]
-
-    # Spatial-RGPT uses the minimum z-value to determine if A is behind B
-    # Calculate the minimum z-value for both A and B
-    A_min_z = A_cloud.get_min_bound()[2]
-    B_min_z = B_cloud.get_min_bound()[2]
-    # Determine if A is behind B based on the minimum z-value
-    is_behind = A_min_z > B_min_z
+    A_center = A_cloud.get_center()
+    B_center = B_cloud.get_center()
+    is_behind = A_center[0] > B_center[0]     # x coords
 
     question_template = random.choice(template_questions)
     response_template = random.choice(true_responses if is_behind else false_responses)
@@ -281,9 +275,9 @@ def front_predicate(A, B):
     B_desc, B_cloud = B
     A_desc, B_desc = A_desc.lower(), B_desc.lower()
 
-    A_center = A_cloud.get_axis_aligned_bounding_box().get_center()
-    B_center = B_cloud.get_axis_aligned_bounding_box().get_center()
-    is_in_front = A_center[2] < B_center[2]
+    A_center = A_cloud.get_center()
+    B_center = B_cloud.get_center()
+    is_in_front = A_center[0] < B_center[0]
 
     # # Spatial-RGPT uses the minimum z-value to determine if A is behind B
     # # Calculate the minimum z-value for both A and B
@@ -303,8 +297,7 @@ def front_predicate(A, B):
     return question + " Answer: " + answer
 
 
-# Choice prompts
-
+#####################################  Choice prompts ########################################
 def left_choice(A, B):
     template_questions = left_choice_questions
     template_responses = left_choice_responses
@@ -316,7 +309,7 @@ def left_choice(A, B):
     A_pos = A_cloud.get_center()
     B_pos = B_cloud.get_center()
 
-    more_left = A_desc if A_pos[0] < B_pos[0] else B_desc
+    more_left = A_desc if A_pos[1] > B_pos[1] else B_desc
 
     question_template = random.choice(template_questions)
     answer_template = random.choice(template_responses)
@@ -338,7 +331,7 @@ def right_choice(A, B):
     A_pos = A_cloud.get_center()
     B_pos = B_cloud.get_center()
 
-    more_right = A_desc if A_pos[0] > B_pos[0] else B_desc
+    more_right = A_desc if A_pos[1] < B_pos[1] else B_desc
 
     question_template = random.choice(template_questions)
     answer_template = random.choice(template_responses)
@@ -360,7 +353,7 @@ def above_choice(A, B):
     A_pos = A_cloud.get_center()
     B_pos = B_cloud.get_center()
 
-    more_above = A_desc if A_pos[1] > B_pos[1] else B_desc
+    more_above = A_desc if A_pos[2] > B_pos[2] else B_desc
 
     question_template = random.choice(template_questions)
     answer_template = random.choice(template_responses)
@@ -382,7 +375,7 @@ def below_choice(A, B):
     A_pos = A_cloud.get_center()
     B_pos = B_cloud.get_center()
 
-    more_below = A_desc if A_pos[1] < B_pos[1] else B_desc
+    more_below = A_desc if A_pos[2] < B_pos[2] else B_desc
 
     question_template = random.choice(template_questions)
     answer_template = random.choice(template_responses)
@@ -401,8 +394,8 @@ def tall_choice(A, B):
     B_desc, B_cloud = B
     A_desc, B_desc = A_desc.lower(), B_desc.lower()
 
-    height_A = A_cloud.get_axis_aligned_bounding_box().get_extent()[1]
-    height_B = B_cloud.get_axis_aligned_bounding_box().get_extent()[1]
+    height_A = A_cloud.get_axis_aligned_bounding_box().get_extent()[2]
+    height_B = B_cloud.get_axis_aligned_bounding_box().get_extent()[2]
 
     taller = A_desc if height_A > height_B else B_desc
 
@@ -423,8 +416,8 @@ def short_choice(A, B):
     B_desc, B_cloud = B
     A_desc, B_desc = A_desc.lower(), B_desc.lower()
 
-    height_A = A_cloud.get_axis_aligned_bounding_box().get_extent()[1]
-    height_B = B_cloud.get_axis_aligned_bounding_box().get_extent()[1]
+    height_A = A_cloud.get_axis_aligned_bounding_box().get_extent()[2]
+    height_B = B_cloud.get_axis_aligned_bounding_box().get_extent()[2]
 
     shorter = A_desc if height_A < height_B else B_desc
 
@@ -437,8 +430,7 @@ def short_choice(A, B):
     return question + " Answer: " + answer
 
 
-# Distance prompts
-
+##############################  Distance prompts ##################################
 def generate_spatial_reasoning_data(
     A, B, human_readable_dist, template_questions, template_answers
 ):
@@ -460,8 +452,13 @@ def generate_spatial_reasoning_data(
 
 
 def distance_data(A, B):
-    distance = calculate_distances_between_point_clouds(A[1], B[1])
+    # distance = calculate_distances_between_point_clouds(A[1], B[1])
+    A_center = A[1].get_axis_aligned_bounding_box().get_center()
+    B_center = B[1].get_axis_aligned_bounding_box().get_center()
+    distance = np.sqrt((A_center[0] - B_center[0]) ** 2 + (A_center[1] - B_center[1]) ** 2 + (A_center[2] - B_center[2]) ** 2)
+    distance = human_like_distance(distance)
     return generate_spatial_reasoning_data(A, B, distance, distance_template_questions, distance_template_answers)
+
 
 def vertical_distance_data(A, B):
     template_questions = vertical_distance_questions
@@ -469,7 +466,7 @@ def vertical_distance_data(A, B):
 
     A_center = A[1].get_axis_aligned_bounding_box().get_center()
     B_center = B[1].get_axis_aligned_bounding_box().get_center()
-    vertical_distance = abs(A_center[1] - B_center[1])
+    vertical_distance = abs(A_center[2] - B_center[2])
     human_readable_dist = human_like_distance(vertical_distance)
 
     return generate_spatial_reasoning_data(
@@ -483,7 +480,7 @@ def horizontal_distance_data(A, B):
 
     A_center = A[1].get_axis_aligned_bounding_box().get_center()
     B_center = B[1].get_axis_aligned_bounding_box().get_center()
-    horizontal_distance = np.sqrt((A_center[0] - B_center[0]) ** 2)
+    horizontal_distance = np.sqrt((A_center[0] - B_center[0]) ** 2 + (A_center[1] - B_center[1]) ** 2)
 
     human_readable_dist = human_like_distance(horizontal_distance)
     return generate_spatial_reasoning_data(
@@ -497,7 +494,7 @@ def width_data(A, B=None):
     template_questions = width_questions
     template_answers = width_answers
 
-    width = A[1].get_axis_aligned_bounding_box().get_extent()[0]
+    width = A[1].get_axis_aligned_bounding_box().get_extent()[1]
 
     human_readable_width = human_like_distance(width)
     question_template = random.choice(template_questions)
@@ -514,7 +511,7 @@ def height_data(A, B=None):
     template_questions = height_questions
     template_answers = height_answers
 
-    height = A[1].get_axis_aligned_bounding_box().get_extent()[1]
+    height = A[1].get_axis_aligned_bounding_box().get_extent()[2]
 
     human_readable_height = human_like_distance(height)
     question_template = random.choice(template_questions)
@@ -525,6 +522,7 @@ def height_data(A, B=None):
 
     return question + " Answer: " + answer
 
+
 def human_like_volume(volume):
     if volume < 0.001:
         human_read_volume = round(volume * 1000, 2)
@@ -532,7 +530,8 @@ def human_like_volume(volume):
     else:
         human_read_volume = round(volume, 2)
         return f"{volume} cubic meter"
-    
+
+
 def volume_data(A, B=None):
     A_desc = A[0].lower()
 
@@ -553,7 +552,6 @@ def volume_data(A, B=None):
     return question + " Answer: " + answer
 
 
-
 def front_choice(A, B):
     template_questions = front_choice_questions
     template_responses = front_choice_responses
@@ -565,10 +563,7 @@ def front_choice(A, B):
     A_pos = A_cloud.get_center()
     B_pos = B_cloud.get_center()
 
-    # A_pos = calculate_centroid(A_cloud)
-    # B_pos = calculate_centroid(B_cloud)
-
-    more_closer = A_desc if A_pos[2] < B_pos[2] else B_desc
+    more_closer = A_desc if A_pos[0] < B_pos[0] else B_desc
 
     question_template = random.choice(template_questions)
     answer_template = random.choice(template_responses)
@@ -578,6 +573,7 @@ def front_choice(A, B):
 
     return question + " Answer: " + answer
 
+
 def behind_choice(A, B):
     template_questions = behind_choice_questions
     template_responses = behind_choice_responses
@@ -586,10 +582,10 @@ def behind_choice(A, B):
     B_desc, B_cloud = B
     A_desc, B_desc = A_desc.lower(), B_desc.lower()
 
-    A_pos = A_cloud.get_axis_aligned_bounding_box().get_center()
-    B_pos = B_cloud.get_axis_aligned_bounding_box().get_center()
+    A_pos = A_cloud.get_center()
+    B_pos = B_cloud.get_center()
 
-    more_further = A_desc if A_pos[2] > B_pos[2] else B_desc
+    more_further = A_desc if A_pos[0] > B_pos[0] else B_desc
 
     question_template = random.choice(template_questions)
     answer_template = random.choice(template_responses)
@@ -608,8 +604,8 @@ def wide_choice(A, B):
     B_desc, B_cloud = B
     A_desc, B_desc = A_desc.lower(), B_desc.lower()
 
-    width_A = A_cloud.get_axis_aligned_bounding_box().get_extent()[0]
-    width_B = B_cloud.get_axis_aligned_bounding_box().get_extent()[0]
+    width_A = A_cloud.get_axis_aligned_bounding_box().get_extent()[1]
+    width_B = B_cloud.get_axis_aligned_bounding_box().get_extent()[1]
 
     wider = A_desc if width_A > width_B else B_desc
 
@@ -630,8 +626,8 @@ def thin_choice(A, B):
     B_desc, B_cloud = B
     A_desc, B_desc = A_desc.lower(), B_desc.lower()
 
-    width_A = A_cloud.get_axis_aligned_bounding_box().get_extent()[0]
-    width_B = B_cloud.get_axis_aligned_bounding_box().get_extent()[0]
+    width_A = A_cloud.get_axis_aligned_bounding_box().get_extent()[1]
+    width_B = B_cloud.get_axis_aligned_bounding_box().get_extent()[1]
 
     thiner = A_desc if width_A < width_B else B_desc
 
@@ -697,6 +693,7 @@ def small_choice(A, B):
 
     return question + " Answer: " + answer
 
+
 def angle_data(A, B):
     template_questions = angle_questions
     template_answers = angle_answers
@@ -710,8 +707,8 @@ def angle_data(A, B):
 
     # 计算从A到B的方向角
     delta_x = B_center[0] - A_center[0]
-    delta_z = B_center[2] - A_center[2]
-    angle_rad = math.atan2(delta_x, delta_z)  # 反正切函数计算角度
+    delta_y = B_center[1] - A_center[1]
+    angle_rad = math.atan2(-delta_y, delta_x)  # 反正切函数计算角度
     angle_degrees = math.degrees(angle_rad)
     angle_degrees = round(angle_degrees, 2)
 
@@ -735,14 +732,14 @@ def direction_data(A, B):
     B_center = B_cloud.get_center()
 
     delta_x = B_center[0] - A_center[0]
-    delta_z = B_center[2] - A_center[2]
+    delta_y = B_center[1] - A_center[1]
 
-    angle_rad = math.atan2(delta_x, delta_z)  # 反正切函数计算角度
+    angle_rad = math.atan2(-delta_y, delta_x)  # 反正切函数计算角度
     angle_degrees = math.degrees(angle_rad)
     angle_degrees = round(angle_degrees, 2)
 
     angle_degrees = (angle_degrees + 360) % 360
-    clock_position = 12 - angle_degrees // 30
+    clock_position = angle_degrees // 30
     clock_position = clock_position if clock_position > 0 else 12 + clock_position
 
     question_template = random.choice(template_questions)
@@ -753,13 +750,14 @@ def direction_data(A, B):
 
     return question + " Answer: " + answer
 
+
 def angle2agent(A, B=None):
     template_questions = angle2agent_questions
     template_responses = angle2agent_answers
 
     A_desc = A[0].lower()
     A_center = A[1].get_center()
-    angle_rad = math.atan2(A_center[0], A_center[2])  # 反正切函数计算角度
+    angle_rad = math.atan2(-A_center[1], A_center[0])  # 反正切函数计算角度
     angle_degrees = math.degrees(angle_rad)
     angle_degrees = round(angle_degrees, 2)
 
@@ -771,6 +769,7 @@ def angle2agent(A, B=None):
 
     return question + " Answer: " + answer
 
+
 def direction2agent(A, B=None):
     template_questions = direction2agent_questions
     template_responses = direction2agent_answers
@@ -778,12 +777,12 @@ def direction2agent(A, B=None):
     A_desc = A[0].lower()
 
     A_center = A[1].get_center()
-    angle_rad = math.atan2(A_center[0], A_center[2])  # 反正切函数计算角度
+    angle_rad = math.atan2(-A_center[1], A_center[0])  # 反正切函数计算角度
     angle_degrees = math.degrees(angle_rad)
     angle_degrees = round(angle_degrees, 2)
 
     angle_degrees = (angle_degrees + 360) % 360
-    clock_position = 12 - angle_degrees // 30
+    clock_position = angle_degrees // 30
     clock_position = clock_position if clock_position > 0 else 12 + clock_position
 
     question_template = random.choice(template_questions)
@@ -818,7 +817,7 @@ def vertical_distance2agent(A, B=None):
 
     A_desc = A[0].lower()
     A_center = A[1].get_center()
-    vertical_distance = abs(A_center[1])
+    vertical_distance = abs(A_center[2])
     human_like_dist = human_like_distance(vertical_distance)
 
     question_template = random.choice(template_questions)
@@ -835,7 +834,7 @@ def horizontal_distance2agent(A, B=None):
     A_desc = A[0].lower()
 
     A_center = A[1].get_center()
-    horizontal_distance = abs(A_center[0])
+    horizontal_distance = np.sqrt(A_center[0]**2+A_center[1]**2)
     human_like_dist = human_like_distance(horizontal_distance)
 
     question_template = random.choice(template_questions)
@@ -853,7 +852,7 @@ def left_relationship2agent(A, B=None):
     A_desc = A[0].lower()
     A_pos = A[1].get_center()
 
-    is_left = A_pos[0] < 0
+    is_left = A_pos[1] > 0
 
     question_template = random.choice(template_questions)
     answer_template = random.choice(true_responses if is_left else false_responses)
@@ -870,7 +869,7 @@ def right_relationship2agent(A, B=None):
     A_desc = A[0].lower()
     A_pos = A[1].get_center()
 
-    is_right = A_pos[0] > 0
+    is_right = A_pos[1] < 0
 
     question_template = random.choice(template_questions)
     answer_template = random.choice(true_responses if is_right else false_responses)
@@ -887,7 +886,7 @@ def above_relationship2agent(A, B=None):
     A_desc = A[0].lower()
     A_pos = A[1].get_center()
 
-    is_above = A_pos[1] > 0
+    is_above = A_pos[2] > 0
 
     question_template = random.choice(template_questions)
     answer_template = random.choice(true_responses if is_above else false_responses)
@@ -904,7 +903,7 @@ def below_relationship2agent(A, B=None):
     A_desc = A[0].lower()
     A_pos = A[1].get_center()
 
-    is_below = A_pos[1] < 0
+    is_below = A_pos[2] < 0
 
     question_template = random.choice(template_questions)
     answer_template = random.choice(true_responses if is_below else false_responses)
@@ -926,7 +925,7 @@ def left_multichoice(A, B):
 
     question_template = random.choice(template_questions)
     question = question_template.replace("[A]", A_desc).replace("[B]", B_desc)
-    if A_pos[0] < B_pos[0]:
+    if A_pos[1] > B_pos[1]:
         answer = 'A.' + A_desc
     else:
         answer = 'B.' + B_desc
@@ -945,7 +944,7 @@ def right_multichoice(A, B):
 
     question_template = random.choice(template_questions)
     question = question_template.replace("[A]", A_desc).replace("[B]", B_desc)
-    if A_pos[0] > B_pos[0]:
+    if A_pos[1] < B_pos[1]:
         answer = 'A.' + A_desc
     else:
         answer = 'B.' + B_desc
@@ -964,7 +963,7 @@ def above_multichoice(A, B):
 
     question_template = random.choice(template_questions)
     question = question_template.replace("[A]", A_desc).replace("[B]", B_desc)
-    if A_pos[1] < B_pos[1]:
+    if A_pos[2] > B_pos[2]:
         answer = 'A.' + A_desc
     else:
         answer = 'B.' + B_desc
@@ -983,7 +982,7 @@ def below_multichoice(A, B):
 
     question_template = random.choice(template_questions)
     question = question_template.replace("[A]", A_desc).replace("[B]", B_desc)
-    if A_pos[1] > B_pos[1]:
+    if A_pos[2] < B_pos[2]:
         answer = 'A.' + A_desc
     else:
         answer = 'B.' + B_desc
@@ -1002,7 +1001,7 @@ def front_multichoice(A, B):
 
     question_template = random.choice(template_questions)
     question = question_template.replace("[A]", A_desc).replace("[B]", B_desc)
-    if A_pos[2] < B_pos[2]:
+    if A_pos[0] < B_pos[0]:
         answer = 'A.' + A_desc
     else:
         answer = 'B.' + B_desc
@@ -1022,7 +1021,7 @@ def behind_multichoice(A, B):
 
     question_template = random.choice(template_questions)
     question = question_template.replace("[A]", A_desc).replace("[B]", B_desc)
-    if A_pos[2] < B_pos[2]:
+    if A_pos[0] > B_pos[0]:
         answer = 'A.' + A_desc
     else:
         answer = 'B.' + B_desc
@@ -1033,22 +1032,30 @@ def behind_multichoice(A, B):
 def tall_multichoice(A, B):
     template_questions = tall_multiqa_questions
 
-    A_desc = A["cropped_image_info"]["cropped_image_caption"]
-    B_desc = B["cropped_image_info"]["cropped_image_caption"]
+    A_desc, A_cloud = A
+    B_desc, B_cloud = B
     A_desc, B_desc = A_desc.lower(), B_desc.lower()
 
-    # 获取A,B bbox
-    A_bbox = A["cam_bbox_3d"]
-    B_bbox = B["cam_bbox_3d"]
+    height_A = A_cloud.get_axis_aligned_bounding_box().get_extent()[2]
+    height_B = B_cloud.get_axis_aligned_bounding_box().get_extent()[2]
 
-    Y_A = {point[1] for point in A_bbox}
-    Y_B = {point[1] for point in B_bbox}
-
-    height_A = abs(max(Y_A) - min(Y_A))
-    height_B = abs(max(Y_B) - min(Y_B))
+    # A_desc = A["cropped_image_info"]["cropped_image_caption"]
+    # B_desc = B["cropped_image_info"]["cropped_image_caption"]
+    # A_desc, B_desc = A_desc.lower(), B_desc.lower()
+    #
+    # # 获取A,B bbox
+    # A_bbox = A["cam_bbox_3d"]
+    # B_bbox = B["cam_bbox_3d"]
+    #
+    # Y_A = {point[1] for point in A_bbox}
+    # Y_B = {point[1] for point in B_bbox}
+    #
+    # height_A = abs(max(Y_A) - min(Y_A))
+    # height_B = abs(max(Y_B) - min(Y_B))
 
     question_template = random.choice(template_questions)
     question = question_template.replace("[A]", A_desc).replace("[B]", B_desc)
+
     if height_A > height_B:
         answer = 'A.' + A_desc
     else:
@@ -1060,19 +1067,26 @@ def tall_multichoice(A, B):
 def short_multichoice(A, B):
     template_questions = short_multiqa_questions
 
-    A_desc = A["cropped_image_info"]["cropped_image_caption"]
-    B_desc = B["cropped_image_info"]["cropped_image_caption"]
+    # A_desc = A["cropped_image_info"]["cropped_image_caption"]
+    # B_desc = B["cropped_image_info"]["cropped_image_caption"]
+    # A_desc, B_desc = A_desc.lower(), B_desc.lower()
+    #
+    # # 获取A,B bbox
+    # A_bbox = A["cam_bbox_3d"]
+    # B_bbox = B["cam_bbox_3d"]
+    #
+    # Y_A = {point[1] for point in A_bbox}
+    # Y_B = {point[1] for point in B_bbox}
+    #
+    # height_A = abs(max(Y_A) - min(Y_A))
+    # height_B = abs(max(Y_B) - min(Y_B))
+
+    A_desc, A_cloud = A
+    B_desc, B_cloud = B
     A_desc, B_desc = A_desc.lower(), B_desc.lower()
 
-    # 获取A,B bbox
-    A_bbox = A["cam_bbox_3d"]
-    B_bbox = B["cam_bbox_3d"]
-
-    Y_A = {point[1] for point in A_bbox}
-    Y_B = {point[1] for point in B_bbox}
-
-    height_A = abs(max(Y_A) - min(Y_A))
-    height_B = abs(max(Y_B) - min(Y_B))
+    height_A = A_cloud.get_axis_aligned_bounding_box().get_extent()[2]
+    height_B = B_cloud.get_axis_aligned_bounding_box().get_extent()[2]
 
     question_template = random.choice(template_questions)
     question = question_template.replace("[A]", A_desc).replace("[B]", B_desc)
@@ -1083,23 +1097,30 @@ def short_multichoice(A, B):
 
     return question + " Answer: " + answer
 
+
 def wide_multichoice(A, B):
     template_questions = wide_multiqa_questions
 
-    A_desc = A["cropped_image_info"]["cropped_image_caption"]
-    B_desc = B["cropped_image_info"]["cropped_image_caption"]
+    # A_desc = A["cropped_image_info"]["cropped_image_caption"]
+    # B_desc = B["cropped_image_info"]["cropped_image_caption"]
+    # A_desc, B_desc = A_desc.lower(), B_desc.lower()
+    #
+    # # 获取A,B bbox
+    # A_bbox = A["cam_bbox_3d"]
+    # B_bbox = B["cam_bbox_3d"]
+    #
+    # X_A = {point[0] for point in A_bbox}
+    # X_B = {point[0] for point in B_bbox}
+    #
+    # width_A = abs(max(X_A) - min(X_A))
+    # width_B = abs(max(X_B) - min(X_B))
+
+    A_desc, A_cloud = A
+    B_desc, B_cloud = B
     A_desc, B_desc = A_desc.lower(), B_desc.lower()
 
-    # 获取A,B bbox
-    A_bbox = A["cam_bbox_3d"]
-    B_bbox = B["cam_bbox_3d"]
-
-    X_A = {point[0] for point in A_bbox}
-    X_B = {point[0] for point in B_bbox}
-
-    width_A = abs(max(X_A) - min(X_A))
-    width_B = abs(max(X_B) - min(X_B))
-
+    width_A = A_cloud.get_axis_aligned_bounding_box().get_extent()[1]
+    width_B = B_cloud.get_axis_aligned_bounding_box().get_extent()[1]
 
     question_template = random.choice(template_questions)
     question = question_template.replace("[A]", A_desc).replace("[B]", B_desc)
@@ -1114,20 +1135,26 @@ def wide_multichoice(A, B):
 def thin_multichoice(A, B):
     template_questions = thin_multiqa_questions
 
-    A_desc = A["cropped_image_info"]["cropped_image_caption"]
-    B_desc = B["cropped_image_info"]["cropped_image_caption"]
+    # A_desc = A["cropped_image_info"]["cropped_image_caption"]
+    # B_desc = B["cropped_image_info"]["cropped_image_caption"]
+    # A_desc, B_desc = A_desc.lower(), B_desc.lower()
+    #
+    # # 获取A,B bbox
+    # A_bbox = A["cam_bbox_3d"]
+    # B_bbox = B["cam_bbox_3d"]
+    #
+    # X_A = {point[0] for point in A_bbox}
+    # X_B = {point[0] for point in B_bbox}
+    #
+    # width_A = abs(max(X_A) - min(X_A))
+    # width_B = abs(max(X_B) - min(X_B))
+
+    A_desc, A_cloud = A
+    B_desc, B_cloud = B
     A_desc, B_desc = A_desc.lower(), B_desc.lower()
 
-    # 获取A,B bbox
-    A_bbox = A["cam_bbox_3d"]
-    B_bbox = B["cam_bbox_3d"]
-
-    X_A = {point[0] for point in A_bbox}
-    X_B = {point[0] for point in B_bbox}
-
-    width_A = abs(max(X_A) - min(X_A))
-    width_B = abs(max(X_B) - min(X_B))
-
+    width_A = A_cloud.get_axis_aligned_bounding_box().get_extent()[1]
+    width_B = B_cloud.get_axis_aligned_bounding_box().get_extent()[1]
 
     question_template = random.choice(template_questions)
     question = question_template.replace("[A]", A_desc).replace("[B]", B_desc)
@@ -1142,34 +1169,45 @@ def thin_multichoice(A, B):
 def big_multichoice(A, B):
     template_questions = big_multiqa_questions
 
-    A_desc = A["cropped_image_info"]["cropped_image_caption"]
-    B_desc = B["cropped_image_info"]["cropped_image_caption"]
+    # A_desc = A["cropped_image_info"]["cropped_image_caption"]
+    # B_desc = B["cropped_image_info"]["cropped_image_caption"]
+    # A_desc, B_desc = A_desc.lower(), B_desc.lower()
+    #
+    # # 获取A,B bbox
+    # A_bbox = A["cam_bbox_3d"]
+    # B_bbox = B["cam_bbox_3d"]
+    #
+    # # 提取唯一的 x, y, z 坐标值
+    # X_A = {point[0] for point in A_bbox}
+    # Y_A = {point[1] for point in A_bbox}
+    # Z_A = {point[2] for point in A_bbox}
+    #
+    # X_B = {point[0] for point in B_bbox}
+    # Y_B = {point[1] for point in B_bbox}
+    # Z_B = {point[2] for point in B_bbox}
+    #
+    # # 计算宽度 (x方向差距), 深度 (y方向差距), 高度 (z方向差距)
+    # width_A = abs(max(X_A) - min(X_A))
+    # height_A = abs(max(Y_A) - min(Y_A))
+    # depth_A = abs(max(Z_A) - min(Z_A))
+    # volume_A = width_A * depth_A * height_A
+    #
+    # width_B = abs(max(X_B) - min(X_B))
+    # height_B = abs(max(Y_B) - min(Y_B))
+    # depth_B = abs(max(Z_B) - min(Z_B))
+    # volume_B = width_B * depth_B * height_B
+
+    A_desc, A_cloud = A
+    B_desc, B_cloud = B
     A_desc, B_desc = A_desc.lower(), B_desc.lower()
 
-    # 获取A,B bbox
-    A_bbox = A["cam_bbox_3d"]
-    B_bbox = B["cam_bbox_3d"]
+    # 获取点云A和点云B的尺寸
+    extent_A = A_cloud.get_axis_aligned_bounding_box().get_extent()
+    extent_B = B_cloud.get_axis_aligned_bounding_box().get_extent()
 
-    # 提取唯一的 x, y, z 坐标值
-    X_A = {point[0] for point in A_bbox}
-    Y_A = {point[1] for point in A_bbox}
-    Z_A = {point[2] for point in A_bbox}
-
-    X_B = {point[0] for point in B_bbox}
-    Y_B = {point[1] for point in B_bbox}
-    Z_B = {point[2] for point in B_bbox}
-
-    # 计算宽度 (x方向差距), 深度 (y方向差距), 高度 (z方向差距)
-    width_A = abs(max(X_A) - min(X_A))
-    height_A = abs(max(Y_A) - min(Y_A))
-    depth_A = abs(max(Z_A) - min(Z_A))
-    volume_A = width_A * depth_A * height_A
-
-    width_B = abs(max(X_B) - min(X_B))
-    height_B = abs(max(Y_B) - min(Y_B))
-    depth_B = abs(max(Z_B) - min(Z_B))
-    volume_B = width_B * depth_B * height_B
-
+    # 计算体积
+    volume_A = extent_A[0] * extent_A[1] * extent_A[2]
+    volume_B = extent_B[0] * extent_B[1] * extent_B[2]
 
     question_template = random.choice(template_questions)
     question = question_template.replace("[A]", A_desc).replace("[B]", B_desc)
@@ -1184,33 +1222,45 @@ def big_multichoice(A, B):
 def small_multichoice(A, B):
     template_questions = small_multiqa_questions
 
-    A_desc = A["cropped_image_info"]["cropped_image_caption"]
-    B_desc = B["cropped_image_info"]["cropped_image_caption"]
+    # A_desc = A["cropped_image_info"]["cropped_image_caption"]
+    # B_desc = B["cropped_image_info"]["cropped_image_caption"]
+    # A_desc, B_desc = A_desc.lower(), B_desc.lower()
+    #
+    # # 获取A,B bbox
+    # A_bbox = A["cam_bbox_3d"]
+    # B_bbox = B["cam_bbox_3d"]
+    #
+    # # 提取唯一的 x, y, z 坐标值
+    # X_A = {point[0] for point in A_bbox}
+    # Y_A = {point[1] for point in A_bbox}
+    # Z_A = {point[2] for point in A_bbox}
+    #
+    # X_B = {point[0] for point in B_bbox}
+    # Y_B = {point[1] for point in B_bbox}
+    # Z_B = {point[2] for point in B_bbox}
+    #
+    # # 计算宽度 (x方向差距), 深度 (y方向差距), 高度 (z方向差距)
+    # width_A = abs(max(X_A) - min(X_A))
+    # height_A = abs(max(Y_A) - min(Y_A))
+    # depth_A = abs(max(Z_A) - min(Z_A))
+    # volume_A = width_A * depth_A * height_A
+    #
+    # width_B = abs(max(X_B) - min(X_B))
+    # height_B = abs(max(Y_B) - min(Y_B))
+    # depth_B = abs(max(Z_B) - min(Z_B))
+    # volume_B = width_B * depth_B * height_B
+
+    A_desc, A_cloud = A
+    B_desc, B_cloud = B
     A_desc, B_desc = A_desc.lower(), B_desc.lower()
 
-    # 获取A,B bbox
-    A_bbox = A["cam_bbox_3d"]
-    B_bbox = B["cam_bbox_3d"]
+    # 获取点云A和点云B的尺寸
+    extent_A = A_cloud.get_axis_aligned_bounding_box().get_extent()
+    extent_B = B_cloud.get_axis_aligned_bounding_box().get_extent()
 
-    # 提取唯一的 x, y, z 坐标值
-    X_A = {point[0] for point in A_bbox}
-    Y_A = {point[1] for point in A_bbox}
-    Z_A = {point[2] for point in A_bbox}
-
-    X_B = {point[0] for point in B_bbox}
-    Y_B = {point[1] for point in B_bbox}
-    Z_B = {point[2] for point in B_bbox}
-
-    # 计算宽度 (x方向差距), 深度 (y方向差距), 高度 (z方向差距)
-    width_A = abs(max(X_A) - min(X_A))
-    height_A = abs(max(Y_A) - min(Y_A))
-    depth_A = abs(max(Z_A) - min(Z_A))
-    volume_A = width_A * depth_A * height_A
-
-    width_B = abs(max(X_B) - min(X_B))
-    height_B = abs(max(Y_B) - min(Y_B))
-    depth_B = abs(max(Z_B) - min(Z_B))
-    volume_B = width_B * depth_B * height_B
+    # 计算体积
+    volume_A = extent_A[0] * extent_A[1] * extent_A[2]
+    volume_B = extent_B[0] * extent_B[1] * extent_B[2]
 
     question_template = random.choice(template_questions)
     question = question_template.replace("[A]", A_desc).replace("[B]", B_desc)
@@ -1232,13 +1282,14 @@ def left_tfqa(A, B):
     A_pos = A_cloud.get_center()
     B_pos = B_cloud.get_center()
 
-    is_left = A_pos[0] < B_pos[0]  # Compare X coordinates
+    is_left = A_pos[1] > B_pos[1]  # Compare Y coordinates
 
     question_template = random.choice(template_questions)
     question = question_template.replace("[A]", A_desc).replace("[B]", B_desc)
     answer = 'A.Yes' if is_left else 'B.No'
 
     return question + " Answer: " + answer
+
 
 def right_tfqa(A, B):
     template_questions = right_tfqa_questions
@@ -1250,7 +1301,7 @@ def right_tfqa(A, B):
     A_pos = A_cloud.get_center()
     B_pos = B_cloud.get_center()
 
-    is_right = A_pos[0] > B_pos[0]  # Compare X coordinates
+    is_right = A_pos[1] < B_pos[1]  # Compare Y coordinates
 
     question_template = random.choice(template_questions)
     question = question_template.replace("[A]", A_desc).replace("[B]", B_desc)
@@ -1269,7 +1320,7 @@ def above_tfqa(A, B):
     A_pos = A_cloud.get_center()
     B_pos = B_cloud.get_center()
 
-    is_above = A_pos[1] < B_pos[1]
+    is_above = A_pos[2] > B_pos[2]
 
     question_template = random.choice(template_questions)
     question = question_template.replace("[A]", A_desc).replace("[B]", B_desc)
@@ -1288,13 +1339,14 @@ def below_tfqa(A, B):
     A_pos = A_cloud.get_center()
     B_pos = B_cloud.get_center()
 
-    is_below = A_pos[1] > B_pos[1]
+    is_below = A_pos[2] < B_pos[2]
 
     question_template = random.choice(template_questions)
     question = question_template.replace("[A]", A_desc).replace("[B]", B_desc)
     answer = 'A.Yes' if is_below else 'B.No'
 
     return question + " Answer: " + answer
+
 
 def behind_tfqa(A, B):
     template_questions = behind_tfqa_questions
@@ -1306,7 +1358,7 @@ def behind_tfqa(A, B):
     A_pos = A_cloud.get_center()
     B_pos = B_cloud.get_center()
 
-    is_behind = A_pos[2] > B_pos[2]
+    is_behind = A_pos[0] > B_pos[0]
 
     question_template = random.choice(template_questions)
     question = question_template.replace("[A]", A_desc).replace("[B]", B_desc)
@@ -1324,7 +1376,7 @@ def front_tfqa(A, B):
 
     A_pos = A_cloud.get_center()
     B_pos = B_cloud.get_center()
-    is_in_front = A_pos[2] < B_pos[2]
+    is_in_front = A_pos[0] < B_pos[0]
 
     question_template = random.choice(template_questions)
     question = question_template.replace("[A]", A_desc).replace("[B]", B_desc)
@@ -1336,19 +1388,26 @@ def front_tfqa(A, B):
 def wide_tfqa(A, B):
     template_questions = wide_tfqa_questions
 
-    A_desc = A["cropped_image_info"]["cropped_image_caption"]
-    B_desc = B["cropped_image_info"]["cropped_image_caption"]
+    # A_desc = A["cropped_image_info"]["cropped_image_caption"]
+    # B_desc = B["cropped_image_info"]["cropped_image_caption"]
+    # A_desc, B_desc = A_desc.lower(), B_desc.lower()
+    #
+    # # 获取A,B bbox
+    # A_bbox = A["cam_bbox_3d"]
+    # B_bbox = B["cam_bbox_3d"]
+    #
+    # X_A = {point[0] for point in A_bbox}
+    # X_B = {point[0] for point in B_bbox}
+    #
+    # width_A = abs(max(X_A) - min(X_A))
+    # width_B = abs(max(X_B) - min(X_B))
+
+    A_desc, A_cloud = A
+    B_desc, B_cloud = B
     A_desc, B_desc = A_desc.lower(), B_desc.lower()
 
-    # 获取A,B bbox
-    A_bbox = A["cam_bbox_3d"]
-    B_bbox = B["cam_bbox_3d"]
-
-    X_A = {point[0] for point in A_bbox}
-    X_B = {point[0] for point in B_bbox}
-
-    width_A = abs(max(X_A) - min(X_A))
-    width_B = abs(max(X_B) - min(X_B))
+    width_A = A_cloud.get_axis_aligned_bounding_box().get_extent()[1]
+    width_B = B_cloud.get_axis_aligned_bounding_box().get_extent()[1]
 
     is_wider = width_A > width_B
 
@@ -1359,36 +1418,81 @@ def wide_tfqa(A, B):
     return question + " Answer: " + answer
 
 
+def thin_tfqa(A, B):
+    template_questions = thin_tfqa_questions
+
+    # A_desc = A["cropped_image_info"]["cropped_image_caption"]
+    # B_desc = B["cropped_image_info"]["cropped_image_caption"]
+    # A_desc, B_desc = A_desc.lower(), B_desc.lower()
+    #
+    # # 获取A,B bbox
+    # A_bbox = A["cam_bbox_3d"]
+    # B_bbox = B["cam_bbox_3d"]
+    #
+    # X_A = {point[0] for point in A_bbox}
+    # X_B = {point[0] for point in B_bbox}
+    #
+    # width_A = abs(max(X_A) - min(X_A))
+    # width_B = abs(max(X_B) - min(X_B))
+
+    A_desc, A_cloud = A
+    B_desc, B_cloud = B
+    A_desc, B_desc = A_desc.lower(), B_desc.lower()
+
+    width_A = A_cloud.get_axis_aligned_bounding_box().get_extent()[1]
+    width_B = B_cloud.get_axis_aligned_bounding_box().get_extent()[1]
+
+    is_thinner = width_A < width_B
+
+    question_template = random.choice(template_questions)
+    question = question_template.replace("[A]", A_desc).replace("[B]", B_desc)
+    answer = 'A.Yes' if is_thinner else 'B.No'
+
+    return question + " Answer: " + answer
+
+
 def big_tfqa(A, B):
     template_questions = big_tfqa_questions
 
-    A_desc = A["cropped_image_info"]["cropped_image_caption"]
-    B_desc = B["cropped_image_info"]["cropped_image_caption"]
+    # A_desc = A["cropped_image_info"]["cropped_image_caption"]
+    # B_desc = B["cropped_image_info"]["cropped_image_caption"]
+    # A_desc, B_desc = A_desc.lower(), B_desc.lower()
+    #
+    # # 获取A,B bbox
+    # A_bbox = A["cam_bbox_3d"]
+    # B_bbox = B["cam_bbox_3d"]
+    #
+    # # 提取唯一的 x, y, z 坐标值
+    # X_A = {point[0] for point in A_bbox}
+    # Y_A = {point[1] for point in A_bbox}
+    # Z_A = {point[2] for point in A_bbox}
+    #
+    # X_B = {point[0] for point in B_bbox}
+    # Y_B = {point[1] for point in B_bbox}
+    # Z_B = {point[2] for point in B_bbox}
+    #
+    # # 计算宽度 (x方向差距), 深度 (y方向差距), 高度 (z方向差距)
+    # width_A = abs(max(X_A) - min(X_A))
+    # height_A = abs(max(Y_A) - min(Y_A))
+    # depth_A = abs(max(Z_A) - min(Z_A))
+    # volume_A = width_A * depth_A * height_A
+    #
+    # width_B = abs(max(X_B) - min(X_B))
+    # height_B = abs(max(Y_B) - min(Y_B))
+    # depth_B = abs(max(Z_B) - min(Z_B))
+    # volume_B = width_B * depth_B * height_B
+
+    A_desc, A_cloud = A
+    B_desc, B_cloud = B
     A_desc, B_desc = A_desc.lower(), B_desc.lower()
 
-    # 获取A,B bbox
-    A_bbox = A["cam_bbox_3d"]
-    B_bbox = B["cam_bbox_3d"]
+    # 获取点云A和点云B的尺寸
+    extent_A = A_cloud.get_axis_aligned_bounding_box().get_extent()
+    extent_B = B_cloud.get_axis_aligned_bounding_box().get_extent()
 
-    # 提取唯一的 x, y, z 坐标值
-    X_A = {point[0] for point in A_bbox}
-    Y_A = {point[1] for point in A_bbox}
-    Z_A = {point[2] for point in A_bbox}
-
-    X_B = {point[0] for point in B_bbox}
-    Y_B = {point[1] for point in B_bbox}
-    Z_B = {point[2] for point in B_bbox}
-
-    # 计算宽度 (x方向差距), 深度 (y方向差距), 高度 (z方向差距)
-    width_A = abs(max(X_A) - min(X_A))
-    height_A = abs(max(Y_A) - min(Y_A))
-    depth_A = abs(max(Z_A) - min(Z_A))
-    volume_A = width_A * depth_A * height_A
-
-    width_B = abs(max(X_B) - min(X_B))
-    height_B = abs(max(Y_B) - min(Y_B))
-    depth_B = abs(max(Z_B) - min(Z_B))
-    volume_B = width_B * depth_B * height_B
+    # 计算体积
+    volume_A = extent_A[0] * extent_A[1] * extent_A[2]
+    volume_B = extent_B[0] * extent_B[1] * extent_B[2]
 
     is_bigger = volume_A > volume_B
 
@@ -1399,23 +1503,81 @@ def big_tfqa(A, B):
     return question + " Answer: " + answer
 
 
+def small_tfqa(A, B):
+    template_questions = small_tfqa_questions
+
+    # A_desc = A["cropped_image_info"]["cropped_image_caption"]
+    # B_desc = B["cropped_image_info"]["cropped_image_caption"]
+    # A_desc, B_desc = A_desc.lower(), B_desc.lower()
+    #
+    # # 获取A,B bbox
+    # A_bbox = A["cam_bbox_3d"]
+    # B_bbox = B["cam_bbox_3d"]
+    #
+    # # 提取唯一的 x, y, z 坐标值
+    # X_A = {point[0] for point in A_bbox}
+    # Y_A = {point[1] for point in A_bbox}
+    # Z_A = {point[2] for point in A_bbox}
+    #
+    # X_B = {point[0] for point in B_bbox}
+    # Y_B = {point[1] for point in B_bbox}
+    # Z_B = {point[2] for point in B_bbox}
+    #
+    # # 计算宽度 (x方向差距), 深度 (y方向差距), 高度 (z方向差距)
+    # width_A = abs(max(X_A) - min(X_A))
+    # height_A = abs(max(Y_A) - min(Y_A))
+    # depth_A = abs(max(Z_A) - min(Z_A))
+    # volume_A = width_A * depth_A * height_A
+    #
+    # width_B = abs(max(X_B) - min(X_B))
+    # height_B = abs(max(Y_B) - min(Y_B))
+    # depth_B = abs(max(Z_B) - min(Z_B))
+    # volume_B = width_B * depth_B * height_B
+
+    A_desc, A_cloud = A
+    B_desc, B_cloud = B
+    A_desc, B_desc = A_desc.lower(), B_desc.lower()
+
+    # 获取点云A和点云B的尺寸
+    extent_A = A_cloud.get_axis_aligned_bounding_box().get_extent()
+    extent_B = B_cloud.get_axis_aligned_bounding_box().get_extent()
+
+    # 计算体积
+    volume_A = extent_A[0] * extent_A[1] * extent_A[2]
+    volume_B = extent_B[0] * extent_B[1] * extent_B[2]
+
+    is_smaller = volume_A < volume_B
+
+    question_template = random.choice(template_questions)
+    question = question_template.replace("[A]", A_desc).replace("[B]", B_desc)
+    answer = 'A.Yes' if is_smaller else 'B.No'
+
+    return question + " Answer: " + answer
+
+
 def tall_tfqa(A, B):
     template_questions = tall_tfqa_questions
 
-    A_desc = A["cropped_image_info"]["cropped_image_caption"]
-    B_desc = B["cropped_image_info"]["cropped_image_caption"]
+    # A_desc = A["cropped_image_info"]["cropped_image_caption"]
+    # B_desc = B["cropped_image_info"]["cropped_image_caption"]
+    # A_desc, B_desc = A_desc.lower(), B_desc.lower()
+    #
+    # # 获取A,B bbox
+    # A_bbox = A["cam_bbox_3d"]
+    # B_bbox = B["cam_bbox_3d"]
+    #
+    # Y_A = {point[1] for point in A_bbox}
+    # Y_B = {point[1] for point in B_bbox}
+    #
+    # height_A = abs(max(Y_A) - min(Y_A))
+    # height_B = abs(max(Y_B) - min(Y_B))
+
+    A_desc, A_cloud = A
+    B_desc, B_cloud = B
     A_desc, B_desc = A_desc.lower(), B_desc.lower()
 
-    # 获取A,B bbox
-    A_bbox = A["cam_bbox_3d"]
-    B_bbox = B["cam_bbox_3d"]
-
-    Y_A = {point[1] for point in A_bbox}
-    Y_B = {point[1] for point in B_bbox}
-
-    height_A = abs(max(Y_A) - min(Y_A))
-    height_B = abs(max(Y_B) - min(Y_B))
-
+    height_A = A_cloud.get_axis_aligned_bounding_box().get_extent()[2]
+    height_B = B_cloud.get_axis_aligned_bounding_box().get_extent()[2]
 
     is_taller = height_A > height_B
 
@@ -1429,92 +1591,32 @@ def tall_tfqa(A, B):
 def short_tfqa(A, B):
     template_questions = short_tfqa_questions
 
-    A_desc = A["cropped_image_info"]["cropped_image_caption"]
-    B_desc = B["cropped_image_info"]["cropped_image_caption"]
+    # A_desc = A["cropped_image_info"]["cropped_image_caption"]
+    # B_desc = B["cropped_image_info"]["cropped_image_caption"]
+    # A_desc, B_desc = A_desc.lower(), B_desc.lower()
+    #
+    # # 获取A,B bbox
+    # A_bbox = A["cam_bbox_3d"]
+    # B_bbox = B["cam_bbox_3d"]
+    #
+    # Y_A = {point[1] for point in A_bbox}
+    # Y_B = {point[1] for point in B_bbox}
+    #
+    # height_A = abs(max(Y_A) - min(Y_A))
+    # height_B = abs(max(Y_B) - min(Y_B))
+
+    A_desc, A_cloud = A
+    B_desc, B_cloud = B
     A_desc, B_desc = A_desc.lower(), B_desc.lower()
 
-    # 获取A,B bbox
-    A_bbox = A["cam_bbox_3d"]
-    B_bbox = B["cam_bbox_3d"]
-
-    Y_A = {point[1] for point in A_bbox}
-    Y_B = {point[1] for point in B_bbox}
-
-    height_A = abs(max(Y_A) - min(Y_A))
-    height_B = abs(max(Y_B) - min(Y_B))
-
+    height_A = A_cloud.get_axis_aligned_bounding_box().get_extent()[2]
+    height_B = B_cloud.get_axis_aligned_bounding_box().get_extent()[2]
 
     is_shorter = height_A < height_B
 
     question_template = random.choice(template_questions)
     question = question_template.replace("[A]", A_desc).replace("[B]", B_desc)
     answer = 'A.Yes' if is_shorter else 'B.No'
-
-    return question + " Answer: " + answer
-
-
-def thin_tfqa(A, B):
-    template_questions = thin_tfqa_questions
-
-    A_desc = A["cropped_image_info"]["cropped_image_caption"]
-    B_desc = B["cropped_image_info"]["cropped_image_caption"]
-    A_desc, B_desc = A_desc.lower(), B_desc.lower()
-
-    # 获取A,B bbox
-    A_bbox = A["cam_bbox_3d"]
-    B_bbox = B["cam_bbox_3d"]
-
-    X_A = {point[0] for point in A_bbox}
-    X_B = {point[0] for point in B_bbox}
-
-    width_A = abs(max(X_A) - min(X_A))
-    width_B = abs(max(X_B) - min(X_B))
-
-    is_thinner = width_A < width_B
-
-    question_template = random.choice(template_questions)
-    question = question_template.replace("[A]", A_desc).replace("[B]", B_desc)
-    answer = 'A.Yes' if is_thinner else 'B.No'
-
-    return question + " Answer: " + answer
-
-
-def small_tfqa(A, B):
-    template_questions = small_tfqa_questions
-
-    A_desc = A["cropped_image_info"]["cropped_image_caption"]
-    B_desc = B["cropped_image_info"]["cropped_image_caption"]
-    A_desc, B_desc = A_desc.lower(), B_desc.lower()
-
-    # 获取A,B bbox
-    A_bbox = A["cam_bbox_3d"]
-    B_bbox = B["cam_bbox_3d"]
-
-    # 提取唯一的 x, y, z 坐标值
-    X_A = {point[0] for point in A_bbox}
-    Y_A = {point[1] for point in A_bbox}
-    Z_A = {point[2] for point in A_bbox}
-
-    X_B = {point[0] for point in B_bbox}
-    Y_B = {point[1] for point in B_bbox}
-    Z_B = {point[2] for point in B_bbox}
-
-    # 计算宽度 (x方向差距), 深度 (y方向差距), 高度 (z方向差距)
-    width_A = abs(max(X_A) - min(X_A))
-    height_A = abs(max(Y_A) - min(Y_A))
-    depth_A = abs(max(Z_A) - min(Z_A))
-    volume_A = width_A * depth_A * height_A
-
-    width_B = abs(max(X_B) - min(X_B))
-    height_B = abs(max(Y_B) - min(Y_B))
-    depth_B = abs(max(Z_B) - min(Z_B))
-    volume_B = width_B * depth_B * height_B
-
-    is_smaller = volume_A < volume_B
-
-    question_template = random.choice(template_questions)
-    question = question_template.replace("[A]", A_desc).replace("[B]", B_desc)
-    answer = 'A.Yes' if is_smaller else 'B.No'
 
     return question + " Answer: " + answer
 
