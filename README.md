@@ -43,17 +43,17 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
       <table>
         <tr>
           <td>
-            <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?<br>
-            <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+            <strong>Question:</strong> Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?<br>
+            <strong>Answer:</strong> Yes, the red storefront with chinese<br>text is shorter than the white<br>building with blue stripes.
           </td>
-          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_1.png" height="80px"/></td>
         </tr>
         <tr>
           <td>
-            <strong>Question:</strong> Between the white building with blue stripes and the tall beige apartment building nearby, which one has more width?<br>
-            <strong>Answer:</strong> Appearing wider between the two is white building with blue stripes.<br>
+            <strong>Question:</strong> Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?<br>
+            <strong>Answer:</strong> Yes, the red storefront with chinese<br>text is shorter than the white<br>building with blue stripes.
           </td>
-          <td style="width: 100px;"><img src="figure/rgb_2.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_2.png" height="80px"/></td>
         </tr>
       </table>
     </td>
@@ -68,17 +68,17 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
       <table>
         <tr>
           <td>
-            <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?<br>
-            <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+            <strong>Question:</strong> Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?<br>
+            <strong>Answer:</strong> Yes, the red storefront with chinese<br>text is shorter than the white<br>building with blue stripes.
           </td>
-          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_1.png" height="80px"/></td>
         </tr>
         <tr>
           <td>
-            <strong>Question:</strong> Between the white building with blue stripes and the tall beige apartment building nearby, which one has more width?<br>
-            <strong>Answer:</strong> Appearing wider between the two is white building with blue stripes.<br>
+            <strong>Question:</strong> Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?<br>
+            <strong>Answer:</strong> Yes, the red storefront with chinese<br>text is shorter than the white<br>building with blue stripes.
           </td>
-          <td style="width: 100px;"><img src="figure/rgb_2.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_2.png" height="80px"/></td>
         </tr>
       </table>
     </td>
@@ -93,17 +93,17 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
       <table>
         <tr>
           <td>
-            <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?<br>
-            <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+            <strong>Question:</strong> Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?<br>
+            <strong>Answer:</strong> Yes, the red storefront with chinese<br>text is shorter than the white<br>building with blue stripes.
           </td>
-          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_1.png" height="80px"/></td>
         </tr>
         <tr>
           <td>
-            <strong>Question:</strong> Between the white building with blue stripes and the tall beige apartment building nearby, which one has more width?<br>
-            <strong>Answer:</strong> Appearing wider between the two is white building with blue stripes.<br>
+            <strong>Question:</strong> Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?<br>
+            <strong>Answer:</strong> Yes, the red storefront with chinese<br>text is shorter than the white<br>building with blue stripes.
           </td>
-          <td style="width: 100px;"><img src="figure/rgb_2.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_2.png" height="80px"/></td>
         </tr>
       </table>
     </td>
@@ -118,17 +118,17 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
       <table>
         <tr>
           <td>
-            <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?<br>
-            <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+            <strong>Question:</strong> Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?<br>
+            <strong>Answer:</strong> Yes, the red storefront with chinese<br>text is shorter than the white<br>building with blue stripes.
           </td>
-          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_1.png" height="80px"/></td>
         </tr>
         <tr>
           <td>
-            <strong>Question:</strong> Between the white building with blue stripes and the tall beige apartment building nearby, which one has more width?<br>
-            <strong>Answer:</strong> Appearing wider between the two is white building with blue stripes.<br>
+            <strong>Question:</strong> Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?<br>
+            <strong>Answer:</strong> Yes, the red storefront with chinese<br>text is shorter than the white<br>building with blue stripes.
           </td>
-          <td style="width: 100px;"><img src="figure/rgb_2.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_2.png" height="80px"/></td>
         </tr>
       </table>
     </td>
@@ -143,17 +143,17 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
       <table>
         <tr>
           <td>
-            <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?<br>
-            <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+            <strong>Question:</strong> Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?<br>
+            <strong>Answer:</strong> Yes, the red storefront with chinese<br>text is shorter than the white<br>building with blue stripes.
           </td>
-          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_1.png" height="80px"/></td>
         </tr>
         <tr>
           <td>
-            <strong>Question:</strong> Between the white building with blue stripes and the tall beige apartment building nearby, which one has more width?<br>
-            <strong>Answer:</strong> Appearing wider between the two is white building with blue stripes.<br>
+            <strong>Question:</strong> Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?<br>
+            <strong>Answer:</strong> Yes, the red storefront with chinese<br>text is shorter than the white<br>building with blue stripes.
           </td>
-          <td style="width: 100px;"><img src="figure/rgb_2.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_2.png" height="80px"/></td>
         </tr>
       </table>
     </td>
@@ -168,17 +168,17 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
       <table>
         <tr>
           <td>
-            <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?<br>
-            <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+            <strong>Question:</strong> Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?<br>
+            <strong>Answer:</strong> Yes, the red storefront with chinese<br>text is shorter than the white<br>building with blue stripes.
           </td>
-          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_1.png" height="80px"/></td>
         </tr>
         <tr>
           <td>
-            <strong>Question:</strong> Between the white building with blue stripes and the tall beige apartment building nearby, which one has more width?<br>
-            <strong>Answer:</strong> Appearing wider between the two is white building with blue stripes.<br>
+            <strong>Question:</strong> Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?<br>
+            <strong>Answer:</strong> Yes, the red storefront with chinese<br>text is shorter than the white<br>building with blue stripes.
           </td>
-          <td style="width: 100px;"><img src="figure/rgb_2.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_2.png" height="80px"/></td>
         </tr>
       </table>
     </td>
@@ -193,17 +193,17 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
       <table>
         <tr>
           <td>
-            <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?<br>
-            <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+            <strong>Question:</strong> Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?<br>
+            <strong>Answer:</strong> Yes, the red storefront with chinese<br>text is shorter than the white<br>building with blue stripes.
           </td>
-          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_1.png" height="80px"/></td>
         </tr>
         <tr>
           <td>
-            <strong>Question:</strong> Between the white building with blue stripes and the tall beige apartment building nearby, which one has more width?<br>
-            <strong>Answer:</strong> Appearing wider between the two is white building with blue stripes.<br>
+            <strong>Question:</strong> Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?<br>
+            <strong>Answer:</strong> Yes, the red storefront with chinese<br>text is shorter than the white<br>building with blue stripes.
           </td>
-          <td style="width: 100px;"><img src="figure/rgb_2.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_2.png" height="80px"/></td>
         </tr>
       </table>
     </td>
@@ -232,8 +232,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
     </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>3D-LLM:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
     </td>
   </tr>
 
@@ -251,8 +250,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
     </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>3D-LLM:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
     </td>
   </tr>
 
@@ -270,8 +268,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
     </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>3D-LLM:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
     </td>
   </tr>
 
@@ -289,8 +286,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
     </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>3D-LLM:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
     </td>
   </tr>
 
@@ -308,8 +304,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
     </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>3D-LLM:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
     </td>
   </tr>
 
@@ -327,8 +322,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
     </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>3D-LLM:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
     </td>
   </tr>
 
@@ -346,8 +340,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
     </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>3D-LLM:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
     </td>
   </tr>
 </table>
