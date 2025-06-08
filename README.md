@@ -1,6 +1,6 @@
 # Open3DVQA: A Benchmark for Embodied Spatial Concept Reasoning with Multimodal Large Language Model in Open Space
 
-Open3DVQA is a benchamrk to comprehensively evaluate the spatial reasoning capacities of current SOTA foundation models in open 3D space. It consists of 89k VQA samples, collected using aneffcient semi-automated tool in a high-fdelity urban simulator.
+Open3DVQA is a benchamrk to comprehensively evaluate the spatial reasoning capacities of current SOTA foundation models in open 3D space. It consists of 89k VOA samples, collected using aneffcient semi-automated tool in a high-fdelity urban simulator.
 
 ## Open3DVQA Benchmark
 
@@ -43,17 +43,17 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
       <table>
         <tr>
           <td>
-            <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?<br>
-            <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+            <strong>Question:</strong> Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?<br>
+            <strong>Answer:</strong> Yes, the red storefront with chinese<br>text is shorter than the white<br>building with blue stripes.
           </td>
-          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_1.png" height="80px"/></td>
         </tr>
         <tr>
           <td>
-            <strong>Question:</strong> Between the white building with blue stripes and the tall beige apartment building nearby, which one has more width?<br>
-            <strong>Answer:</strong> Appearing wider between the two is white building with blue stripes.<br>
+            <strong>Question:</strong> Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?<br>
+            <strong>Answer:</strong> Yes, the red storefront with chinese<br>text is shorter than the white<br>building with blue stripes.
           </td>
-          <td style="width: 100px;"><img src="figure/rgb_2.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_2.png" height="80px"/></td>
         </tr>
       </table>
     </td>
@@ -68,17 +68,17 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
       <table>
         <tr>
           <td>
-            <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?<br>
-            <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+            <strong>Question:</strong> Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?<br>
+            <strong>Answer:</strong> Yes, the red storefront with chinese<br>text is shorter than the white<br>building with blue stripes.
           </td>
-          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_1.png" height="80px"/></td>
         </tr>
         <tr>
           <td>
-            <strong>Question:</strong> Between the white building with blue stripes and the tall beige apartment building nearby, which one has more width?<br>
-            <strong>Answer:</strong> Appearing wider between the two is white building with blue stripes.<br>
+            <strong>Question:</strong> Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?<br>
+            <strong>Answer:</strong> Yes, the red storefront with chinese<br>text is shorter than the white<br>building with blue stripes.
           </td>
-          <td style="width: 100px;"><img src="figure/rgb_2.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_2.png" height="80px"/></td>
         </tr>
       </table>
     </td>
@@ -93,17 +93,17 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
       <table>
         <tr>
           <td>
-            <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?<br>
-            <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+            <strong>Question:</strong> Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?<br>
+            <strong>Answer:</strong> Yes, the red storefront with chinese<br>text is shorter than the white<br>building with blue stripes.
           </td>
-          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_1.png" height="80px"/></td>
         </tr>
         <tr>
           <td>
-            <strong>Question:</strong> Between the white building with blue stripes and the tall beige apartment building nearby, which one has more width?<br>
-            <strong>Answer:</strong> Appearing wider between the two is white building with blue stripes.<br>
+            <strong>Question:</strong> Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?<br>
+            <strong>Answer:</strong> Yes, the red storefront with chinese<br>text is shorter than the white<br>building with blue stripes.
           </td>
-          <td style="width: 100px;"><img src="figure/rgb_2.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_2.png" height="80px"/></td>
         </tr>
       </table>
     </td>
@@ -118,17 +118,17 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
       <table>
         <tr>
           <td>
-            <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?<br>
-            <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+            <strong>Question:</strong> Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?<br>
+            <strong>Answer:</strong> Yes, the red storefront with chinese<br>text is shorter than the white<br>building with blue stripes.
           </td>
-          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_1.png" height="80px"/></td>
         </tr>
         <tr>
           <td>
-            <strong>Question:</strong> Between the white building with blue stripes and the tall beige apartment building nearby, which one has more width?<br>
-            <strong>Answer:</strong> Appearing wider between the two is white building with blue stripes.<br>
+            <strong>Question:</strong> Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?<br>
+            <strong>Answer:</strong> Yes, the red storefront with chinese<br>text is shorter than the white<br>building with blue stripes.
           </td>
-          <td style="width: 100px;"><img src="figure/rgb_2.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_2.png" height="80px"/></td>
         </tr>
       </table>
     </td>
@@ -143,17 +143,17 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
       <table>
         <tr>
           <td>
-            <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?<br>
-            <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+            <strong>Question:</strong> Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?<br>
+            <strong>Answer:</strong> Yes, the red storefront with chinese<br>text is shorter than the white<br>building with blue stripes.
           </td>
-          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_1.png" height="80px"/></td>
         </tr>
         <tr>
           <td>
-            <strong>Question:</strong> Between the white building with blue stripes and the tall beige apartment building nearby, which one has more width?<br>
-            <strong>Answer:</strong> Appearing wider between the two is white building with blue stripes.<br>
+            <strong>Question:</strong> Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?<br>
+            <strong>Answer:</strong> Yes, the red storefront with chinese<br>text is shorter than the white<br>building with blue stripes.
           </td>
-          <td style="width: 100px;"><img src="figure/rgb_2.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_2.png" height="80px"/></td>
         </tr>
       </table>
     </td>
@@ -168,17 +168,17 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
       <table>
         <tr>
           <td>
-            <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?<br>
-            <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+            <strong>Question:</strong> Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?<br>
+            <strong>Answer:</strong> Yes, the red storefront with chinese<br>text is shorter than the white<br>building with blue stripes.
           </td>
-          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_1.png" height="80px"/></td>
         </tr>
         <tr>
           <td>
-            <strong>Question:</strong> Between the white building with blue stripes and the tall beige apartment building nearby, which one has more width?<br>
-            <strong>Answer:</strong> Appearing wider between the two is white building with blue stripes.<br>
+            <strong>Question:</strong> Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?<br>
+            <strong>Answer:</strong> Yes, the red storefront with chinese<br>text is shorter than the white<br>building with blue stripes.
           </td>
-          <td style="width: 100px;"><img src="figure/rgb_2.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_2.png" height="80px"/></td>
         </tr>
       </table>
     </td>
@@ -193,17 +193,17 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
       <table>
         <tr>
           <td>
-            <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?<br>
-            <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+            <strong>Question:</strong> Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?<br>
+            <strong>Answer:</strong> Yes, the red storefront with chinese<br>text is shorter than the white<br>building with blue stripes.
           </td>
-          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_1.png" height="80px"/></td>
         </tr>
         <tr>
           <td>
-            <strong>Question:</strong> Between the white building with blue stripes and the tall beige apartment building nearby, which one has more width?<br>
-            <strong>Answer:</strong> Appearing wider between the two is white building with blue stripes.<br>
+            <strong>Question:</strong> Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?<br>
+            <strong>Answer:</strong> Yes, the red storefront with chinese<br>text is shorter than the white<br>building with blue stripes.
           </td>
-          <td style="width: 100px;"><img src="figure/rgb_2.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_2.png" height="80px"/></td>
         </tr>
       </table>
     </td>
@@ -219,164 +219,131 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
     <th style="text-align: center; vertical-align: middle;">Responses</th>
   </tr>
   <tr>
-    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric Size Reasoning</strong></td>
-    <td>
-      <table>
-        <tr>
-          <td style="text-align: center; vertical-align: middle;">
-            Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?
-          </td>
-          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
-        </tr>
-      </table>
-    </td>
+    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric Size<br>Reasoning</strong></td>
+   <td>
+      <div style="text-align: center;">
+         <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
+      </div>
+      <div style="text-align: left;">
+         Does the red storefront with Chinese<br>
+         text have a lesser height compared<br>
+         to the white building with blue stripes?
+      </div>
+   </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>3D-LLM:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
     </td>
   </tr>
 
   <tr>
-    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric Distance Reasoning</strong></td>
-    <td>
-      <table>
-        <tr>
-          <td>
-            Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?
-          </td>
-          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
-        </tr>
-      </table>
-    </td>
+    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric Distance<br>Reasoning</strong></td>
+   <td>
+      <div style="text-align: center;">
+         <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
+      </div>
+      <div style="text-align: left;">
+         Does the red storefront with Chinese<br>
+         text have a lesser height compared<br>
+         to the white building with blue stripes?
+      </div>
+   </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>3D-LLM:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
     </td>
   </tr>
 
   <tr>
-    <td style="text-align: center; vertical-align: middle;"><strong>Egocentric Direction Reasoning</strong></td>
-    <td>
-      <table>
-        <tr>
-          <td>
-            Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?
-          </td>
-          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
-        </tr>
-      </table>
-    </td>
+    <td style="text-align: center; vertical-align: middle;"><strong>Egocentric Direction<br>Reasoning</strong></td>
+   <td>
+      <div style="text-align: center;">
+         <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
+      </div>
+      <div style="text-align: left;">
+         Does the red storefront with Chinese<br>
+         text have a lesser height compared<br>
+         to the white building with blue stripes?
+      </div>
+   </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>3D-LLM:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
     </td>
   </tr>
 
   <tr>
-    <td style="text-align: center; vertical-align: middle;"><strong>Egocentric Distance Reasoning</strong></td>
-    <td>
-      <table>
-        <tr>
-          <td>
-            Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?
-          </td>
-          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
-        </tr>
-      </table>
-    </td>
+    <td style="text-align: center; vertical-align: middle;"><strong>Egocentric Distance<br>Reasoning</strong></td>
+   <td>
+      <div style="text-align: center;">
+         <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
+      </div>
+      <div style="text-align: left;">
+         Does the red storefront with Chinese<br>
+         text have a lesser height compared<br>
+         to the white building with blue stripes?
+      </div>
+   </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>3D-LLM:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
     </td>
   </tr>
 
   <tr>
-    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric-Egocentric Transformation Direction Reasoning</strong></td>
-    <td>
-      <table>
-        <tr>
-          <td>
-            Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?
-          </td>
-          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
-        </tr>
-      </table>
-    </td>
+    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric-Egocentric<br>Transformation<br>Direction Reasoning</strong></td>
+   <td>
+      <div style="text-align: center;">
+         <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
+      </div>
+      <div style="text-align: left;">
+         Does the red storefront with Chinese<br>
+         text have a lesser height compared<br>
+         to the white building with blue stripes?
+      </div>
+   </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>3D-LLM:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
     </td>
   </tr>
 
   <tr>
-    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric-Egocentric Transformation Distance Reasoning</strong></td>
-    <td>
-      <table>
-        <tr>
-          <td>
-            Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?
-          </td>
-          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
-        </tr>
-      </table>
-    </td>
+    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric-Egocentric<br>Transformation<br>Distance Reasoning</strong></td>
+   <td>
+      <div style="text-align: center;">
+         <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
+      </div>
+      <div style="text-align: left;">
+         Does the red storefront with Chinese<br>
+         text have a lesser height compared<br>
+         to the white building with blue stripes?
+      </div>
+   </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>3D-LLM:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
     </td>
   </tr>
 
   <tr>
-    <td style="text-align: center; vertical-align: middle;"><strong>Object-Centric Size Reasoning</strong></td>
-    <td>
-      <table>
-        <tr>
-          <td>
-            Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?
-          </td>
-          <td style="width: 100px;"><img src="figure/rgb_1.png" height="80px"/></td>
-        </tr>
-      </table>
-    </td>
+    <td style="text-align: center; vertical-align: middle;"><strong>Object-Centric<br>Size Reasoning</strong></td>
+   <td>
+      <div style="text-align: center;">
+         <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
+      </div>
+      <div style="text-align: left;">
+         Does the red storefront with Chinese<br>
+         text have a lesser height compared<br>
+         to the white building with blue stripes?
+      </div>
+   </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>3D-LLM:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
     </td>
   </tr>
 </table>
-
-## Data Curation
-
-AirScape takes the current observations and motion intentions as input and outputs future embodied sequence observations (videos). 
-Below are examples of videos generated on the test set.
-
-### Simulator
-
-| Example |                                          Prediction                                           |                                                                                                                             Motion Intention                                                                                                                              |
-|:-------:|:---------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| **1** |         <img src="figure/generated_example/00819_urbanvideo_test.gif" width="100%"/>          |                                                      The drone moved forward with its camera pointed straight ahead, capturing a stationary view of high-rise buildings, a landscaped garden, and a pond.                                                       |
-| **2** |         <img src="figure/generated_example/00840_urbanvideo_test.gif" width="100%"/>          |                             The drone rotated counterclockwise inplace, with its camera gimbal angled downward, and concluded its flight above a courtyard featuring a circular fountain, swimming pools, and surrounding greenery.                             |
-| **3** |         <img src="figure/generated_example/00846_urbanvideo_test.gif" width="100%"/>          |                                                             The drone hovered in place while gradually rotating to the left, ended up facing a broader view of the buildings and the street below.                                                              |
-| **4** |         <img src="figure/generated_example/00930_urbanvideo_test.gif" width="100%"/>          |                                  The drone tilts up its camera, moves slightly forward while maintaining a steady view of a fountain plaza and surrounding area, then holds position for an overhead perspective of the scene.                                  |
-| **5** |      <img src="figure/generated_example/01035_NAT2021_test_N02029_4.gif" width="100%"/>       |                                          No obvious tracking of a target, the drone moving forward along a road while maintaining the gimbal angle, with its final position being farther down the illuminated street.                                          |
-| **6** |      <img src="figure/generated_example/01247_NAT2021_test_N04039_2.gif" width="100%"/>       |                    A group of pedestrians moving from left to right along a walkway, while the drone rotates rightward slowly and its camera gimbal adjusts slightly to follow their motion, keeping them centered and visible in the frame.                    |
-| **7** |      <img src="figure/generated_example/01374_NAT2021_test_N08024_3.gif" width="100%"/>       | The drone ascends while capturing a night-time view of a road with vehicles moving forward (away from the drone) and brightly lit buildings in the distance, without obvious tracking or significant camera gimbal movements. |
-| **8** |    <img src="figure/generated_example/11954_WebUAV3M_val_apartment_3_1.gif" width="100%"/>    |                                                                  The drone flies forward, keeping the skyline of the city centered in its field of view.                                                                   |
-| **9** | <img src="figure/generated_example/11992_WebUAV3M_val_container_ship_6_0.gif" width="100%"/>  |                                            The drone tracks a cargo ship moving forward along the river, while flying to the right and rotate to the left, maintaining the ship in the center of the field of view.                                             |
-| **10** |  <img src="figure/generated_example/11964_WebUAV3M_val_bulk_carrier_32_0.gif" width="100%"/>  |                                                                               The drone flies to the right, maintaining the current altitude and keeping the gimbal angle level.                                                                                |
-| **11** |    <img src="figure/generated_example/11977_WebUAV3M_val_climbing_2_2.gif" width="100%"/>     |                         The drone flies to the left while rotating to the right, rotating clockwise about 45 degrees around the pagoda in the field of view, while keeping the pagoda and surrounding structures centered in the frame.                         |
-| **12** | <img src="figure/generated_example/11980_WebUAV3M_val_climbing_stairs_5_1.gif" width="100%"/> |                                       The drone flies to the left while rotating to the right, rotating clockwise slowly around the pagoda in the field of view, while keeping the statue centered in its field of view.                                        |
-| **13** |   <img src="figure/generated_example/12026_WebUAV3M_val_harvester_23_1.gif" width="100%"/>    |                              The drone is moving forward, adjusting the pan tilt angle downwards to track the movement of two agricultural vehicles proceeding forward in tandem, maintaining them centered in its field of view.                               |
-| **14** |   <img src="figure/generated_example/12033_WebUAV3M_val_harvester_34_6.gif" width="100%"/>    |                                      The drone follows a combine harvester moving forward through a field, keeping the harvester in the center of its field of view while maintaining a steady altitude and camera angle.                                       |
-
-### Realworld
 
 ## QA Generation Pipeline
 
@@ -457,3 +424,4 @@ Feel free to report any issues or unexpected results you encounter.
 ## Acknowledgement
 
 We have used code snippets from different repositories, especially from: LLaVA, Qwen2-VL and VQASynth. We would like to acknowledge and thank the authors of these repositories for their excellent work.
+
