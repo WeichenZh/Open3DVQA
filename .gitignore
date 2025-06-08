@@ -1,0 +1,4 @@
+.git/
+.idea/
+vqasynth/datasets/__pycache__/
+vqasynth/datasets/__pycache__

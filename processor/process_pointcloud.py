@@ -28,7 +28,7 @@ def get_intrinsic(scene_name, width, height, fov):
             'cy': height / 2,
         }
 
-    elif scene_name == "RealworldUAV":
+    elif scene_name == "realworldUAV":
         intrinsic_parameters = {
             'width': width,
             'height': height,
@@ -57,37 +57,49 @@ def pointcloud_image_data(row, output_dir, use_gt=False):
     original_image_cv = np.array(row["image"].convert('RGB'))
     depth_image_cv = np.repeat(np.array(row["depth_map"])[:, :, np.newaxis], 3, axis=2)
 
+    if "EmbodiedCity" in row['image_path']:
+        scene_name = "EmbodiedCity"
+    elif "UrbanScene" in row['image_path']:
+        scene_name = "UrbanScene"
+    elif "realworldUAV" in row['image_path']:
+        scene_name = "realworldUAV"
+    elif "WildUAV" in row['image_path']:
+        scene_name = "WildUAV"
+    else:
+        raise ValueError(f"Unknown scene name: {row['image_path']}")
+
     if use_gt:
         width, height = row["image"].size
         fov = 90
-        if "EmbodiedCity" in row['image_path']:
-            intrinsic_parameters = get_intrinsic("EmbodiedCity", width, height, fov)
-        elif "UrbanScene" in row['image_path']:
-            intrinsic_parameters = get_intrinsic("UrbanScene", width, height, fov)
-        elif "realworldUAV" in row['image_path']:
-            intrinsic_parameters = get_intrinsic("RealworldUAV", width, height, fov)
-        elif "WildUAV" in row['image_path']:
-            intrinsic_parameters = get_intrinsic("WildUAV", width, height, fov)
-        else:
-            raise ValueError(f"Unknown scene name: {row['image_path']}")
-
+        intrinsic_parameters = get_intrinsic(scene_name, width, height, fov)
         camera_pose_file = row["image_path"].replace('rgb', 'state')[:-4] + '.json'
         # construct extrinsic matrix
         with open(camera_pose_file, 'r') as f:
             camera_pose = json.load(f)
 
+        # obtain roll, pitch, yaww
+        qw, qx, qy, qz = camera_pose['rotation']
+        r = R.from_quat([qx, qy, qz, qw])
+        if scene_name == "EmbodiedCity" or scene_name == "UrbanScene":
+            # construct canonicalized extrinsic matrix, rotate y, -pitch degrees
+            roll, pitch, yaw = r.as_euler("xyz", degrees=True)
+            r_tar = R.from_euler('y', -pitch, degrees=True).as_matrix()
+            r_diff = r_tar
+        elif scene_name == "realworldUAV":
+            # construct canonicalized extrinsic matrix, rotate y, -pitch degrees
+            roll, pitch, yaw = r.as_euler("xyz", degrees=True)
+            r_tar = R.from_euler('y', pitch, degrees=True).as_matrix()
+            r_diff = r_tar
+        elif scene_name == "WildUAV":
+            yaw, roll, pitch = r.as_euler("xyz", degrees=True)
+            print(pitch)
+            if pitch < 0:
+                pitch = 180 + pitch
+            r_tar = R.from_euler('y', pitch, degrees=True).as_matrix()
+            r_diff = r_tar
     else:
         #  todo: load estimated camera intrinsic
         pass
-
-    # obtain roll, pitch, yaww
-    qw, qx, qy, qz = camera_pose['rotation']
-    r = R.from_quat([qx, qy, qz, qw])
-    roll, pitch, yaw = r.as_euler("xyz", degrees=True)
-
-    # construct canonicalized extrinsic matrix, rotate y, -pitch degrees
-    r_tar = R.from_euler('y', -pitch, degrees=True).as_matrix()
-    r_diff = r_tar
 
     point_clouds = []
     point_cloud_data = []
@@ -188,5 +200,5 @@ if __name__ == "__main__":
     #
     # main(args.output_dir)
 
-    output_dir = r"F:\Documents\PythonScripts\dataset-build\dataset\embodied_tasks_zx\realworldUAV\lab"
+    output_dir = r"F:\Documents\PythonScripts\dataset-build\dataset\embodied_tasks_zx\WildUAV\seq00"
     main(output_dir, use_gt=True)
