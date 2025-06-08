@@ -291,7 +291,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
   </tr>
 
   <tr>
-    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric<br>-Egocentric<br>Transformation<br>Direction Reasoning</strong></td>
+    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric-Egocentric<br>Transformation<br>Direction Reasoning</strong></td>
    <td>
       <div style="text-align: center;">
          <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
@@ -309,7 +309,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
   </tr>
 
   <tr>
-    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric<br>-Egocentric<br>Transformation<br>Distance Reasoning</strong></td>
+    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric-Egocentric<br>Transformation<br>Distance Reasoning</strong></td>
    <td>
       <div style="text-align: center;">
          <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
