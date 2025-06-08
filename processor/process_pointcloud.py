@@ -194,11 +194,11 @@ def main(output_dir, use_gt=False):
 
 
 if __name__ == "__main__":
-    # parser = argparse.ArgumentParser(description="Process images from .pkl files", add_help=True)
-    # parser.add_argument("--output_dir", type=str, required=True, help="path to directory containing .pkl files")
-    # args = parser.parse_args()
-    #
-    # main(args.output_dir)
+    parser = argparse.ArgumentParser(description="Process images from .pkl files", add_help=True)
+    parser.add_argument("--output_dir", type=str, required=True, help="path to directory containing .pkl files")
+    args = parser.parse_args()
 
-    output_dir = r"F:\Documents\PythonScripts\dataset-build\dataset\embodied_tasks_zx\WildUAV\seq00"
-    main(output_dir, use_gt=True)
+    main(args.output_dir)
+
+    # output_dir = r"F:\Documents\PythonScripts\dataset-build\dataset\embodied_tasks_zx\WildUAV\seq00"
+    # main(output_dir, use_gt=True)
