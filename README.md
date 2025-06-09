@@ -205,7 +205,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
     <th style="text-align: center; vertical-align: middle;">Responses</th>
   </tr>
   <tr>
-    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric Size Reasoning</strong></td>
+    <td align="center"><strong>Allocentric Size Reasoning</strong></td>
    <td align="center">
    <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
    <br />
@@ -220,7 +220,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
   </tr>
 
   <tr>
-    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric Distance Reasoning</strong></td>
+    <td align="center"><strong>Allocentric Distance Reasoning</strong></td>
    <td align="center">
    <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
    <br />
@@ -235,7 +235,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
   </tr>
 
   <tr>
-    <td style="text-align: center; vertical-align: middle;"><strong>Egocentric Direction Reasoning</strong></td>
+    <td align="center"><strong>Egocentric Direction Reasoning</strong></td>
    <td align="center">
    <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
    <br />
@@ -250,7 +250,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
   </tr>
 
   <tr>
-    <td style="text-align: center; vertical-align: middle;"><strong>Egocentric Distance Reasoning</strong></td>
+    <td align="center"><strong>Egocentric Distance Reasoning</strong></td>
    <td align="center">
    <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
    <br />
@@ -265,7 +265,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
   </tr>
 
   <tr>
-    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric-Egocentric Transformation Direction Reasoning</strong></td>
+    <td align="center"><strong>Allocentric-Egocentric Transformation Direction Reasoning</strong></td>
    <td align="center">
    <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
    <br />
@@ -280,7 +280,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
   </tr>
 
   <tr>
-    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric-Egocentric Transformation Distance Reasoning</strong></td>
+    <td align="center"><strong>Allocentric-Egocentric Transformation Distance Reasoning</strong></td>
    <td align="center">
    <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
    <br />
@@ -295,7 +295,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
   </tr>
 
   <tr>
-    <td style="text-align: center; vertical-align: middle;"><strong>Object-Centric Size Reasoning</strong></td>
+    <td align="center"><strong>Object-Centric Size Reasoning</strong></td>
    <td align="center">
    <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
    <br />
