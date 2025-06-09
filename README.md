@@ -28,7 +28,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
     <td>
       <table>
         <tr>
-          <td>
+          <td width="100px">
             <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes? 
             <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
           </td>
