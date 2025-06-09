@@ -12,20 +12,6 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
 
 **Note 3:** We evaluate mainstream MLLMs on Open3DVQA, revealing their current limitations in spatial reasoning and analyzing their sim-to-real capacities.
 
-### Multiple Modalities
-
-
-| Sample             | RGB                                                       | Depth                     |Caption & Bounding Box                                                     | Mask                                                      | PointCloud                                                |
-|:------------:|:---------------------------------------------------------:|:---------------------------------------------------------:|:---------------------------------------------------------:|:---------------------------------------------------------:|:----------------------------------------------------------:|
-| **1** | <img src="figure/rgb_1.png" height="65px"/>                | <img src="figure/depth_1.png" height="65px"/>              | <img src="figure/cap_1.png" height="65px"/>              | <img src="figure/mask_1.png" height="65px"/>              | <img src="figure/pcd_1.png" height="65px"/>                |
-| **2** | <img src="figure/rgb_2.png" height="65px"/>                | <img src="figure/depth_2.png" height="65px"/>              | <img src="figure/cap_2.png" height="65px"/>              | <img src="figure/mask_2.png" height="65px"/>              | <img src="figure/pcd_2.png" height="65px"/>                |
-| **3** | <img src="figure/rgb_3.png" height="65px"/>                | <img src="figure/depth_3.png" height="65px"/>              | <img src="figure/cap_3.png" height="65px"/>              | <img src="figure/mask_3.png" height="65px"/>              | <img src="figure/pcd_3.png" height="65px"/>                |
-| **4** | <img src="figure/rgb_4.png" height="65px"/>                | <img src="figure/depth_4.png" height="65px"/>              | <img src="figure/cap_4.png" height="65px"/>              | <img src="figure/mask_4.png" height="65px"/>              | <img src="figure/pcd_4.png" height="65px"/>                |
-| **5** | <img src="figure/rgb_5.png" height="65px"/>                | <img src="figure/depth_5.png" height="65px"/>              | <img src="figure/cap_5.png" height="65px"/>              | <img src="figure/mask_5.png" height="65px"/>              | <img src="figure/pcd_5.png" height="65px"/>                |
-| **6** | <img src="figure/rgb_6.png" height="65px"/>                | <img src="figure/depth_6.png" height="65px"/>              | <img src="figure/cap_6.png" height="65px"/>              | <img src="figure/mask_6.png" height="65px"/>              | <img src="figure/pcd_6.png" height="65px"/>                |
-
-
-
 ### QA Templates
 
 <table>
@@ -219,16 +205,13 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
     <th style="text-align: center; vertical-align: middle;">Responses</th>
   </tr>
   <tr>
-    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric Size<br>Reasoning</strong></td>
-   <td>
-      <div style="text-align: center;">
-         <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
-      </div>
-      <div style="text-align: left;">
-         Does the red storefront with Chinese<br>
-         text have a lesser height compared<br>
-         to the white building with blue stripes?
-      </div>
+    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric Size Reasoning</strong></td>
+   <td align="center">
+   <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
+   <br />
+   Does the red storefront with Chinese<br>
+   text have a lesser height compared<br>
+   to the white building with blue stripes?
    </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
@@ -237,16 +220,13 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
   </tr>
 
   <tr>
-    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric Distance<br>Reasoning</strong></td>
-   <td>
-      <div style="text-align: center;">
-         <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
-      </div>
-      <div style="text-align: left;">
-         Does the red storefront with Chinese<br>
-         text have a lesser height compared<br>
-         to the white building with blue stripes?
-      </div>
+    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric Distance Reasoning</strong></td>
+   <td align="center">
+   <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
+   <br />
+   Does the red storefront with Chinese<br>
+   text have a lesser height compared<br>
+   to the white building with blue stripes?
    </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
@@ -255,16 +235,13 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
   </tr>
 
   <tr>
-    <td style="text-align: center; vertical-align: middle;"><strong>Egocentric Direction<br>Reasoning</strong></td>
-   <td>
-      <div style="text-align: center;">
-         <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
-      </div>
-      <div style="text-align: left;">
-         Does the red storefront with Chinese<br>
-         text have a lesser height compared<br>
-         to the white building with blue stripes?
-      </div>
+    <td style="text-align: center; vertical-align: middle;"><strong>Egocentric Direction Reasoning</strong></td>
+   <td align="center">
+   <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
+   <br />
+   Does the red storefront with Chinese<br>
+   text have a lesser height compared<br>
+   to the white building with blue stripes?
    </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
@@ -273,16 +250,13 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
   </tr>
 
   <tr>
-    <td style="text-align: center; vertical-align: middle;"><strong>Egocentric Distance<br>Reasoning</strong></td>
-   <td>
-      <div style="text-align: center;">
-         <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
-      </div>
-      <div style="text-align: left;">
-         Does the red storefront with Chinese<br>
-         text have a lesser height compared<br>
-         to the white building with blue stripes?
-      </div>
+    <td style="text-align: center; vertical-align: middle;"><strong>Egocentric Distance Reasoning</strong></td>
+   <td align="center">
+   <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
+   <br />
+   Does the red storefront with Chinese<br>
+   text have a lesser height compared<br>
+   to the white building with blue stripes?
    </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
@@ -291,16 +265,13 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
   </tr>
 
   <tr>
-    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric-Egocentric<br>Transformation<br>Direction Reasoning</strong></td>
-   <td>
-      <div style="text-align: center;">
-         <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
-      </div>
-      <div style="text-align: left;">
-         Does the red storefront with Chinese<br>
-         text have a lesser height compared<br>
-         to the white building with blue stripes?
-      </div>
+    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric-Egocentric Transformation Direction Reasoning</strong></td>
+   <td align="center">
+   <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
+   <br />
+   Does the red storefront with Chinese<br>
+   text have a lesser height compared<br>
+   to the white building with blue stripes?
    </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
@@ -309,16 +280,13 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
   </tr>
 
   <tr>
-    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric-Egocentric<br>Transformation<br>Distance Reasoning</strong></td>
-   <td>
-      <div style="text-align: center;">
-         <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
-      </div>
-      <div style="text-align: left;">
-         Does the red storefront with Chinese<br>
-         text have a lesser height compared<br>
-         to the white building with blue stripes?
-      </div>
+    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric-Egocentric Transformation Distance Reasoning</strong></td>
+   <td align="center">
+   <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
+   <br />
+   Does the red storefront with Chinese<br>
+   text have a lesser height compared<br>
+   to the white building with blue stripes?
    </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
@@ -327,16 +295,13 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
   </tr>
 
   <tr>
-    <td style="text-align: center; vertical-align: middle;"><strong>Object-Centric<br>Size Reasoning</strong></td>
-   <td>
-      <div style="text-align: center;">
-         <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
-      </div>
-      <div style="text-align: left;">
-         Does the red storefront with Chinese<br>
-         text have a lesser height compared<br>
-         to the white building with blue stripes?
-      </div>
+    <td style="text-align: center; vertical-align: middle;"><strong>Object-Centric Size Reasoning</strong></td>
+   <td align="center">
+   <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
+   <br />
+   Does the red storefront with Chinese<br>
+   text have a lesser height compared<br>
+   to the white building with blue stripes?
    </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
@@ -344,6 +309,18 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
     </td>
   </tr>
 </table>
+
+### Multiple Modalities
+
+| Sample             | RGB                                                       | Depth                     |Caption & Bounding Box                                                     | Mask                                                      | PointCloud                                                |
+|:------------:|:---------------------------------------------------------:|:---------------------------------------------------------:|:---------------------------------------------------------:|:---------------------------------------------------------:|:----------------------------------------------------------:|
+| **1** | <img src="figure/rgb_1.png" height="65px"/>                | <img src="figure/depth_1.png" height="65px"/>              | <img src="figure/cap_1.png" height="65px"/>              | <img src="figure/mask_1.png" height="65px"/>              | <img src="figure/pcd_1.png" height="65px"/>                |
+| **2** | <img src="figure/rgb_2.png" height="65px"/>                | <img src="figure/depth_2.png" height="65px"/>              | <img src="figure/cap_2.png" height="65px"/>              | <img src="figure/mask_2.png" height="65px"/>              | <img src="figure/pcd_2.png" height="65px"/>                |
+| **3** | <img src="figure/rgb_3.png" height="65px"/>                | <img src="figure/depth_3.png" height="65px"/>              | <img src="figure/cap_3.png" height="65px"/>              | <img src="figure/mask_3.png" height="65px"/>              | <img src="figure/pcd_3.png" height="65px"/>                |
+| **4** | <img src="figure/rgb_4.png" height="65px"/>                | <img src="figure/depth_4.png" height="65px"/>              | <img src="figure/cap_4.png" height="65px"/>              | <img src="figure/mask_4.png" height="65px"/>              | <img src="figure/pcd_4.png" height="65px"/>                |
+| **5** | <img src="figure/rgb_5.png" height="65px"/>                | <img src="figure/depth_5.png" height="65px"/>              | <img src="figure/cap_5.png" height="65px"/>              | <img src="figure/mask_5.png" height="65px"/>              | <img src="figure/pcd_5.png" height="65px"/>                |
+| **6** | <img src="figure/rgb_6.png" height="65px"/>                | <img src="figure/depth_6.png" height="65px"/>              | <img src="figure/cap_6.png" height="65px"/>              | <img src="figure/mask_6.png" height="65px"/>              | <img src="figure/pcd_6.png" height="65px"/>                |
+
 
 ## QA Generation Pipeline
 
@@ -424,4 +401,3 @@ Feel free to report any issues or unexpected results you encounter.
 ## Acknowledgement
 
 We have used code snippets from different repositories, especially from: LLaVA, Qwen2-VL and VQASynth. We would like to acknowledge and thank the authors of these repositories for their excellent work.
-
