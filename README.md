@@ -8,6 +8,8 @@ Open3DVQA is a benchamrk to comprehensively evaluate the spatial reasoning capac
 
 ![Open3DVQA Overview](figure/data_overview.jpg)
 
+______________________________________________________________________
+
 ## Open3DVQA Benchmark
 
 [**Open3DVQA: A Benchmark for Comprehensive Spatial Reasoning with Multimodal Large Language Model in Open Space**](<https://www.arxiv.org/abs/2503.11094>)
@@ -399,6 +401,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
 | **5** | <img src="figure/rgb_5.png" height="55px"/>                | <img src="figure/depth_5.png" height="55px"/>              | <img src="figure/cap_5.png" height="55px"/>              | <img src="figure/mask_5.png" height="55px"/>              | <img src="figure/pcd_5.png" height="55px"/>                |
 | **6** | <img src="figure/rgb_6.png" height="55px"/>                | <img src="figure/depth_6.png" height="55px"/>              | <img src="figure/cap_6.png" height="55px"/>              | <img src="figure/mask_6.png" height="55px"/>              | <img src="figure/pcd_6.png" height="55px"/>                |
 
+______________________________________________________________________
 
 ## QA Generation Pipeline
 
@@ -438,6 +441,8 @@ Run id_processor.py to get ids of interested objects. After that, run caption_pr
 
 Feel free to report any issues or unexpected results you encounter.
 
+______________________________________________________________________
+
 ## Inference & Evaluation
 
 We've also made the dataset synthesis pipeline available. You can find the code and instructions in the [processor](processor) folder.
@@ -475,6 +480,8 @@ Run id_processor.py to get ids of interested objects. After that, run caption_pr
 ```
 
 Feel free to report any issues or unexpected results you encounter.
+
+______________________________________________________________________
 
 ## Acknowledgement
 
