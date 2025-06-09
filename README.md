@@ -205,6 +205,8 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
     <th style="text-align: center; vertical-align: middle;">Responses</th>
   </tr>
   <tr>
+    <td align="center"><strong>Allocentric Size<br>Reasoning</strong></td>
+   <td>
       <table>
         <tr>
           <td align="center">
