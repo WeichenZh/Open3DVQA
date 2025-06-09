@@ -210,7 +210,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
       <table>
         <tr>
           <td align="center">
-            <img src="figure/rgb_1.png" height="80px" />
+            <img src="figure/rgb_1.png" height="100px" />
           </td>
         </tr>
         <tr>
@@ -235,7 +235,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
       <table>
         <tr>
           <td align="center">
-            <img src="figure/rgb_1.png" height="80px" />
+            <img src="figure/rgb_2.png" height="100px" />
           </td>
         </tr>
         <tr>
@@ -260,7 +260,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
       <table>
         <tr>
           <td align="center">
-            <img src="figure/rgb_1.png" height="80px" />
+            <img src="figure/rgb_3.png" height="100px" />
           </td>
         </tr>
         <tr>
@@ -285,7 +285,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
       <table>
         <tr>
           <td align="center">
-            <img src="figure/rgb_1.png" height="80px" />
+            <img src="figure/rgb_4.png" height="100px" />
           </td>
         </tr>
         <tr>
@@ -310,7 +310,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
       <table>
         <tr>
           <td align="center">
-            <img src="figure/rgb_1.png" height="80px" />
+            <img src="figure/rgb_5.png" height="100px" />
           </td>
         </tr>
         <tr>
@@ -335,7 +335,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
       <table>
         <tr>
           <td align="center">
-            <img src="figure/rgb_1.png" height="80px" />
+            <img src="figure/rgb_6.png" height="100px" />
           </td>
         </tr>
         <tr>
@@ -360,7 +360,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
       <table>
         <tr>
           <td align="center">
-            <img src="figure/rgb_1.png" height="80px" />
+            <img src="figure/rgb_7.png" height="100px" />
           </td>
         </tr>
         <tr>
