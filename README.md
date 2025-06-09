@@ -205,7 +205,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
     <th style="text-align: center; vertical-align: middle;">Responses</th>
   </tr>
   <tr>
-    <td align="center"><strong>Allocentric Size Reasoning</strong></td>
+    <td align="center"><strong>Allocentric Size<br>Reasoning</strong></td>
    <td align="center">
    <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
    <br />
@@ -215,12 +215,13 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
    </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
+      <strong>3D-LLM:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
     </td>
   </tr>
 
   <tr>
-    <td align="center"><strong>Allocentric Distance Reasoning</strong></td>
+    <td align="center"><strong>Allocentric Distance<br>Reasoning</strong></td>
    <td align="center">
    <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
    <br />
@@ -230,12 +231,13 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
    </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
+      <strong>3D-LLM:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
     </td>
   </tr>
 
   <tr>
-    <td align="center"><strong>Egocentric Direction Reasoning</strong></td>
+    <td align="center"><strong>Egocentric Direction<br>Reasoning</strong></td>
    <td align="center">
    <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
    <br />
@@ -245,12 +247,13 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
    </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
+      <strong>3D-LLM:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
     </td>
   </tr>
 
   <tr>
-    <td align="center"><strong>Egocentric Distance Reasoning</strong></td>
+    <td align="center"><strong>Egocentric Distance<br>Reasoning</strong></td>
    <td align="center">
    <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
    <br />
@@ -260,12 +263,13 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
    </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
+      <strong>3D-LLM:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
     </td>
   </tr>
 
   <tr>
-    <td align="center"><strong>Allocentric-Egocentric Transformation Direction Reasoning</strong></td>
+    <td align="center"><strong>Allocentric-Egocentric<br>Transformation Direction<br>Reasoning</strong></td>
    <td align="center">
    <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
    <br />
@@ -275,12 +279,13 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
    </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
+      <strong>3D-LLM:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
     </td>
   </tr>
 
   <tr>
-    <td align="center"><strong>Allocentric-Egocentric Transformation Distance Reasoning</strong></td>
+    <td align="center"><strong>Allocentric-Egocentric<br>Transformation Distance<br>Reasoning</strong></td>
    <td align="center">
    <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
    <br />
@@ -290,12 +295,13 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
    </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
+      <strong>3D-LLM:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
     </td>
   </tr>
 
   <tr>
-    <td align="center"><strong>Object-Centric Size Reasoning</strong></td>
+    <td align="center"><strong>Object-Centric<br>Size Reasoning</strong></td>
    <td align="center">
    <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
    <br />
@@ -305,7 +311,8 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
    </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
+      <strong>3D-LLM:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
     </td>
   </tr>
 </table>
