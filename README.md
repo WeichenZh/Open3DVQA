@@ -21,7 +21,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
     <th style="text-align: center; vertical-align: middle;">Examples</th>
   </tr>
   <tr>
-    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric Size Reasoning</strong></td>
+    <td align="center"><strong>Allocentric Size Reasoning</strong></td>
     <td style="text-align: center; vertical-align: middle;">
       To infer relative size relationships <strong>between two objects in space</strong>, such as longer/shorter, wider/narrower, taller/shorter, larger/smaller.
     </td>
@@ -46,7 +46,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
   </tr>
 
   <tr>
-    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric Distance Reasoning</strong></td>
+    <td align="center"><strong>Allocentric Distance Reasoning</strong></td>
     <td style="text-align: center; vertical-align: middle;">
       To infer straight-line, vertical or horizontal <strong>distances between objects</strong>.
     </td>
@@ -71,7 +71,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
   </tr>
 
   <tr>
-    <td style="text-align: center; vertical-align: middle;"><strong>Egocentric Direction Reasoning</strong></td>
+    <td align="center"><strong>Egocentric Direction Reasoning</strong></td>
     <td style="text-align: center; vertical-align: middle;">
       To infer the direction of an object <strong>relative to the agent</strong>, such as left, right, up and down.
     </td>
@@ -96,7 +96,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
   </tr>
 
   <tr>
-    <td style="text-align: center; vertical-align: middle;"><strong>Egocentric Distance Reasoning</strong></td>
+    <td align="center"><strong>Egocentric Distance Reasoning</strong></td>
     <td style="text-align: center; vertical-align: middle;">
       To infer the straight-line distance of an object <strong>from the agent</strong>.
     </td>
@@ -121,7 +121,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
   </tr>
 
   <tr>
-    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric-Egocentric Transformation Direction Reasoning</strong></td>
+    <td align="center"><strong>Allocentric-Egocentric Transformation Direction Reasoning</strong></td>
     <td style="text-align: center; vertical-align: middle;">
       The agent <strong>infers the direction of objects</strong> relative to itself based on its movement.
     </td>
@@ -146,7 +146,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
   </tr>
 
   <tr>
-    <td style="text-align: center; vertical-align: middle;"><strong>Allocentric-Egocentric Transformation Distance Reasoning</strong></td>
+    <td align="center"><strong>Allocentric-Egocentric Transformation Distance Reasoning</strong></td>
     <td style="text-align: center; vertical-align: middle;">
       The agent <strong>infers object distance</strong> in the horizontal or vertical direction relative to itself.
     </td>
@@ -171,7 +171,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
   </tr>
 
   <tr>
-    <td style="text-align: center; vertical-align: middle;"><strong>Object-Centric Size Reasoning</strong></td>
+    <td align="center"><strong>Object-Centric Size Reasoning</strong></td>
     <td style="text-align: center; vertical-align: middle;">
       To infer the <strong>absolute size</strong> of a single object, such as its length, width or height.
     </td>
