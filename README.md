@@ -4,15 +4,23 @@
 [![Code License](https://img.shields.io/badge/Data%20License-Apache_2.0-green.svg)](CODE_LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/release/python-3100/)
 
+______________________________________________________________________
+
+[**📄 Open3DVQA: A Benchmark for Comprehensive Spatial Reasoning with Multimodal Large Language Model in Open Space**](<https://www.arxiv.org/abs/2503.11094>)
+
 Open3DVQA is a benchamrk to comprehensively evaluate the spatial reasoning capacities of current SOTA foundation models in open 3D space. It consists of 89k VOA samples, collected using aneffcient semi-automated tool in a high-fdelity urban simulator.
 
 ![Open3DVQA Overview](figure/data_overview.jpg)
 
 ______________________________________________________________________
 
-## Open3DVQA Benchmark
+## 📢 News
+- **June-03-2025**- Open3DVQA v2 is released at [Open3DVQA-v2](https://github.com/WeichenZh/Open3DVQA/tree/o3dvqa_v2)!🔥
+- **Mar-15-2025**- Open3DVQA preprint released at [Arxiv](https://www.arxiv.org/abs/2503.11094)!
+- **Feb-27-2025**- Open3DVQA code/dataset released! 🔥
+______________________________________________________________________
 
-[**Open3DVQA: A Benchmark for Comprehensive Spatial Reasoning with Multimodal Large Language Model in Open Space**](<https://www.arxiv.org/abs/2503.11094>)
+## ✅ Open3DVQA Benchmark
 
 We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason about complex spatial relationships from an aerial perspective. The benchmark comprises **89k** QA pairs spanning **7** general spatial reasoning tasks—multiple-choice, true/false, and short-answer formats—and supports both visual and point cloud modalities. The questions are automatically generated from spatial relations extracted from both real-world and simulated aerial scenes.
 
@@ -22,7 +30,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
 
 **Note 3:** We evaluate mainstream MLLMs on Open3DVQA, revealing their current limitations in spatial reasoning and analyzing their sim-to-real capacities.
 
-### QA Templates
+### 📋 QA Templates
 
 <table>
   <tr>
@@ -206,7 +214,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
   </tr>
 </table>
 
-### Response Examples
+### 💬 Response Examples
 
 <table>
   <tr>
@@ -390,7 +398,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
   </tr>
 </table>
 
-### Multiple Modalities
+### 🖼️ Multiple Modalities
 
 | Sample             | RGB                                                       | Depth                     |Caption & Bounding Box                                                     | Mask                                                      | PointCloud                                                |
 |:------------:|:---------------------------------------------------------:|:---------------------------------------------------------:|:---------------------------------------------------------:|:---------------------------------------------------------:|:----------------------------------------------------------:|
@@ -403,7 +411,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
 
 ______________________________________________________________________
 
-## QA Generation Pipeline
+## 🛠️ QA Generation Pipeline
 
 We've also made the dataset synthesis pipeline available. You can find the code and instructions in the [processor](processor) folder.
 
@@ -443,7 +451,7 @@ Feel free to report any issues or unexpected results you encounter.
 
 ______________________________________________________________________
 
-## Inference & Evaluation
+## 🚀 Inference & Evaluation
 
 We've also made the dataset synthesis pipeline available. You can find the code and instructions in the [processor](processor) folder.
 
@@ -483,6 +491,6 @@ Feel free to report any issues or unexpected results you encounter.
 
 ______________________________________________________________________
 
-## Acknowledgement
+## 🙏 Acknowledgement
 
 We have used code snippets from different repositories, especially from: LLaVA, Qwen2-VL and VQASynth. We would like to acknowledge and thank the authors of these repositories for their excellent work.
