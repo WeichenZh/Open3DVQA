@@ -29,15 +29,15 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
       <table>
         <tr>
           <td>
-            <strong>Question:</strong> Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?<br>
-            <strong>Answer:</strong> Yes, the red storefront with chinese<br>text is shorter than the white<br>building with blue stripes.
+            <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes? 
+            <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
           </td>
           <td style="width: 90px;"><img src="figure/rgb_1.png" height="80px"/></td>
         </tr>
         <tr>
           <td>
-            <strong>Question:</strong> Does the red storefront with chinese<br>text have a lesser height compared<br>to the white building with blue stripes?<br>
-            <strong>Answer:</strong> Yes, the red storefront with chinese<br>text is shorter than the white<br>building with blue stripes.
+            <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes? 
+            <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
           </td>
           <td style="width: 90px;"><img src="figure/rgb_2.png" height="80px"/></td>
         </tr>
