@@ -8,15 +8,15 @@ ______________________________________________________________________
 
 [**📄 Open3DVQA: A Benchmark for Comprehensive Spatial Reasoning with Multimodal Large Language Model in Open Space**](<https://www.arxiv.org/abs/2503.11094>)
 
-We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason about complex spatial relationships from an aerial perspective.The questions are automatically generated from spatial relations extracted from both real-world and simulated aerial scenes.
+We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason about complex spatial relationships from an aerial perspective.The QAs are automatically generated from spatial relations extracted from both real-world and simulated aerial scenes.
 
 ![Open3DVQA Overview](figure/data_overview.jpg)
 
 ______________________________________________________________________
 
 ## 📢 News
-- **June-03-2025**- Open3DVQA v2 is released at [Open3DVQA-v2](https://github.com/WeichenZh/Open3DVQA/tree/o3dvqa_v2)!🔥
-- **Mar-15-2025**- Open3DVQA preprint released at [Arxiv](https://www.arxiv.org/abs/2503.11094)!
+- **June-03-2025**- Open3DVQA v2 is released at [Open3DVQA-v2](https://github.com/WeichenZh/Open3DVQA/tree/o3dvqa_v2)! 🔥
+- **Mar-15-2025**- Open3DVQA preprint released at [Arxiv](https://www.arxiv.org/abs/2503.11094)! 🔥
 - **Feb-27-2025**- Open3DVQA code/dataset released! 🔥
 ______________________________________________________________________
 
@@ -24,7 +24,7 @@ ______________________________________________________________________
 
 Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex spatial relationships from an aerial view. It contains **89k** QA pairs across **7** spatial reasoning tasks—including multiple-choice, true/false, and short-answer formats—and supports both visual and point cloud data. Questions are automatically generated from spatial relations in real-world and simulated aerial scenes.
 
-**Key highlights:**
+**💡 Key highlights:**
 
 - Covers four spatial perspectives and **7** task types for comprehensive open 3D spatial reasoning evaluation.
 - Introduces a scalable **QA generation pipeline** that extracts 3D spatial relationships and creates diverse QA formats from a single RGB image, with a multi-modal correction flow to ensure quality.
