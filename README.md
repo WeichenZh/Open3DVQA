@@ -415,6 +415,8 @@ ______________________________________________________________________
 
 We've also made the dataset synthesis pipeline available. You can find the code and instructions in the [processor](processor) folder.
 
+![QA Generation Pipeline](figure/qa_pipeline.jpg)
+
 Please clone this repository and change path to the floder. Then use the following command to get the open3dvqa dataset.
 ```bash
    cd Open3DVQA
