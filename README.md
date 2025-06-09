@@ -205,17 +205,21 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
     <th style="text-align: center; vertical-align: middle;">Responses</th>
   </tr>
   <tr>
-    <td align="center"><strong>Allocentric Size<br>Reasoning</strong></td>
-    <td>
-      <div style="text-align: center;">
-        <img src="figure/rgb_1.png" height="80px" style="display: block; margin: auto;" />
-      </div>
-      <div style="text-align: left; font-size: 14px; line-height: 1.4;">
-        Does the red storefront with Chinese<br>
-        text have a lesser height compared<br>
-        to the white building with blue stripes?
-      </div>
-    </td>
+      <table>
+        <tr>
+          <td align="center">
+            <img src="figure/rgb_1.png" height="80px" />
+          </td>
+        </tr>
+        <tr>
+          <td align="left">
+            Does the red storefront with Chinese<br>
+            text have a lesser height compared<br>
+            to the white building with blue stripes?
+          </td>
+        </tr>
+      </table>
+   </td>
     <td>
       <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
       <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
