@@ -8,7 +8,7 @@ ______________________________________________________________________
 
 [**📄 Open3DVQA: A Benchmark for Comprehensive Spatial Reasoning with Multimodal Large Language Model in Open Space**](<https://www.arxiv.org/abs/2503.11094>)
 
-Open3DVQA is a benchamrk to comprehensively evaluate the spatial reasoning capacities of current SOTA foundation models in open 3D space. It consists of 89k VOA samples, collected using aneffcient semi-automated tool in a high-fdelity urban simulator.
+We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason about complex spatial relationships from an aerial perspective.The questions are automatically generated from spatial relations extracted from both real-world and simulated aerial scenes.
 
 ![Open3DVQA Overview](figure/data_overview.jpg)
 
@@ -22,13 +22,13 @@ ______________________________________________________________________
 
 ## ✅ Open3DVQA Benchmark
 
-We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason about complex spatial relationships from an aerial perspective. The benchmark comprises **89k** QA pairs spanning **7** general spatial reasoning tasks—multiple-choice, true/false, and short-answer formats—and supports both visual and point cloud modalities. The questions are automatically generated from spatial relations extracted from both real-world and simulated aerial scenes.
+Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex spatial relationships from an aerial view. It contains **89k** QA pairs across **7** spatial reasoning tasks—including multiple-choice, true/false, and short-answer formats—and supports both visual and point cloud data. Questions are automatically generated from spatial relations in real-world and simulated aerial scenes.
 
-**Note 1:** We propose **Open3DVQA**, a novel question-answering benchmark designed for spatial reasoning in 3D urban environments. The benchmark encompasses four distinct spatial perspectives and **7** task types, providing a comprehensive evaluation of an embodied agent’s 3D spatial reasoning capabilities.
+**Key highlights:**
 
-**Note 2:** We introduce a scalable **QA generation pipeline** that extracts 3D spatial relationships and generates diverse QA formats from a single RGB image. We design a plug-and-play multi-modal correction flow that leverages available ground-truth information across modalities to reduce error accumulation and ensure high-quality QAs.
-
-**Note 3:** We evaluate mainstream MLLMs on Open3DVQA, revealing their current limitations in spatial reasoning and analyzing their sim-to-real capacities.
+- Covers four spatial perspectives and **7** task types for comprehensive open 3D spatial reasoning evaluation.
+- Introduces a scalable **QA generation pipeline** that extracts 3D spatial relationships and creates diverse QA formats from a single RGB image, with a multi-modal correction flow to ensure quality.
+- Benchmarks mainstream MLLMs, revealing their current spatial reasoning limitations and sim-to-real generalization capabilities.
 
 ### 📋 QA Templates
 
