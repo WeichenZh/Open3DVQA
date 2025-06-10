@@ -54,10 +54,10 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
         </tr>
         <tr>
           <td width="360px">
-            <strong>Question:</strong> Who is positioned more to the right, the white building with blue stripes or the tall beige apartment building nearby?<br>
-            <strong>Answer:</strong> From the viewer's perspective, white building with blue stripes appears more on the right side.
+            <strong>Question:</strong> Which of these two, the white modular buildings with windows or the tall beige residential apartments, appears wider?<br>
+            <strong>Answer:</strong> Appearing wider between the two is white modular buildings with windows.
           </td>
-          <td style="width: 90px;"><img src="figure/rgb_2.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_5.png" height="80px"/></td>
         </tr>
       </table>
     </td>
@@ -154,10 +154,10 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
         </tr>
         <tr>
           <td width="360px">
-            <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?<br>
-            <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+            <strong>Question:</strong> If you are at row of parked white vans, where will you find white building with blue stripes?<br>
+            <strong>Answer:</strong> Row of parked white vans will find white building with blue stripes around the 10 o'clock direction.
           </td>
-          <td style="width: 90px;"><img src="figure/rgb_4.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_1.png" height="80px"/></td>
         </tr>
       </table>
     </td>
@@ -172,17 +172,17 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
       <table>
         <tr>
           <td width="360px">
-            <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?<br>
-            <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+            <strong>Question:</strong> Could you provide the vertical distance between the white building with blue stripes and you?<br>
+            <strong>Answer:</strong> 4.19 meters
           </td>
-          <td style="width: 90px;"><img src="figure/rgb_5.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_2.png" height="80px"/></td>
         </tr>
         <tr>
           <td width="360px">
-            <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?<br>
-            <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+            <strong>Question:</strong> How distant is the green foliage surrounding the structure from you horizontally?<br>
+            <strong>Answer:</strong> Horizontally, 96.91 meters apart.
           </td>
-          <td style="width: 90px;"><img src="figure/rgb_6.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_3.png" height="80px"/></td>
         </tr>
       </table>
     </td>
@@ -197,17 +197,17 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
       <table>
         <tr>
           <td width="360px">
-            <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?<br>
-            <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+            <strong>Question:</strong> Determine the horizontal dimensions of the dark stone lion sculpture with textured surface.<br>
+            <strong>Answer:</strong> The dark stone lion sculpture with textured surface is 2.49 meters wide.
           </td>
-          <td style="width: 90px;"><img src="figure/rgb_1.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_7.png" height="80px"/></td>
         </tr>
         <tr>
           <td width="360px">
-            <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?<br>
-            <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+            <strong>Question:</strong> How tall is the curved black streetlamp with modern design?<br>
+            <strong>Answer:</strong> The height of the curved black streetlamp with modern design is 7.26 meters.
           </td>
-          <td style="width: 90px;"><img src="figure/rgb_2.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_8.png" height="80px"/></td>
         </tr>
       </table>
     </td>
