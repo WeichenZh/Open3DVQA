@@ -104,7 +104,7 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
         </tr>
         <tr>
           <td width="360px">
-            <strong>Question:</strong> Which is closer to viewer, the white suv parked in foreground or the blue building with tree beside?\nA:white suv parked in foreground\nB:blue building with tree beside\nC:Same\nD:Unknown<br>
+            <strong>Question:</strong> Which is closer to viewer, the white suv parked in foreground or the blue building with tree beside?<br>A:white suv parked in foreground B:blue building with tree beside C:Same D:Unknown<br>
             <strong>Answer:</strong> A.white suv parked in foreground.
           </td>
           <td style="width: 90px;"><img src="figure/rgb_6.png" height="80px"/></td>
