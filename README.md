@@ -239,9 +239,9 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
       </table>
    </td>
     <td>
-      <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>3D-LLM:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+      <strong>Gemini-2.5-Flash:</strong> No.✔️<br>
+      <strong>Qwen2-VL-Finetuned:</strong> Incorrect, the modern building with vertical glass panels's width is not less than the curved white railing structure's.✔️<br>
+      <strong>3D-LLM:</strong> The modern building with vertical glass panels is thinner than the curved white railing structure.❌
     </td>
   </tr>
 
@@ -251,20 +251,20 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
       <table>
         <tr>
           <td align="center">
-            <img src="figure/rgb_3.png" height="100px" />
+            <img src="figure/rgb_9.png" height="100px" />
           </td>
         </tr>
         <tr>
           <td width="300px">
-            How close is the white building with small square windows from the grey pathway leading to the building?
+            How much distance is there between the wooden pavilion with blue metal pyramid roof and the gray stucco wall with minimalist design and structure?
           </td>
         </tr>
       </table>
    </td>
     <td>
-      <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>3D-LLM:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+      <strong>Gemini-2.5-Flash:</strong> Based only on the provided image, it is not possible to determine an exact numerical distance between the wooden pavilion with the blue metal pyramid roof and the gray stucco wall with the minimalist design and structure. The image does not contain the necessary depth or scale information to calculate this measurement.❌<br>
+      <strong>Qwen2-VL-Finetuned:</strong> 11.22 meters.❌<br>
+      <strong>3D-LLM:</strong> The wooden pavilion with blue metal pyramid roof is a few meters away from the gray stucco wall with minimalist design and structure.❌
     </td>
   </tr>
 
@@ -285,9 +285,9 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
       </table>
    </td>
     <td>
-      <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>3D-LLM:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+      <strong>Gemini-2.5-Flash:</strong> Yes, the white modular buildings with windows are to the left of you from the viewer's perspective (around 9 o'clock to 11 o'clock).✔️<br>
+      <strong>Qwen2-VL-Finetuned:</strong> Correct, you'll find the white modular buildings with windows to the left.✔️<br>
+      <strong>3D-LLM:</strong> The white modular buildings with windows are to the left of the viewer's perspective.✔️
     </td>
   </tr>
 
@@ -297,20 +297,20 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
       <table>
         <tr>
           <td align="center">
-            <img src="figure/rgb_1.png" height="100px" />
+            <img src="figure/rgb_9.png" height="100px" />
           </td>
         </tr>
         <tr>
           <td width="300px">
-            How far is the red storefront with chinese text from you?
+            Can you give me an estimation of the distance between the wooden pavilion with blue metal pyramid roof and you?
           </td>
         </tr>
       </table>
    </td>
     <td>
-      <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>3D-LLM:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+      <strong>Gemini-2.5-Flash:</strong> Based on the image, the distance between the wooden pavilion with blue metal pyramid roof and you is 10 meters.✔️<br>
+      <strong>Qwen2-VL-Finetuned:</strong> The wooden pavilion with blue metal pyramid roof is 11.51 meters away.✔️<br>
+      <strong>3D-LLM:</strong> The wooden pavilion with blue metal pyramid roof is approximately 3.05 meters tall.❌
     </td>
   </tr>
 
@@ -320,20 +320,20 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
       <table>
         <tr>
           <td align="center">
-            <img src="figure/rgb_3.png" height="100px" />
+            <img src="figure/rgb_10.png" height="100px" />
           </td>
         </tr>
         <tr>
           <td width="300px">
-            If you are at white building with small square windows, where will you find grey pathway leading to the building?
+            If you are at white building with irregular windows, where will you find area with dense green foliage?
           </td>
         </tr>
       </table>
    </td>
     <td>
-      <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>3D-LLM:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+      <strong>Gemini-2.5-Flash:</strong> If you are at the white building with irregular windows, you will find the area with dense green foliage at 12 o'clock.❌<br>
+      <strong>Qwen2-VL-Finetuned:</strong> White building with irregular windows will find area with dense green foliage around the 7 o'clock direction.✔️<br>
+      <strong>3D-LLM:</strong> The area with dense green foliage is near the white building with irregular windows.❌
     </td>
   </tr>
 
@@ -343,20 +343,20 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
       <table>
         <tr>
           <td align="center">
-            <img src="figure/rgb_2.png" height="100px" />
+            <img src="figure/rgb_11.png" height="100px" />
           </td>
         </tr>
         <tr>
           <td width="300px">
-            Could you provide the vertical distance between the white building with blue stripes and you?
+            Give me the vertical distance from the small wooden structure on ground to you.
           </td>
         </tr>
       </table>
    </td>
     <td>
-      <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>3D-LLM:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+      <strong>Gemini-2.5-Flash:</strong> -1.❌<br>
+      <strong>Qwen2-VL-Finetuned:</strong> The vertical distance of the small wooden structure on ground is 21.52 meters.❌<br>
+      <strong>3D-LLM:</strong> 0.❌
     </td>
   </tr>
 
@@ -377,9 +377,9 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
       </table>
    </td>
     <td>
-      <strong>Gemini-2.5-Flash:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>Qwen2-VL-Finetuned:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.<br>
-      <strong>3D-LLM:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+      <strong>Gemini-2.5-Flash:</strong> I cannot determine the exact horizontal dimensions from the image alone.❌<br>
+      <strong>Qwen2-VL-Finetuned:</strong> The dark stone lion sculpture with textured surface is 2.42 meters in width.✔️<br>
+      <strong>3D-LLM:</strong> The horizontal dimensions of the dark stone lion sculpture with textured surface are.❌
     </td>
   </tr>
 </table>
