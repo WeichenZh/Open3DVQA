@@ -135,7 +135,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Process images and generate captions", add_help=True)
     parser.add_argument("--image_dir", type=str, required=True, help="path to directory containing image files")
     parser.add_argument("--output_dir", type=str, required=True, help="path to directory to save .pkl files")
-    parser.add_argument("--use_gt", type=bool, default=False, help="use the gt caption")
+    parser.add_argument("--use_gt", action="store_true", help="use the gt caption")
     args = parser.parse_args()
 
     main(args.image_dir, args.output_dir, args.use_gt)

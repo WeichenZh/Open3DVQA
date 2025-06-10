@@ -162,6 +162,9 @@ def pointcloud_image_data(row, output_dir, use_gt=False):
 
 
 def main(output_dir, use_gt=False):
+    if use_gt:
+        print("Using ground truth in point cloud process module.")
+
     point_cloud_dir = os.path.join(output_dir, "pointclouds")
     if not os.path.exists(point_cloud_dir):
         os.makedirs(point_cloud_dir)
@@ -196,9 +199,10 @@ def main(output_dir, use_gt=False):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Process images from .pkl files", add_help=True)
     parser.add_argument("--output_dir", type=str, required=True, help="path to directory containing .pkl files")
+    parser.add_argument("--use_gt", action='store_true', help="use the gt point cloud and camera parameters")
     args = parser.parse_args()
 
-    main(args.output_dir)
+    main(args.output_dir, args.use_gt)
 
     # output_dir = r"F:\Documents\PythonScripts\dataset-build\dataset\embodied_tasks_zx\WildUAV\seq00"
     # main(output_dir, use_gt=True)

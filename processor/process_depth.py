@@ -24,13 +24,15 @@ def get_image_depth(image_path, use_gt=False):
 
 
 def main(output_dir, use_gt=False):
+    if use_gt:
+        print("Using ground truth in depth process module.")
     for filename in os.listdir(output_dir):
         if filename.endswith('.pkl'):
             pkl_path = os.path.join(output_dir, filename)
             # Load the DataFrame from the .pkl file
             df = pd.read_pickle(pkl_path)
             # Process each image and add the results to a new column
-            df['depth_map'] = df['image_path'].apply(get_image_depth, args=use_gt)
+            df['depth_map'] = df['image_path'].apply(get_image_depth, args=[use_gt])
 
             # Save the updated DataFrame back to the .pkl file
             df.to_pickle(pkl_path)
@@ -41,7 +43,8 @@ if __name__ == "__main__":
     
     parser = argparse.ArgumentParser(description="Process images from .pkl files", add_help=True)
     parser.add_argument("--output_dir", type=str, required=True, help="path to directory containing .pkl files")
+    parser.add_argument("--use_gt", action='store_true', help="use the gt depth")
     args = parser.parse_args()
 
-    main(args.output_dir)
+    main(args.output_dir, args.use_gt)
 

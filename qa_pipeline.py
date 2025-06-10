@@ -2,7 +2,7 @@ import subprocess
 import os
 import time
 
-data_dir = r"O3DVQA/EmbodiedCity/Wuhan"
+data_dir = r"F:\Documents\PythonScripts\dataset-build\dataset\embodied_tasks_zx\O3DVQA\EmbodiedCity\Wuhan"
 seqs = os.listdir(data_dir)
 
 for idx, seq in enumerate(seqs):
@@ -11,12 +11,12 @@ for idx, seq in enumerate(seqs):
     output_dir = seq_data_path
 
     commands = [
-        f"python ./processor/process_caption.py --output_dir {output_dir} --image_dir {image_dir}",
-        f"python ./processor/process_depth.py --output_dir {output_dir}",
-        f"python ./processor/process_segment.py --output_dir {output_dir}",
-        f"python ./processor/process_pointcloud.py --output_dir {output_dir}",
+        # f"python ./processor/process_caption.py --output_dir {output_dir} --image_dir {image_dir}",
+        f"python ./processor/process_depth.py --output_dir {output_dir} --use_gt",
+        # f"python ./processor/process_segment.py --output_dir {output_dir}",
+        f"python ./processor/process_pointcloud.py --output_dir {output_dir} --use_gt",
         f"python ./processor/process_prompts.py --output_dir {output_dir} --image_dir {image_dir}",
-        f"python ./processor/generate_mask.py --output_dir {output_dir}"
+        # f"python ./processor/generate_mask.py --output_dir {output_dir}"
     ]
     start_time = time.time()
 
