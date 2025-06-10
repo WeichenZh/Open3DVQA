@@ -54,8 +54,8 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
         </tr>
         <tr>
           <td width="360px">
-            <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?<br>
-            <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+            <strong>Question:</strong> Who is positioned more to the right, the white building with blue stripes or the tall beige apartment building nearby?<br>
+            <strong>Answer:</strong> From the viewer's perspective, white building with blue stripes appears more on the right side.
           </td>
           <td style="width: 90px;"><img src="figure/rgb_2.png" height="80px"/></td>
         </tr>
@@ -72,17 +72,17 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
       <table>
         <tr>
           <td width="360px">
-            <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?<br>
-            <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+            <strong>Question:</strong> How close is the white building with small square windows from the grey pathway leading to the building?<br>
+            <strong>Answer:</strong> A distance of 32.15 meters exists between the white building with small square windows and the grey pathway leading to the building.
           </td>
-          <td style="width: 90px;"><img src="figure/rgb_1.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_3.png" height="80px"/></td>
         </tr>
         <tr>
           <td width="360px">
-            <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?<br>
-            <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+            <strong>Question:</strong> Is the position of the modern building with vertical glass panels more distant than that of the curved white railing structure?<br>
+            <strong>Answer:</strong> Yes, it is.
           </td>
-          <td style="width: 90px;"><img src="figure/rgb_2.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_4.png" height="80px"/></td>
         </tr>
       </table>
     </td>
@@ -97,17 +97,17 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
       <table>
         <tr>
           <td width="360px">
-            <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?<br>
-            <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
+            <strong>Question:</strong> Is the white modular buildings with windows to the left of you from the viewer's perspective?<br>
+            <strong>Answer:</strong> Yes, the white modular buildings with windows is to the left.
           </td>
-          <td style="width: 90px;"><img src="figure/rgb_1.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_5.png" height="80px"/></td>
         </tr>
         <tr>
           <td width="360px">
             <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?<br>
             <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
           </td>
-          <td style="width: 90px;"><img src="figure/rgb_2.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_6.png" height="80px"/></td>
         </tr>
       </table>
     </td>
@@ -150,14 +150,14 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
             <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?<br>
             <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
           </td>
-          <td style="width: 90px;"><img src="figure/rgb_1.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_3.png" height="80px"/></td>
         </tr>
         <tr>
           <td width="360px">
             <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?<br>
             <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
           </td>
-          <td style="width: 90px;"><img src="figure/rgb_2.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_4.png" height="80px"/></td>
         </tr>
       </table>
     </td>
@@ -175,14 +175,14 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
             <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?<br>
             <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
           </td>
-          <td style="width: 90px;"><img src="figure/rgb_1.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_5.png" height="80px"/></td>
         </tr>
         <tr>
           <td width="360px">
             <strong>Question:</strong> Does the red storefront with chinese text have a lesser height compared to the white building with blue stripes?<br>
             <strong>Answer:</strong> Yes, the red storefront with chinese text is shorter than the white building with blue stripes.
           </td>
-          <td style="width: 90px;"><img src="figure/rgb_2.png" height="80px"/></td>
+          <td style="width: 90px;"><img src="figure/rgb_6.png" height="80px"/></td>
         </tr>
       </table>
     </td>
@@ -378,7 +378,7 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
       <table>
         <tr>
           <td align="center">
-            <img src="figure/rgb_7.png" height="100px" />
+            <img src="figure/rgb_1.png" height="100px" />
           </td>
         </tr>
         <tr>
