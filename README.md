@@ -228,14 +228,12 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
       <table>
         <tr>
           <td align="center">
-            <img src="figure/rgb_1.png" height="100px" />
+            <img src="figure/rgb_4.png" height="100px" />
           </td>
         </tr>
         <tr>
           <td align="left">
-            Does the red storefront with Chinese<br>
-            text have a lesser height compared<br>
-            to the white building with blue stripes?
+            Is the modern building with vertical glass panels thinner than the curved white railing structure?
           </td>
         </tr>
       </table>
@@ -253,14 +251,12 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
       <table>
         <tr>
           <td align="center">
-            <img src="figure/rgb_2.png" height="100px" />
+            <img src="figure/rgb_3.png" height="100px" />
           </td>
         </tr>
         <tr>
           <td align="left">
-            Does the red storefront with Chinese<br>
-            text have a lesser height compared<br>
-            to the white building with blue stripes?
+            How close is the white building with small square windows from the grey pathway leading to the building?
           </td>
         </tr>
       </table>
@@ -278,14 +274,12 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
       <table>
         <tr>
           <td align="center">
-            <img src="figure/rgb_3.png" height="100px" />
+            <img src="figure/rgb_5.png" height="100px" />
           </td>
         </tr>
         <tr>
           <td align="left">
-            Does the red storefront with Chinese<br>
-            text have a lesser height compared<br>
-            to the white building with blue stripes?
+            Is the white modular buildings with windows to the left of you from the viewer's perspective?
           </td>
         </tr>
       </table>
@@ -303,14 +297,12 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
       <table>
         <tr>
           <td align="center">
-            <img src="figure/rgb_4.png" height="100px" />
+            <img src="figure/rgb_1.png" height="100px" />
           </td>
         </tr>
         <tr>
           <td align="left">
-            Does the red storefront with Chinese<br>
-            text have a lesser height compared<br>
-            to the white building with blue stripes?
+            How far is the red storefront with chinese text from you?
           </td>
         </tr>
       </table>
@@ -328,14 +320,12 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
       <table>
         <tr>
           <td align="center">
-            <img src="figure/rgb_5.png" height="100px" />
+            <img src="figure/rgb_3.png" height="100px" />
           </td>
         </tr>
         <tr>
           <td align="left">
-            Does the red storefront with Chinese<br>
-            text have a lesser height compared<br>
-            to the white building with blue stripes?
+            If you are at white building with small square windows, where will you find grey pathway leading to the building?
           </td>
         </tr>
       </table>
@@ -353,14 +343,12 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
       <table>
         <tr>
           <td align="center">
-            <img src="figure/rgb_6.png" height="100px" />
+            <img src="figure/rgb_2.png" height="100px" />
           </td>
         </tr>
         <tr>
           <td align="left">
-            Does the red storefront with Chinese<br>
-            text have a lesser height compared<br>
-            to the white building with blue stripes?
+            Could you provide the vertical distance between the white building with blue stripes and you?
           </td>
         </tr>
       </table>
@@ -378,14 +366,12 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
       <table>
         <tr>
           <td align="center">
-            <img src="figure/rgb_1.png" height="100px" />
+            <img src="figure/rgb_7.png" height="100px" />
           </td>
         </tr>
         <tr>
           <td align="left">
-            Does the red storefront with Chinese<br>
-            text have a lesser height compared<br>
-            to the white building with blue stripes?
+            Determine the horizontal dimensions of the dark stone lion sculpture with textured surface.
           </td>
         </tr>
       </table>
