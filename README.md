@@ -232,7 +232,7 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
           </td>
         </tr>
         <tr>
-          <td width="300px">
+          <td width="250px">
             Is the modern building with vertical glass panels thinner than the curved white railing structure?
           </td>
         </tr>
@@ -255,7 +255,7 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
           </td>
         </tr>
         <tr>
-          <td width="300px">
+          <td width="250px">
             How much distance is there between the wooden pavilion with blue metal pyramid roof and the gray stucco wall with minimalist design and structure?
           </td>
         </tr>
@@ -278,7 +278,7 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
           </td>
         </tr>
         <tr>
-          <td width="300px">
+          <td width="250px">
             Is the white modular buildings with windows to the left of you from the viewer's perspective?
           </td>
         </tr>
@@ -301,7 +301,7 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
           </td>
         </tr>
         <tr>
-          <td width="300px">
+          <td width="250px">
             Can you give me an estimation of the distance between the wooden pavilion with blue metal pyramid roof and you?
           </td>
         </tr>
@@ -324,7 +324,7 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
           </td>
         </tr>
         <tr>
-          <td width="300px">
+          <td width="250px">
             If you are at white building with irregular windows, where will you find area with dense green foliage?
           </td>
         </tr>
@@ -347,7 +347,7 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
           </td>
         </tr>
         <tr>
-          <td width="300px">
+          <td width="250px">
             Give me the vertical distance from the small wooden structure on ground to you.
           </td>
         </tr>
@@ -370,7 +370,7 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
           </td>
         </tr>
         <tr>
-          <td width="300px">
+          <td width="250px">
             Determine the horizontal dimensions of the dark stone lion sculpture with textured surface.
           </td>
         </tr>
