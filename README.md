@@ -403,119 +403,96 @@ ______________________________________________________________________
 
 We've also made the QA generation pipeline available. Before running the code, make sure you complete the following three steps:
 
-1. **Set up the environment**
+**Set up the environment**
 
-  Install all required Python packages and dependencies. You can use the provided `requirements.txt`:
-  ```bash
-  git clone https://github.com/WeichenZh/Open3DVQA.git
-  cd Open3DVQA
-  conda create -n o3dvqa python=3.10 -y
-  conda activate o3dvqa
-  pip install -r requirements.txt
-  ```
-
-2. **Prepare the GPT-4o API access**
-
-  You need access to the GPT-4o model via OpenAI’s API. Make sure your API key is correctl set as an environment variable:
-  ```bash
-  export OPENAI_API_KEY=your_api_key_here
-  ```
-
-3. **Download dataset and models**
-  
-  Please download the Open3DVQA dataset, ClipSeg and SAM models: 
-
-  - [Open3DVQA dataset](https://huggingface.co/datasets/zzxslp/Open3DVQA)
-  - [ClipSeg model](https://huggingface.co/CIDAS/clipseg-rd64-refined)
-  - [SAM model](https://huggingface.co/facebook/sam-vit-h)
-
-  Organize all codes and resources according to the following directory structure:
-  ```
-  Open3DVQA/
-  ├── qa_pipeline.py
-  ├── inference.py
-  ├── evaluation.py
-  ├── requirements.txt
-  ├── processor/
-  │   ├── process_caption.py
-  │   ├── process_depth.py
-  │   ├── process_segment.py
-  │   ├── ...
-  ├── vqasynth/
-  │   ├── datasets/
-  │   ├── external/
-  │   ├── wrappers/
-  │   ├── models/
-  │   │   ├── clipseg/
-  │   │   ├── sam/
-  ├── dataset/
-  │   ├── EmbodiedCity/
-  │   │   ├── Wuhan/
-  │   │   │   ├── depth/
-  │   │   │   ├── pose
-  │   │   │   ├── rgb/
-  │   │   │   ├── visible_objs/
-  │   │   │   ├── pointclouds/
-  │   │   │   ├── chunk_0.pkl
-  │   │   │   ├── ...
-  │   │   │   ├── merged_qa.json
-  │   ├── RealworldUAV/
-  │   │   ├── Lab/
-  │   │   ├── ...
-  │   ├── UrbanScene/
-  │   │   ├── Campus
-  │   │   ├── ...
-  │   ├── WildUAV/
-  │   │   ├── Wuhan/
-  ```
-
-  
-Run id_processor.py to get ids of interested objects. After that, run caption_processor.py to get the boundingbox and egocentric coordinates. Fill your own gpt api key in the gpt4_caption.py and run the create_vqa.sh to get your own dataset.
-
+Install all required Python packages and dependencies. You can use the provided `requirements.txt`:
 ```bash
-   python processor/id_processor.py
-   python processor/caption_processor.py
-   bash processor/create_vqa.sh
+git clone https://github.com/WeichenZh/Open3DVQA.git
+cd Open3DVQA
+conda create -n o3dvqa python=3.10 -y
+conda activate o3dvqa
+pip install -r requirements.txt
 ```
 
-Feel free to report any issues or unexpected results you encounter.
+**Prepare the GPT-4o API access**
+
+You need access to the GPT-4o model via OpenAI’s API. Make sure your API key is correctly set as an environment variable:
+```bash
+export OPENAI_API_KEY=your_api_key_here
+```
+
+**Download dataset and models**
+  
+Please download the Open3DVQA dataset, ClipSeg and SAM models: 
+
+- [Open3DVQA dataset](https://huggingface.co/datasets/zzxslp/Open3DVQA)
+- [ClipSeg model](https://huggingface.co/CIDAS/clipseg-rd64-refined)
+- [SAM model](https://huggingface.co/facebook/sam-vit-h)
+
+Organize all codes and resources according to the following directory structure:
+```
+Open3DVQA/
+├── processor/
+│   ├── process_caption.py
+│   ├── process_depth.py
+│   ├── process_segment.py
+│   ├── ...
+├── vqasynth/
+│   ├── models/
+│   │   ├── clipseg/
+│   │   ├── sam/
+│   ├── ...
+├── dataset/
+│   ├── EmbodiedCity/
+│   │   ├── Wuhan/
+│   │   │   ├── depth/
+│   │   │   ├── pose
+│   │   │   ├── rgb/
+│   │   │   ├── visible_objs/
+│   │   │   ├── pointclouds/
+│   │   │   ├── chunk_0.pkl
+│   │   │   ├── ...
+│   │   │   ├── merged_qa.json
+│   ├── RealworldUAV/
+│   │   ├── Lab/
+│   │   ├── ...
+│   ├── UrbanScene/
+│   │   ├── Campus
+│   │   ├── ...
+│   ├── WildUAV/
+│   │   ├── Wuhan/
+├── qa_pipeline.py
+├── inference.py
+├── evaluation.py
+├── requirements.txt
+```
+
+
+Open `qa_pipeline.py` and set the `data_dir` variable to the scene you want to process. For example: `data_dir = dataset/RealworldUAV`
+
+After saving your changes, execute the script to start the QA generation process:
+
+```bash
+   python qa_pipeline.py
+```
+
+The script will process the specified scene and generate QA pairs automatically. Input files are `rgb/`, `depth/` and `pose/`. Output files contain `chunk_*.pkl` and `merged_qa.json`.
 
 ______________________________________________________________________
 
 ## 🚀 Inference & Evaluation
 
-We've also made the dataset synthesis pipeline available. You can find the code and instructions in the [processor](processor) folder.
+We also provide additional scripts for model inference and evaluation:
 
-Please clone this repository and change path to the floder. Then use the following command to get the open3dvqa dataset.
-```bash
-   cd Open3DVQA
-```
-Place your own boundingbox.json path extracted from Airsim and change your boundingbox.json path in the id_processor.py. The structure should be as follow:
-```
-Open3DVQA/
-├── utils/
-├── processor/
-│   ├── id_processor.py
-│   ├── caption_processor.py
-│   ├── ...
-├── data/
-│   ├── open3dvqa/
-│   │   ├── 1/
-│   │   │   ├── depth/
-│   │   │   ├── state/
-│   │   │   ├── rgb/
-│   │   │   ├── visible_objs/
-│   │   ├── ...
-│   ├── object_info.json
-│   ├── Buildingbbox.json
-│   ├── ...
-```
-Run id_processor.py to get ids of interested objects. After that, run caption_processor.py to get the boundingbox and egocentric coordinates. Fill your own gpt api key in the gpt4_caption.py and run the create_vqa.sh to get your own dataset.
+- **`inference.py`**  
+  This script allows you to perform QA using large language models (e.g., GPT-4o) via API. It takes prepared multimodal inputs and sends prompts to the model for response answer.
+
+- **`evaluation.py`**  
+  This script is used to evaluate the accuracy of the model-responsed answers. It compares the predicted answers against ground truth answers to compute evaluation metrics such as accuracy.
 
 ```bash
-   python processor/id_processor.py
-   python processor/caption_processor.py
-   bash processor/create_vqa.sh
+   python inference.py
+   python evaluation.py
 ```
 
 Feel free to report any issues or unexpected results you encounter.
