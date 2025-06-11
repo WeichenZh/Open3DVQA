@@ -405,59 +405,71 @@ We've also made the QA generation pipeline available. Before running the code, m
 
 1. **Set up the environment**
 
-Install all required Python packages and dependencies. You can use the provided `requirements.txt`:
-```bash
-git clone https://github.com/WeichenZh/Open3DVQA.git
-cd Open3DVQA
-conda create -n o3dvqa python=3.10 -y
-conda activate o3dvqa
-pip install -r requirements.txt
-```
+  Install all required Python packages and dependencies. You can use the provided `requirements.txt`:
+  ```bash
+  git clone https://github.com/WeichenZh/Open3DVQA.git
+  cd Open3DVQA
+  conda create -n o3dvqa python=3.10 -y
+  conda activate o3dvqa
+  pip install -r requirements.txt
+  ```
 
 2. **Prepare the GPT-4o API access**
 
+  You need access to the GPT-4o model via OpenAI’s API. Make sure your API key is correctl set as an environment variable:
+  ```bash
+  export OPENAI_API_KEY=your_api_key_here
+  ```
 
+3. **Download dataset and models**
+  
+  Please download the Open3DVQA dataset, ClipSeg and SAM models: 
 
+  - [Open3DVQA dataset](https://huggingface.co/datasets/zzxslp/Open3DVQA)
+  - [ClipSeg model](https://huggingface.co/CIDAS/clipseg-rd64-refined)
+  - [SAM model](https://huggingface.co/facebook/sam-vit-h)
 
-Place your own boundingbox.json path extracted from Airsim and change your boundingbox.json path in the id_processor.py. The structure should be as follow:
-```
-Open3DVQA/
-├── qa_pipeline.py
-├── inference.py
-├── evaluation.py
-├── requirements.txt
-├── processor/
-│   ├── process_caption.py
-│   ├── process_depth.py
-│   ├── process_segment.py
-│   ├── ...
-├── vqasynth/
-│   ├── datasets/
-│   ├── external/
-│   ├── wrappers/
-│   ├── models/
-│   │   ├── clipseg/
-│   │   ├── sam/
-├── dataset/
-│   ├── EmbodiedCity/
-│   │   ├── Wuhan/
-│   │   │   ├── depth/
-│   │   │   ├── pose
-│   │   │   ├── rgb/
-│   │   │   ├── visible_objs/
-│   │   │   ├── pointclouds/
-│   │   │   ├── chunk_0.pkl
-│   │   │   ├── ...
-│   │   │   ├── merged_qa.json
-│   ├── RealworldUAV/
-│   │   ├── Lab/
-│   │   ├── ...
-│   ├── UrbanScene/
-│   │   ├── Campus
-│   │   ├── ...
-│   ├── WildUAV/
-│   │   ├── Wuhan/
-```
+  Organize all codes and resources according to the following directory structure:
+  ```
+  Open3DVQA/
+  ├── qa_pipeline.py
+  ├── inference.py
+  ├── evaluation.py
+  ├── requirements.txt
+  ├── processor/
+  │   ├── process_caption.py
+  │   ├── process_depth.py
+  │   ├── process_segment.py
+  │   ├── ...
+  ├── vqasynth/
+  │   ├── datasets/
+  │   ├── external/
+  │   ├── wrappers/
+  │   ├── models/
+  │   │   ├── clipseg/
+  │   │   ├── sam/
+  ├── dataset/
+  │   ├── EmbodiedCity/
+  │   │   ├── Wuhan/
+  │   │   │   ├── depth/
+  │   │   │   ├── pose
+  │   │   │   ├── rgb/
+  │   │   │   ├── visible_objs/
+  │   │   │   ├── pointclouds/
+  │   │   │   ├── chunk_0.pkl
+  │   │   │   ├── ...
+  │   │   │   ├── merged_qa.json
+  │   ├── RealworldUAV/
+  │   │   ├── Lab/
+  │   │   ├── ...
+  │   ├── UrbanScene/
+  │   │   ├── Campus
+  │   │   ├── ...
+  │   ├── WildUAV/
+  │   │   ├── Wuhan/
+  ```
+
+  
 Run id_processor.py to get ids of interested objects. After that, run caption_processor.py to get the boundingbox and egocentric coordinates. Fill your own gpt api key in the gpt4_caption.py and run the create_vqa.sh to get your own dataset.
 
 ```bash
