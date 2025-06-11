@@ -50,14 +50,14 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
             <strong>Question:</strong> Is the modern building with vertical glass panels thinner than the curved white railing structure?<br>
             <strong>Answer:</strong> No, the modern building with vertical glass panels is not thinner than the curved white railing structure.
           </td>
-          <td style="width: 400px;"><img src="figure/rgb_4.png" height="160px"/></td>
+          <td style="width: 300px;"><img src="figure/rgb_4.png" height="160px"/></td>
         </tr>
         <tr>
           <td width="360px">
             <strong>Question:</strong> Which of these two, the white modular buildings with windows or the tall beige residential apartments, appears wider?<br>
             <strong>Answer:</strong> Appearing wider between the two is white modular buildings with windows.
           </td>
-          <td style="width: 400px;"><img src="figure/rgb_5.png" height="160px"/></td>
+          <td style="width: 300px;"><img src="figure/rgb_5.png" height="160px"/></td>
         </tr>
       </table>
     </td>
@@ -75,14 +75,14 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
             <strong>Question:</strong> How close is the white building with small square windows from the grey pathway leading to the building?<br>
             <strong>Answer:</strong> A distance of 32.15 meters exists between the white building with small square windows and the grey pathway leading to the building.
           </td>
-          <td style="width: 400px;"><img src="figure/rgb_3.png" height="160px"/></td>
+          <td style="width: 300px;"><img src="figure/rgb_3.png" height="160px"/></td>
         </tr>
         <tr>
           <td width="360px">
             <strong>Question:</strong> How far is the row of parked white vans from the white building with blue stripes horizontally?<br>
             <strong>Answer:</strong> The row of parked white vans is 6.26 meters away from the white building with blue stripes horizontally.
           </td>
-          <td style="width: 400px;"><img src="figure/rgb_1.png" height="160px"/></td>
+          <td style="width: 300px;"><img src="figure/rgb_1.png" height="160px"/></td>
         </tr>
       </table>
     </td>
@@ -100,14 +100,14 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
             <strong>Question:</strong> Is the white modular buildings with windows to the left of you from the viewer's perspective?<br>
             <strong>Answer:</strong> Yes, the white modular buildings with windows is to the left.
           </td>
-          <td style="width: 400px;"><img src="figure/rgb_5.png" height="160px"/></td>
+          <td style="width: 300px;"><img src="figure/rgb_5.png" height="160px"/></td>
         </tr>
         <tr>
           <td width="360px">
             <strong>Question:</strong> Which is closer to viewer, the white suv parked in foreground or the blue building with tree beside?<br>A:white suv parked in foreground B:blue building with tree beside C:Same D:Unknown<br>
             <strong>Answer:</strong> A.white suv parked in foreground.
           </td>
-          <td style="width: 400px;"><img src="figure/rgb_6.png" height="160px"/></td>
+          <td style="width: 300px;"><img src="figure/rgb_6.png" height="160px"/></td>
         </tr>
       </table>
     </td>
@@ -125,14 +125,14 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
             <strong>Question:</strong> How far is the red storefront with chinese text from you?<br>
             <strong>Answer:</strong> 29.0 meters
           </td>
-          <td style="width: 400px;"><img src="figure/rgb_1.png" height="160px"/></td>
+          <td style="width: 300px;"><img src="figure/rgb_1.png" height="160px"/></td>
         </tr>
         <tr>
           <td width="360px">
             <strong>Question:</strong> How close is the white building with blue stripes from you?<br>
             <strong>Answer:</strong> The distance of the white building with blue stripes is 41.73 meters.
           </td>
-          <td style="width: 400px;"><img src="figure/rgb_2.png" height="160px"/></td>
+          <td style="width: 300px;"><img src="figure/rgb_2.png" height="160px"/></td>
         </tr>
       </table>
     </td>
@@ -150,14 +150,14 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
             <strong>Question:</strong> If you are at white building with small square windows, where will you find grey pathway leading to the building?<br>
             <strong>Answer:</strong> Grey pathway leading to the building is roughly at 9 o'clock from white building with small square windows.
           </td>
-          <td style="width: 400px;"><img src="figure/rgb_3.png" height="160px"/></td>
+          <td style="width: 300px;"><img src="figure/rgb_3.png" height="160px"/></td>
         </tr>
         <tr>
           <td width="360px">
             <strong>Question:</strong> If you are at row of parked white vans, where will you find white building with blue stripes?<br>
             <strong>Answer:</strong> Row of parked white vans will find white building with blue stripes around the 10 o'clock direction.
           </td>
-          <td style="width: 400px;"><img src="figure/rgb_1.png" height="160px"/></td>
+          <td style="width: 300px;"><img src="figure/rgb_1.png" height="160px"/></td>
         </tr>
       </table>
     </td>
@@ -175,14 +175,14 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
             <strong>Question:</strong> Could you provide the vertical distance between the white building with blue stripes and you?<br>
             <strong>Answer:</strong> 4.19 meters
           </td>
-          <td style="width: 400px;"><img src="figure/rgb_2.png" height="160px"/></td>
+          <td style="width: 300px;"><img src="figure/rgb_2.png" height="160px"/></td>
         </tr>
         <tr>
           <td width="360px">
             <strong>Question:</strong> How distant is the green foliage surrounding the structure from you horizontally?<br>
             <strong>Answer:</strong> Horizontally, 96.91 meters apart.
           </td>
-          <td style="width: 400px;"><img src="figure/rgb_3.png" height="160px"/></td>
+          <td style="width: 300px;"><img src="figure/rgb_3.png" height="160px"/></td>
         </tr>
       </table>
     </td>
@@ -200,14 +200,14 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
             <strong>Question:</strong> Determine the horizontal dimensions of the dark stone lion sculpture with textured surface.<br>
             <strong>Answer:</strong> The dark stone lion sculpture with textured surface is 2.49 meters wide.
           </td>
-          <td style="width: 400px;"><img src="figure/rgb_7.png" height="160px"/></td>
+          <td style="width: 300px;"><img src="figure/rgb_7.png" height="160px"/></td>
         </tr>
         <tr>
           <td width="360px">
             <strong>Question:</strong> How tall is the curved black streetlamp with modern design?<br>
             <strong>Answer:</strong> The height of the curved black streetlamp with modern design is 7.26 meters.
           </td>
-          <td style="width: 400px;"><img src="figure/rgb_8.png" height="160px"/></td>
+          <td style="width: 300px;"><img src="figure/rgb_8.png" height="160px"/></td>
         </tr>
       </table>
     </td>
@@ -228,11 +228,11 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
       <table>
         <tr>
           <td align="center">
-            <img src="figure/rgb_4.png" height="100px" />
+            <img src="figure/rgb_4.png" height="120px" />
           </td>
         </tr>
         <tr>
-          <td width="300px">
+          <td width="320px">
             Is the modern building with vertical glass panels thinner than the curved white railing structure?
           </td>
         </tr>
@@ -251,11 +251,11 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
       <table>
         <tr>
           <td align="center">
-            <img src="figure/rgb_9.png" height="100px" />
+            <img src="figure/rgb_9.png" height="120px" />
           </td>
         </tr>
         <tr>
-          <td width="300px">
+          <td width="320px">
             How much distance is there between the wooden pavilion with blue metal pyramid roof and the gray stucco wall with minimalist design and structure?
           </td>
         </tr>
@@ -274,11 +274,11 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
       <table>
         <tr>
           <td align="center">
-            <img src="figure/rgb_5.png" height="100px" />
+            <img src="figure/rgb_5.png" height="120px" />
           </td>
         </tr>
         <tr>
-          <td width="300px">
+          <td width="320px">
             Is the white modular buildings with windows to the left of you from the viewer's perspective?
           </td>
         </tr>
@@ -297,11 +297,11 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
       <table>
         <tr>
           <td align="center">
-            <img src="figure/rgb_9.png" height="100px" />
+            <img src="figure/rgb_9.png" height="120px" />
           </td>
         </tr>
         <tr>
-          <td width="300px">
+          <td width="320px">
             Can you give me an estimation of the distance between the wooden pavilion with blue metal pyramid roof and you?
           </td>
         </tr>
@@ -320,11 +320,11 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
       <table>
         <tr>
           <td align="center">
-            <img src="figure/rgb_10.png" height="100px" />
+            <img src="figure/rgb_10.png" height="120px" />
           </td>
         </tr>
         <tr>
-          <td width="300px">
+          <td width="320px">
             If you are at white building with irregular windows, where will you find area with dense green foliage?
           </td>
         </tr>
@@ -343,11 +343,11 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
       <table>
         <tr>
           <td align="center">
-            <img src="figure/rgb_11.png" height="100px" />
+            <img src="figure/rgb_11.png" height="120px" />
           </td>
         </tr>
         <tr>
-          <td width="300px">
+          <td width="320px">
             Give me the vertical distance from the small wooden structure on ground to you.
           </td>
         </tr>
@@ -366,11 +366,11 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
       <table>
         <tr>
           <td align="center">
-            <img src="figure/rgb_7.png" height="100px" />
+            <img src="figure/rgb_7.png" height="120px" />
           </td>
         </tr>
         <tr>
-          <td width="300px">
+          <td width="320px">
             Determine the horizontal dimensions of the dark stone lion sculpture with textured surface.
           </td>
         </tr>
