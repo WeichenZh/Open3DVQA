@@ -433,16 +433,6 @@ Please download the Open3DVQA dataset, ClipSeg and SAM:
 Organize all codes and resources according to the following directory structure:
 ```
 Open3DVQA/
-├── processor/
-│   ├── process_caption.py
-│   ├── process_depth.py
-│   ├── process_segment.py
-│   ├── ...
-├── vqasynth/
-│   ├── models/
-│   │   ├── clipseg/
-│   │   ├── sam/
-│   ├── ...
 ├── dataset/
 │   ├── EmbodiedCity/
 │   │   ├── Wuhan/
@@ -462,22 +452,32 @@ Open3DVQA/
 │   │   ├── ...
 │   ├── WildUAV/
 │   │   ├── Wuhan/
+├── vqasynth/
+│   ├── models/
+│   │   ├── clipseg/
+│   │   ├── sam/
+│   ├── ...
 ├── qa_pipeline.py
 ├── inference.py
 ├── evaluation.py
+├── processor/
+│   ├── process_caption.py
+│   ├── process_depth.py
+│   ├── process_segment.py
+│   ├── ...
 ├── requirements.txt
 ```
 
 
 Open `qa_pipeline.py` and set the `data_dir` variable to the scene you want to process. For example: `data_dir = dataset/RealworldUAV`
 
-After saving your changes, execute the script to start the QA generation process:
+After saving your changes, run the script to start the QA generation process:
 
 ```bash
 python qa_pipeline.py
 ```
 
-The script will process the specified scene and generate QA pairs automatically. Input files are `rgb/`, `depth/` and `pose/`. Output files contain `chunk_*.pkl` and `merged_qa.json`.
+The script will process the specified scene and generate QA pairs automatically. Input files are `rgb/`, `depth/` and `pose/`. Output files contain `pointclouds`, `chunk_*.pkl` and `merged_qa.json`.
 
 ______________________________________________________________________
 
