@@ -403,9 +403,10 @@ ______________________________________________________________________
 
 We've also made the QA generation pipeline available. Before running the code, make sure you complete the following three steps:
 
-**Set up the environment**
+**1. Set up the environment**
 
 Install all required Python packages and dependencies. You can use the provided `requirements.txt`:
+
 ```bash
 git clone https://github.com/WeichenZh/Open3DVQA.git
 cd Open3DVQA
@@ -414,16 +415,16 @@ conda activate o3dvqa
 pip install -r requirements.txt
 ```
 
-**Prepare the GPT-4o API access**
+**2. Prepare the GPT-4o API access**
 
 You need access to the GPT-4o model via OpenAI’s API. Make sure your API key is correctly set as an environment variable:
 ```bash
 export OPENAI_API_KEY=your_api_key_here
 ```
 
-**Download dataset and models**
+**3. Download dataset and models**
   
-Please download the Open3DVQA dataset, ClipSeg and SAM models: 
+Please download the Open3DVQA dataset, ClipSeg and SAM: 
 
 - [Open3DVQA dataset](https://huggingface.co/datasets/zzxslp/Open3DVQA)
 - [ClipSeg model](https://huggingface.co/CIDAS/clipseg-rd64-refined)
@@ -473,7 +474,7 @@ Open `qa_pipeline.py` and set the `data_dir` variable to the scene you want to p
 After saving your changes, execute the script to start the QA generation process:
 
 ```bash
-   python qa_pipeline.py
+python qa_pipeline.py
 ```
 
 The script will process the specified scene and generate QA pairs automatically. Input files are `rgb/`, `depth/` and `pose/`. Output files contain `chunk_*.pkl` and `merged_qa.json`.
@@ -482,20 +483,21 @@ ______________________________________________________________________
 
 ## 🚀 Inference & Evaluation
 
-We also provide additional scripts for model inference and evaluation:
+We also provide scripts for model inference and evaluation:
 
 - **`inference.py`**  
   This script allows you to perform QA using large language models (e.g., GPT-4o) via API. It takes prepared multimodal inputs and sends prompts to the model for response answer.
+
+```bash
+python inference.py
+```
 
 - **`evaluation.py`**  
   This script is used to evaluate the accuracy of the model-responsed answers. It compares the predicted answers against ground truth answers to compute evaluation metrics such as accuracy.
 
 ```bash
-   python inference.py
-   python evaluation.py
+python evaluation.py
 ```
-
-Feel free to report any issues or unexpected results you encounter.
 
 ______________________________________________________________________
 
