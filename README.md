@@ -399,33 +399,64 @@ ______________________________________________________________________
 
 ## 🛠️ QA Generation Pipeline
 
-We've also made the dataset synthesis pipeline available. You can find the code and instructions in the [processor](processor) folder.
-
 ![QA Generation Pipeline](figure/qa_pipeline.jpg)
 
-Please clone this repository and change path to the floder. Then use the following command to get the open3dvqa dataset.
+We've also made the QA generation pipeline available. Before running the code, make sure you complete the following three steps:
+
+1. **Set up the environment**
+
+Install all required Python packages and dependencies. You can use the provided `requirements.txt`:
 ```bash
-   cd Open3DVQA
+git clone https://github.com/WeichenZh/Open3DVQA.git
+cd Open3DVQA
+conda create -n o3dvqa python=3.10 -y
+conda activate o3dvqa
+pip install -r requirements.txt
 ```
+
+2. **Prepare the GPT-4o API access**
+
+
+
+
 Place your own boundingbox.json path extracted from Airsim and change your boundingbox.json path in the id_processor.py. The structure should be as follow:
 ```
 Open3DVQA/
-├── utils/
+├── qa_pipeline.py
+├── inference.py
+├── evaluation.py
+├── requirements.txt
 ├── processor/
-│   ├── id_processor.py
-│   ├── caption_processor.py
+│   ├── process_caption.py
+│   ├── process_depth.py
+│   ├── process_segment.py
 │   ├── ...
-├── data/
-│   ├── open3dvqa/
-│   │   ├── 1/
+├── vqasynth/
+│   ├── datasets/
+│   ├── external/
+│   ├── wrappers/
+│   ├── models/
+│   │   ├── clipseg/
+│   │   ├── sam/
+├── dataset/
+│   ├── EmbodiedCity/
+│   │   ├── Wuhan/
 │   │   │   ├── depth/
-│   │   │   ├── state/
+│   │   │   ├── pose
 │   │   │   ├── rgb/
 │   │   │   ├── visible_objs/
+│   │   │   ├── pointclouds/
+│   │   │   ├── chunk_0.pkl
+│   │   │   ├── ...
+│   │   │   ├── merged_qa.json
+│   ├── RealworldUAV/
+│   │   ├── Lab/
 │   │   ├── ...
-│   ├── object_info.json
-│   ├── Buildingbbox.json
-│   ├── ...
+│   ├── UrbanScene/
+│   │   ├── Campus
+│   │   ├── ...
+│   ├── WildUAV/
+│   │   ├── Wuhan/
 ```
 Run id_processor.py to get ids of interested objects. After that, run caption_processor.py to get the boundingbox and egocentric coordinates. Fill your own gpt api key in the gpt4_caption.py and run the create_vqa.sh to get your own dataset.
 
