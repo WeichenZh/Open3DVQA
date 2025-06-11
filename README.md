@@ -228,7 +228,7 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
       <table>
         <tr>
           <td align="center">
-            <img src="figure/rgb_4.png" height="120px" />
+            <img src="figure/rgb_4.png" height="150px" />
           </td>
         </tr>
         <tr>
@@ -251,7 +251,7 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
       <table>
         <tr>
           <td align="center">
-            <img src="figure/rgb_9.png" height="120px" />
+            <img src="figure/rgb_9.png" height="150px" />
           </td>
         </tr>
         <tr>
@@ -274,7 +274,7 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
       <table>
         <tr>
           <td align="center">
-            <img src="figure/rgb_5.png" height="120px" />
+            <img src="figure/rgb_5.png" height="150px" />
           </td>
         </tr>
         <tr>
@@ -297,7 +297,7 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
       <table>
         <tr>
           <td align="center">
-            <img src="figure/rgb_9.png" height="120px" />
+            <img src="figure/rgb_9.png" height="150px" />
           </td>
         </tr>
         <tr>
@@ -320,7 +320,7 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
       <table>
         <tr>
           <td align="center">
-            <img src="figure/rgb_10.png" height="120px" />
+            <img src="figure/rgb_10.png" height="150px" />
           </td>
         </tr>
         <tr>
@@ -343,7 +343,7 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
       <table>
         <tr>
           <td align="center">
-            <img src="figure/rgb_11.png" height="120px" />
+            <img src="figure/rgb_11.png" height="150px" />
           </td>
         </tr>
         <tr>
@@ -366,7 +366,7 @@ Open3DVQA is a novel benchmark evaluating MLLMs' ability to reason about complex
       <table>
         <tr>
           <td align="center">
-            <img src="figure/rgb_7.png" height="120px" />
+            <img src="figure/rgb_7.png" height="150px" />
           </td>
         </tr>
         <tr>
