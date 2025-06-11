@@ -15,7 +15,7 @@ We present Open3DVQA, a novel benchmark for evaluating MLLMs' ability to reason 
 ______________________________________________________________________
 
 ## 📢 News
-- **June-03-2025**- Open3DVQA v2 is released at [Open3DVQA-v2](https://github.com/WeichenZh/Open3DVQA/tree/o3dvqa_v2)! 🔥
+- **Jun-03-2025**- Open3DVQA v2 is released at [Open3DVQA-v2](https://github.com/WeichenZh/Open3DVQA/tree/o3dvqa_v2)! 🔥
 - **Mar-15-2025**- Open3DVQA preprint released at [Arxiv](https://www.arxiv.org/abs/2503.11094)! 🔥
 - **Feb-27-2025**- Open3DVQA code/dataset released! 🔥
 ______________________________________________________________________
