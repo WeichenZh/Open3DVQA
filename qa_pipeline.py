@@ -2,18 +2,20 @@ import subprocess
 import os
 import time
 
-data_dir = r"F:\Documents\PythonScripts\dataset-build\dataset\embodied_tasks_zx\O3DVQA\EmbodiedCity\Wuhan"
+data_dir = "dataset/RealworldUAV"
 seqs = os.listdir(data_dir)
 
 for idx, seq in enumerate(seqs):
+    if idx > 0:
+        continue
     seq_data_path = os.path.join(data_dir, seq)
     image_dir = os.path.join(seq_data_path, 'rgb')
     output_dir = seq_data_path
 
     commands = [
-        # f"python ./processor/process_caption.py --output_dir {output_dir} --image_dir {image_dir}",
+        f"python ./processor/process_caption.py --output_dir {output_dir} --image_dir {image_dir}",
         f"python ./processor/process_depth.py --output_dir {output_dir} --use_gt",
-        # f"python ./processor/process_segment.py --output_dir {output_dir}",
+        f"python ./processor/process_segment.py --output_dir {output_dir}",
         f"python ./processor/process_pointcloud.py --output_dir {output_dir} --use_gt",
         f"python ./processor/process_prompts.py --output_dir {output_dir} --image_dir {image_dir}",
         # f"python ./processor/generate_mask.py --output_dir {output_dir}"
@@ -30,4 +32,4 @@ for idx, seq in enumerate(seqs):
         end_time_cmd = time.time()
         print(f"Command finished: {command}. Time taken: {end_time_cmd - start_time_cmd:.2f} seconds")
     end_time = time.time()
-    print(f"{idx} vqa finished. Saved images in {output_dir}. Time taken: {end_time - start_time:.2f} seconds")
+    print(f"Saved QAs in {output_dir}. Time taken: {end_time - start_time:.2f} seconds")

@@ -1,10 +1,9 @@
 import os
-import pickle
 import argparse
 import pandas as pd
 import io
 from PIL import Image
-from openai import AzureOpenAI
+from openai import OpenAI
 import json
 import base64
 
@@ -44,35 +43,40 @@ def extract_descriptions_from_incomplete_json(json_like_str):
         raise ValueError(f"Error parsing JSON: {e}")
 
 def caption_image_data(image):
-    client = AzureOpenAI(
-        api_key="",  
-        api_version="",
-        azure_endpoint=""
-        # end point
+    client = OpenAI(
+        api_key=os.getenv("OPENAI_API_KEY"),
+        base_url="https://api.openai.com/v1"  # default OpenAI API endpoint
     )
     data_uri = image_to_base64_data_uri(image)
-    response = client.chat.completions.create(
-        model="gpt-4o",
-        messages=[
-            {
-                "role": "system",
-                "content": "You are an assistant who perfectly describes images."
-            },
-            {
-                "role": "user",
-                "content": [
-                    {"type": "image_url",
-                     "image_url": {"url": data_uri}
+    max_retries = 10
+    retry_count = 0
+    while retry_count < max_retries:
+        try:
+            response = client.chat.completions.create(
+                model="gpt-4o",
+                messages=[
+                    {
+                        "role": "system",
+                        "content": "You are an assistant who perfectly describes images."
                     },
-                    {"type": "text",
-                     "text": 'Create a JSON representation where each entry consists of a key "object" with a numerical suffix starting from 1, and a corresponding "description" key. The description should be a concise sentence (max six words) identifying one visually distinctive object or building in the image. Only describe up to three unique objects that clearly differ in color, shape, or category. Do not include background elements like sky or ground. Avoid duplicates. If no qualifying objects are present, return an empty JSON {}. An example: {"object1": { "description": "Man in red hat walking." },"object2": { "description": "Wooden pallet with boxes." },"object3": { "description": "Cardboard boxes stacked." }}'
+                    {
+                        "role": "user",
+                        "content": [
+                            {"type": "image_url",
+                            "image_url": {"url": data_uri}
+                            },
+                            {"type": "text",
+                            "text": 'Create a JSON representation where each entry consists of a key "object" with a numerical suffix starting from 1, and a corresponding "description" key. The description should be a concise sentence (max six words) identifying one visually distinctive object or building in the image. Only describe up to three unique objects that clearly differ in color, shape, or category. Do not include background elements like sky or ground. Avoid duplicates. If no qualifying objects are present, return an empty JSON {}. An example: {"object1": { "description": "Man in red hat walking." },"object2": { "description": "Wooden pallet with boxes." },"object3": { "description": "Cardboard boxes stacked." }}'
+                            }
+                        ]
                     }
-                ]
-            }
-        ],
-        response_format={"type": "json_object"}
-    )
-    return response.choices[0].message.content
+                ],
+                response_format={"type": "json_object"}
+            )
+            return response.choices[0].message.content
+        except Exception as e:
+            print(f"Error during API call: {e}")
+            retry_count += 1
 
 
 def process_images_in_chunks(image_dir, chunk_size=100):

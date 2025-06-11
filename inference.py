@@ -3,10 +3,9 @@ import os
 from collections import defaultdict
 from tqdm import tqdm
 import io
-import numpy as np
 import PIL
 from PIL import Image
-from openai import OpenAI, AzureOpenAI
+from openai import OpenAI
 import json
 import base64
 
@@ -43,8 +42,9 @@ def main():
         data = json.load(file)
 
     client = OpenAI(
-        api_key="",
-        base_url="")
+        api_key=os.getenv("OPENAI_API_KEY"),
+        base_url="https://api.openai.com/v1"  # default OpenAI API endpoint
+    )
     
     model_name = "gpt-4o"
 

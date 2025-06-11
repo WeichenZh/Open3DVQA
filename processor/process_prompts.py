@@ -1,11 +1,9 @@
 import os
 import sys
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
-import cv2
+root_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))  
+sys.path.append(root_path)
 import json
-import pickle
 import random
-import itertools
 import argparse
 import numpy as np
 import pandas as pd
@@ -61,13 +59,13 @@ def main(image_dir, output_dir):
                 if row['prompts'] and any(row['prompts']) and row['qa_information'] and any(row['qa_information']):
                     image_filename = row['image_filename']
                     if len(row['prompts']) != len(row['qa_information']):
-                        raise ValueError("列表的长度不相同！")
-                    # 假设 row['prompts'] 和 row['qa_information'] 的长度相同
+                        raise ValueError("The length of 'prompts' and 'qa_information' must be the same.")
+                    # assume row['prompts'] and row['qa_information'] are lists of the same length
                     for prompt, question_name in zip(row['prompts'], row['qa_information']):
                         print(row['qa_information'])
                         conversation = []
                         qa_information = {}
-                        # 处理 prompts
+                        # process prompts
                         if 'Answer: ' in prompt:
                             question, answer = prompt.split('Answer: ', 1)
                             # human_value = f"<image>\n{question}" if first_prompt else question
@@ -81,7 +79,7 @@ def main(image_dir, output_dir):
                                 "value": answer
                             })
 
-                        # 处理 qa_information
+                        # process qa_information
                         if 'choice' in question_name or 'predicate' in question_name or 'relationship' in question_name:
                             qa_information={
                                 "type": 'qualitative',
@@ -113,7 +111,7 @@ def main(image_dir, output_dir):
                         }
                         images_samples.append(image_sample)
 
-    test_json = os.path.join(output_dir, "test_dataset.json")
+    test_json = os.path.join(output_dir, "merged_qa.json")
     with open(test_json, "w") as json_file:
         json.dump(images_samples, json_file, indent=4)
 

@@ -1,0 +1,37 @@
+# Core libraries
+numpy>=1.26.0
+pandas>=2.2.3
+matplotlib>=3.9.0
+scipy>=1.15.3
+tqdm>=4.67.0
+
+# Deep learning
+torch>=2.6.0
+torchvision>=0.21.0
+torchaudio>=2.6.0
+tensorflow>=2.18.0
+transformers>=4.46.2
+accelerate>=1.1.1
+
+# Models & inference
+openai>=1.76.0
+huggingface-hub>=0.26.2
+peft>=0.3.0
+safetensors>=0.4.5
+tokenizers>=0.20.3
+timm>=0.6.7
+
+# Visualization and image I/O
+opencv-python>=4.10.0.84
+pillow>=11.0.0
+matplotlib-inline>=0.1.7
+
+# Geometry & 3D
+open3d==0.19.0
+
+# Utilities
+PyYAML>=6.0.2
+filelock>=3.16.1
+requests>=2.32.3
+packaging>=24.2
+scikit-image

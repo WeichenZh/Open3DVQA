@@ -1,17 +1,15 @@
 import os
 import sys
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
-import cv2
-import pickle
+root_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))  
+sys.path.append(root_path)
 import argparse
 import numpy as np
 import pandas as pd
 from vqasynth.datasets.segment import CLIPSeg, SAM, sample_points_from_heatmap
 import traceback
-import matplotlib.pyplot as plt
 
-clipseg = CLIPSeg(model_path="models/clipseg")
-sam = SAM(model_path="models/sam", device="cuda")
+clipseg = CLIPSeg(model_path="vqasynth/models/clipseg")
+sam = SAM(model_path="vqasynth/models/sam", device="cuda")
 
 def segment_image_data(row):
     try:

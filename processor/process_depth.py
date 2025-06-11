@@ -1,9 +1,9 @@
 import os
-import pickle
 import argparse
 import sys
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+root_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))  
+sys.path.append(root_path)
 import PIL.Image
 import pandas as pd
 import numpy as np
@@ -47,4 +47,3 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     main(args.output_dir, args.use_gt)
-

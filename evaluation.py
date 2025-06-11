@@ -1,5 +1,5 @@
 import json
-from openai import OpenAI, AzureOpenAI
+from openai import OpenAI
 from tqdm import tqdm
 from datetime import datetime
 import os
@@ -33,10 +33,10 @@ Response: {response}
 
     # content = prompt + examples.format(question=question) + post_fix.format(question, answer, response)
     content = prompt + post_fix
-    client = AzureOpenAI(
-        api_key="",
-            api_version="",
-            azure_endpoint="")
+    client = OpenAI(
+        api_key=os.getenv("OPENAI_API_KEY"),
+        base_url="https://api.openai.com/v1"  # default OpenAI API endpoint
+    )
     
     response = client.chat.completions.create(
         timeout=75,
@@ -70,6 +70,9 @@ def evaluate(json_path):
         gt = item.get("answer", "")
         if pred and gt:
             score = check_match(question, pred, gt)
+            while score not in ["0", "1"]:
+                print(f"Invalid score: {score}. Retrying...")
+                score = check_match(question, pred, gt)
             if score == "1":
                 correct += 1
                 total += 1

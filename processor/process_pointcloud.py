@@ -2,7 +2,8 @@ import json
 import os
 import sys
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+root_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))  
+sys.path.append(root_path)
 import open3d as o3d
 import argparse
 import numpy as np
@@ -28,7 +29,7 @@ def get_intrinsic(scene_name, width, height, fov):
             'cy': height / 2,
         }
 
-    elif scene_name == "realworldUAV":
+    elif scene_name == "RealworldUAV":
         intrinsic_parameters = {
             'width': width,
             'height': height,
@@ -61,8 +62,8 @@ def pointcloud_image_data(row, output_dir, use_gt=False):
         scene_name = "EmbodiedCity"
     elif "UrbanScene" in row['image_path']:
         scene_name = "UrbanScene"
-    elif "realworldUAV" in row['image_path']:
-        scene_name = "realworldUAV"
+    elif "RealworldUAV" in row['image_path']:
+        scene_name = "RealworldUAV"
     elif "WildUAV" in row['image_path']:
         scene_name = "WildUAV"
     else:
@@ -72,7 +73,7 @@ def pointcloud_image_data(row, output_dir, use_gt=False):
         width, height = row["image"].size
         fov = 90
         intrinsic_parameters = get_intrinsic(scene_name, width, height, fov)
-        camera_pose_file = row["image_path"].replace('rgb', 'state')[:-4] + '.json'
+        camera_pose_file = row["image_path"].replace('rgb', 'pose')[:-4] + '.json'
         # construct extrinsic matrix
         with open(camera_pose_file, 'r') as f:
             camera_pose = json.load(f)
@@ -85,7 +86,7 @@ def pointcloud_image_data(row, output_dir, use_gt=False):
             roll, pitch, yaw = r.as_euler("xyz", degrees=True)
             r_tar = R.from_euler('y', -pitch, degrees=True).as_matrix()
             r_diff = r_tar
-        elif scene_name == "realworldUAV":
+        elif scene_name == "RealworldUAV":
             # construct canonicalized extrinsic matrix, rotate y, -pitch degrees
             roll, pitch, yaw = r.as_euler("xyz", degrees=True)
             r_tar = R.from_euler('y', pitch, degrees=True).as_matrix()
@@ -122,10 +123,10 @@ def pointcloud_image_data(row, output_dir, use_gt=False):
         print("before rotate:", np.array(pcd.points).mean(axis=0))
         # o3d.visualization.draw_geometries([pcd])
 
-        # 2.2 应用旋转矩阵到airsim ego点云
+        # 2.2 rotate to canonicalized coordinate system
         pcd.rotate(r_diff, center=(0, 0, 0))
         print("after rotate:", np.array(pcd.points).mean(axis=0))
-        o3d.visualization.draw_geometries([pcd])
+        # o3d.visualization.draw_geometries([pcd])
 
         point_clouds.append(pcd)
 
@@ -135,7 +136,7 @@ def pointcloud_image_data(row, output_dir, use_gt=False):
     pcd_cam = np.stack([pcd_cam[:, 2], -pcd_cam[:, 0], -pcd_cam[:, 1]], axis=-1)
     pcd_all.points = o3d.utility.Vector3dVector(pcd_cam)
     pcd_all.rotate(r_diff, center=(0, 0, 0))
-    o3d.visualization.draw_geometries([pcd_all])
+    # o3d.visualization.draw_geometries([pcd_all])
 
     # print(len(point_clouds), row['caption'], len(row['masks']))
     valid_idx = [True] * len(point_clouds)
@@ -143,7 +144,7 @@ def pointcloud_image_data(row, output_dir, use_gt=False):
         pc_valid = True
         cl, ind = pcd.remove_statistical_outlier(nb_neighbors=20, std_ratio=2.0)
         inlier_cloud = pcd.select_by_index(ind)
-        if len(inlier_cloud.points) < 100:          # 小于100个点 判定为无效点云
+        if len(inlier_cloud.points) < 100:          # less than 100 points, not valid
             pc_valid = False
 
         pointcloud_filepath = os.path.join(output_dir, "pointclouds", f"pointcloud_{Path(row['image_filename']).stem}_{idx}_v2.pcd")
@@ -203,6 +204,3 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     main(args.output_dir, args.use_gt)
-
-    # output_dir = r"F:\Documents\PythonScripts\dataset-build\dataset\embodied_tasks_zx\WildUAV\seq00"
-    # main(output_dir, use_gt=True)
