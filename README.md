@@ -426,9 +426,9 @@ export OPENAI_API_KEY=your_api_key_here
   
 Please download the Open3DVQA dataset, ClipSeg and SAM: 
 
-- [Open3DVQA dataset](https://huggingface.co/datasets/zzxslp/Open3DVQA)
+- [Open3DVQA dataset](https://huggingface.co/datasets/EmbodiedCity/Open3DVQA-v2)
 - [ClipSeg model](https://huggingface.co/CIDAS/clipseg-rd64-refined)
-- [SAM model](https://huggingface.co/facebook/sam-vit-h)
+- [SAM model](https://huggingface.co/facebook/sam-vit-huge)
 
 Organize all codes and resources according to the following directory structure:
 ```
